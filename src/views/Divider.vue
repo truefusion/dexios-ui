@@ -2,22 +2,10 @@
 	<article class="divider prose">
 		<h1>Divider</h1>
 		<VigilDivider></VigilDivider>
-		<VigilSegment plain>
-			<VigilDivider vertical></VigilDivider>
-		</VigilSegment>
+		<VigilDivider class="max-h-64 relative" vertical></VigilDivider>
 
 		<h3>With Text</h3>
 		<VigilDivider>OR</VigilDivider>
-		<VigilSegment plain>
-			<VigilDivider vertical>OR</VigilDivider>
-		</VigilSegment>
+		<VigilDivider class="max-h-64 relative" vertical>OR</VigilDivider>
 	</article>
 </template>
-
-<style lang="less">
-	.view.divider {
-		.segment {
-			@apply min-h-64;
-		}
-	}
-</style>

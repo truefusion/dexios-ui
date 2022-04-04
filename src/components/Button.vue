@@ -1,33 +1,37 @@
+<script setup>
+	import { computed, unref, useSlots } from 'vue';
+
+	const $props = defineProps({
+		circular: Boolean,
+		compact: Boolean,
+		disabled: Boolean,
+		icon: String,
+		plain: Boolean,
+		primary: Boolean,
+		secondary: Boolean,
+	});
+	const $slots = useSlots();
+
+	const hasLabel = computed(() => {
+		return Boolean($slots.default);
+	});
+	const iconOnly = computed(() => {
+		return $props.icon && !unref(hasLabel);
+	});
+	const classes = computed(() => {
+		return  {
+			...$props,
+			icon: unref(iconOnly),
+		};
+	});
+</script>
+
 <script>
-	import { unref } from 'vue';
 	import Base from './../lib/Base.js';
 
 	export default {
 		extends: Base,
 		name: 'Button',
-		props: {
-			circular: Boolean,
-			compact: Boolean,
-			disabled: Boolean,
-			icon: String,
-			plain: Boolean,
-			primary: Boolean,
-			secondary: Boolean,
-		},
-		computed: {
-			classes() {
-				return  {
-					...this.$props,
-					icon: unref(this.iconOnly),
-				};
-			},
-			hasLabel() {
-				return Boolean(this.$slots.default);
-			},
-			iconOnly() {
-				return this.icon && !unref(this.hasLabel);
-			},
-		}
 	}
 </script>
 

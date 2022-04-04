@@ -11,6 +11,7 @@
 			active: Boolean,
 			header: Boolean,
 			icon: Boolean,
+			spacer: Boolean,
 			...RouterLink.props,
 		},
 		setup(props, { attrs, slots }) {

@@ -33,7 +33,7 @@
 <style lang="less">
 	.vigil {
 		&.menu {
-			@apply cursor-default flex;
+			@apply cursor-default flex dark:bg-gray-900;
 
 			> .input {
 				@apply ring-transparent z-1;
@@ -42,7 +42,7 @@
 			> .item {
 				@apply px-4 e('py-1.5');
 
-				&.stretch {
+				&.spacer {
 					@apply flex-1;
 				}
 			}
@@ -112,14 +112,14 @@
 			}
 
 			&.secondary {
-				@apply border-b-2;
+				@apply border-b-2 dark:border-gray-800;
 
 				> .link {
-					@apply border-b-2;
+					@apply border-b-2 dark:border-gray-800;
 					margin-bottom: -2px;
 
 					&.active {
-						@apply border-gray-800;
+						@apply border-gray-800 dark:border-gray-200;
 					}
 				}
 			}

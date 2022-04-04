@@ -8,6 +8,12 @@
 			<div>Message</div>
 		</VigilMessage>
 
+		<h3>Raised</h3>
+		<VigilMessage raised>
+			<VigilHeader>Header</VigilHeader>
+			<div>Message</div>
+		</VigilMessage>
+
 		<h3>Colors</h3>
 		<section class="flex flex-col space-y-4">
 			<VigilMessage class="green">

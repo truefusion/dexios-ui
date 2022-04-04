@@ -1,8 +1,9 @@
 <script setup>
-	import { computed } from 'vue';
+	import { computed, ref } from 'vue';
 	import { RouterLink, RouterView, useRouter } from 'vue-router';
 
 	const $router = useRouter();
+	const dark = ref(false);
 
 	const menu = computed(() => $router.getRoutes().map((route) => {
 		var { name: label, path: href } = route;
@@ -11,24 +12,28 @@
 </script>
 
 <template>
-	<aside class="dark">
-		<VigilMenu plain vertical>
+	<aside :class="{ dark }">
+		<VigilMenu secondary>
 			<VigilItem :key="item.href" :to="item.href" v-for="item in menu">{{item.label}}</VigilItem>
+			<VigilItem spacer></VigilItem>
+			<VigilInput plain type="checkbox" v-model="dark">
+				<VigilItem class="flex-1">Dark Mode</VigilItem>
+			</VigilInput>
 		</VigilMenu>
 	</aside>
-	<RouterView class="view" />
+	<RouterView class="view" :class="{ dark }" />
 </template>
 
 <style lang="less">
 	#app {
-		@apply fixed font-inter flex inset-0;
+		@apply fixed font-inter flex flex-col inset-0;
 
 		article {
-			@apply flex-1 max-w-full overflow-y-auto p-8 space-y-8;
-		}
+			@apply flex-1 max-w-full overflow-y-auto p-16 space-y-8;
 
-		aside {
-			@apply bg-gray-800 w-52;
+			&.dark {
+				@apply bg-black;
+			}
 		}
 	}
 </style>

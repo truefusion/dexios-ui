@@ -103,7 +103,7 @@
 <style lang="less">
 	.vigil {
 		&.input {
-			@apply divide-gray-300 inline-flex ring-gray-300 transition-shadow;
+			@apply divide-gray-300 inline-flex items-center ring-gray-300 transition-shadow dark:text-white;
 
 			&:not(.plain) {
 				@apply divide-x ring-1 rounded;
@@ -130,7 +130,7 @@
 			}
 
 			.input-wrapper {
-				@apply flex flex-1 items-center justify-center;
+				@apply flex items-center justify-center;
 
 				.input-icon, .input-spinner {
 					@apply transition-colors;
@@ -158,7 +158,7 @@
 
 				&.plain {
 					input {
-						@apply mx-0;
+						@apply mr-0;
 					}
 				}
 			}
@@ -178,6 +178,10 @@
 			&.number, &.text {
 				input {
 					@apply appearance-none w-full;
+				}
+
+				.input-wrapper {
+					@apply flex-1;
 				}
 			}
 

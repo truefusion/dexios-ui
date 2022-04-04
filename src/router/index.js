@@ -12,6 +12,7 @@ import Label from '../views/Label.vue';
 import Menu from '../views/Menu.vue';
 import Message from '../views/Message.vue';
 import Modal from '../views/Modal.vue';
+import Segment from '../views/Segment.vue';
 
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
@@ -60,6 +61,11 @@ const router = createRouter({
 			path: '/modal',
 			name: 'Modal',
 			component: Modal,
+		},
+		{
+			path: '/segment',
+			name: 'Segment',
+			component: Segment,
 		},
 	],
 });

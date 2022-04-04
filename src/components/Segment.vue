@@ -1,40 +1,42 @@
-<script>
-	import { h, resolveComponent } from 'vue';
+<script setup>
+	import { computed } from 'vue';
 	import Base from './../lib/Base.js';
 
+	const $props = defineProps({
+		...Base.props,
+		circular: Boolean,
+		loading: Boolean,
+		placeholder: Boolean,
+		plain: Boolean,
+		raised: Boolean,
+		stacked: Boolean,
+		stackedTall: Boolean,
+	});
+
+	const classes = computed(() => {
+		var ret = {
+			vigil: true,
+			segment: true,
+			...$props,
+		};
+		ret['stacked-tall'] = ret.stackedTall;
+		delete ret['stackedTall'];
+		return ret;
+	});
+</script>
+
+<script>
 	export default {
-		extends: Base,
-		props: {
-			circular: Boolean,
-			loading: Boolean,
-			placeholder: Boolean,
-			plain: Boolean,
-			raised: Boolean,
-			stacked: Boolean,
-			stackedTall: Boolean,
-		},
-		setup(props, { slots }) {
-			return () => {
-				var children = [];
-				var slot = slots.default?.() ?? [];
-
-				if (props.loading) {
-					children.push(h(resolveComponent('VigilLoader'), {
-						run: true,
-					}));
-				}
-
-				return h('div', {
-					class: {
-						vigil: true,
-						segment: true,
-						...props,
-					},
-				}, children.concat(slot));
-			};
-		},
+		name: 'Segment',
 	}
 </script>
+
+<template>
+	<div class="vigil segment" :class="classes">
+		<VigilLoader run v-if="$props.loading"></VigilLoader>
+		<slot></slot>
+	</div>
+</template>
 
 <style lang="less">
 	.vigil {

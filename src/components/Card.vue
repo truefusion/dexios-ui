@@ -1,20 +1,21 @@
+<script setup>
+	const $props = defineProps({});
+</script>
+
 <script>
-	import { h } from 'vue';
 	import Base from './../lib/Base.js';
 
 	export default {
 		extends: Base,
-		setup(props, { slots }) {
-			return () => h('div', {
-				class: {
-					vigil: true,
-					card: true,
-					...props,
-				},
-			}, slots.default?.());
-		},
+		name: 'Card',
 	}
 </script>
+
+<template>
+	<div class="vigil card" :class="$props">
+		<slot></slot>
+	</div>
+</template>
 
 <style lang="less">
 	.vigil {

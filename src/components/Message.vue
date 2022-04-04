@@ -5,12 +5,14 @@
 
 	export default {
 		extends: Base,
+		props: {
+			raised: Boolean,
+		},
 		setup(props, { slots }) {
 			return () => h(Segment, {
 				class: {
 					vigil: true,
 					message: true,
-					raised: true,
 					...props,
 				},
 			}, slots.default);
