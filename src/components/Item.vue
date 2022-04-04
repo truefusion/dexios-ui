@@ -10,6 +10,7 @@
 		props: {
 			active: Boolean,
 			header: Boolean,
+			icon: Boolean,
 			...RouterLink.props,
 		},
 		setup(props, { attrs, slots }) {
@@ -59,6 +60,10 @@
 
 			&.header {
 				@apply font-bold;
+			}
+
+			&.icon {
+				@apply flex space-x-2;
 			}
 
 			&.link {

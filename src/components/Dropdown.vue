@@ -133,7 +133,7 @@
 		<div class="dropdown-label-wrapper">
 			<slot></slot>
 			<!-- <VigilIcon icon="backspace" v-if="clearable && ActiveItem" ref="clear" /> -->
-			<VigilIcon icon="chevron-down" v-if="!props.button && !props.noArrow" />
+			<VigilIcon :icon="open ? 'chevron-up' : 'chevron-down'" v-if="!props.button && !props.noArrow" />
 		</div>
 		<VigilMenu ref="$menu" vertical>
 			<slot :close="close" :isActive="isActive" :setValue="setValue" name="menu"></slot>
@@ -144,7 +144,7 @@
 <style lang="less">
 	.vigil {
 		&.dropdown {
-			@apply cursor-pointer flex-col inline-flex relative transition-colors;
+			@apply flex-col inline-flex relative transition-colors;
 
 			.dropdown-label-wrapper {
 				@apply flex items-center space-x-2;
@@ -161,22 +161,26 @@
 			}
 
 			&:not(.open) {
-				@apply text-opacity-70;
+				@apply cursor-pointer;
 
-				.dropdown-label-wrapper > * {
+				.dropdown-label-wrapper {
 					@apply text-opacity-70;
+
+					> * {
+						@apply text-opacity-70;
+					}
+
+					&:hover {
+						@apply text-opacity-100;
+
+						> * {
+							@apply text-opacity-100;
+						}
+					}
 				}
 
 				.menu {
 					@apply invisible opacity-10 pointer-events-none;
-				}
-
-				&:hover {
-					 @apply text-opacity-100;
-
-					 .dropdown-label-wrapper > * {
-	 					@apply text-opacity-100;
-	 				}
 				}
 			}
 

@@ -34,7 +34,7 @@
 <template>
 	<button class="vigil button" :class="classes" :disabled="disabled" type="button">
 		<div class="button-label">
-			<VigilIcon :icon="icon" v-if="icon" />
+			<VigilIcon class="button-icon" :icon="icon" v-if="icon" />
 			<div class="button-label-slot">
 				<slot></slot>
 			</div>
@@ -48,17 +48,19 @@
 <style lang="less">
 	.vigil {
 		&.button {
-			@apply cursor-pointer inline-flex items-center justify-center overflow-hidden px-4 e('py-1.5') relative text-opacity-70 transition-colors;
+			@apply cursor-pointer inline-flex items-center justify-center overflow-hidden px-4 e('py-1.5') relative transition-colors;
 
 			&:hover {
-				@apply text-opacity-100;
+				.button-label {
+					@apply text-opacity-100;
+				}
 
-				.icon {
+				.button-icon {
 					@apply text-opacity-100;
 				}
 			}
 
-			.icon {
+			.button-icon {
 				@apply text-opacity-70;
 			}
 
@@ -67,7 +69,7 @@
 			}
 
 			.button-label {
-				@apply flex items-center justify-center space-x-2 transition;
+				@apply flex items-center justify-center space-x-2 text-opacity-70 transition;
 			}
 
 			&:not(.plain) {
