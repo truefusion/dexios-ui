@@ -1,3 +1,10 @@
+const content = process.env.NODE_ENV == 'development' ? [
+	"./index.html",
+	"./src/**/*.{vue,js,ts,jsx,tsx}",
+] : [
+	"./src/components/**/*.{vue,js,ts,jsx,tsx}",
+];
+
 const baseSizes = (function () {
 	var ret = {};
 	for (var i = 1; i < 21; i++) {
@@ -51,10 +58,7 @@ const sizes = Object.assign({
 }, baseSizes);
 
 module.exports = {
-	content: [
-		"./index.html",
-		"./src/**/*.{vue,js,ts,jsx,tsx}",
-	],
+	content,
 	darkMode: 'class', // false or 'media' or 'class'
 	important: true,
 	plugins: [

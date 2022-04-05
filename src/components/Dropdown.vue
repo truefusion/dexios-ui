@@ -144,10 +144,14 @@
 <style lang="less">
 	.vigil {
 		&.dropdown {
-			@apply flex-col inline-flex relative transition-colors;
+			@apply flex-col inline-flex relative;
 
 			.dropdown-label-wrapper {
-				@apply flex items-center space-x-2;
+				@apply flex items-center space-x-2 transition-colors dark:text-white;
+
+				> * {
+					@apply transition-colors;
+				}
 			}
 
 			.menu {
@@ -164,14 +168,14 @@
 				@apply cursor-pointer;
 
 				.dropdown-label-wrapper {
-					@apply text-opacity-70;
+					@apply text-opacity-70 dark:text-opacity-70 dark:text-white;
 
 					> * {
 						@apply text-opacity-70;
 					}
 
 					&:hover {
-						@apply text-opacity-100;
+						@apply text-opacity-100 dark:text-opacity-100;
 
 						> * {
 							@apply text-opacity-100;
@@ -185,10 +189,10 @@
 			}
 
 			&.button, &.selection {
-				@apply overflow-visible;
+				@apply overflow-visible dark:bg-gray-800;
 
 				.dropdown-label-wrapper {
-					@apply rounded;
+					@apply rounded dark:border-gray-600;
 				}
 			}
 

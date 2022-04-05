@@ -106,7 +106,7 @@
 			@apply divide-gray-300 inline-flex items-center ring-gray-300 transition-shadow dark:text-white;
 
 			&:not(.plain) {
-				@apply divide-x ring-1 rounded;
+				@apply divide-x ring-1 rounded dark:bg-gray-800 dark:divide-gray-600 dark:ring-gray-600;
 
 				&:focus-within {
 					@apply divide-sky-500 ring-sky-500;
@@ -130,7 +130,7 @@
 			}
 
 			.input-wrapper {
-				@apply flex items-center justify-center;
+				@apply flex items-center justify-center self-stretch;
 
 				.input-icon, .input-spinner {
 					@apply transition-colors;
@@ -186,7 +186,7 @@
 			}
 
 			&.error {
-				@apply bg-rose-50 divide-rose-200 ring-rose-200;
+				@apply bg-rose-50 divide-rose-200 ring-rose-200 dark:divide-rose-300 dark:ring-rose-300;
 
 				input {
 					@apply placeholder-rose-200 text-rose-500;
@@ -206,7 +206,7 @@
 			}
 
 			&.disabled, &.loading {
-				@apply bg-gray-100 pointer-events-none ring-gray-200 select-none;
+				@apply bg-gray-50 pointer-events-none ring-gray-200 select-none opacity-80 dark:opacity-50;
 
 				input {
 					@apply placeholder-gray-300;
@@ -218,7 +218,7 @@
 			}
 
 			&.loading {
-				@apply bg-gray-50 ring-gray-300;
+				@apply ring-gray-300;
 			}
 
 			> .item {

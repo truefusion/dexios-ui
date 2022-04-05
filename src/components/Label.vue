@@ -26,13 +26,13 @@
 <style lang="less">
 	.vigil {
 		&.label {
-			@apply auto-cols-max cursor-default grid grid-flow-col overflow-hidden rounded text-sm;
+			@apply auto-cols-max cursor-default grid grid-flow-col overflow-hidden rounded text-sm dark:text-white;
 
 			&:not(.plain) {
-				@apply bg-gray-100;
+				@apply bg-gray-100 dark:bg-gray-800;
 
 				.label-detail {
-					@apply bg-black bg-opacity-10 dark:bg-white;
+					@apply bg-black bg-opacity-10 dark:bg-gray-200 dark:bg-opacity-10;
 				}
 			}
 
@@ -41,10 +41,10 @@
 			}
 
 			&.plain {
-				@apply border border-gray-300;
+				@apply border border-gray-300 dark:border-gray-600;
 
 				.label-detail {
-					@apply border-l border-gray-300;
+					@apply border-l border-gray-300 dark:border-gray-600;
 				}
 			}
 

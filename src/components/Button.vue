@@ -56,28 +56,28 @@
 
 			&:hover {
 				.button-label {
-					@apply text-opacity-100;
+					@apply text-opacity-100 dark:text-opacity-100;
 				}
 
 				.button-icon {
-					@apply text-opacity-100;
+					@apply text-opacity-100 dark:text-opacity-100;
 				}
 			}
 
 			.button-icon {
-				@apply text-opacity-70;
+				@apply text-opacity-70 transition-colors dark:text-opacity-70;
 			}
 
 			.button-hover {
-				@apply absolute flex items-center justify-center inset-0 px-4 py-2 transition whitespace-nowrap;
+				@apply absolute flex items-center justify-center inset-0 px-4 py-2 transition whitespace-nowrap dark:text-white;
 			}
 
 			.button-label {
-				@apply flex items-center justify-center space-x-2 text-opacity-70 transition;
+				@apply flex items-center justify-center space-x-2 text-opacity-70 transition dark:text-opacity-70 dark:text-white;
 			}
 
 			&:not(.plain) {
-				@apply bg-white border border-gray-300 rounded hover:shadow;
+				@apply bg-white border border-gray-300 rounded hover:shadow dark:bg-transparent dark:border-gray-600;
 			}
 
 			&.circular {
@@ -99,17 +99,21 @@
 			&.primary, &.secondary {
 				@apply border-0 text-white;
 
+				.button-label {
+					@apply text-white;
+				}
+
 				.icon {
 					@apply text-white;
 				}
 			}
 
 			&.primary {
-				@apply bg-sky-600 border-sky-700 hover:bg-sky-700;
+				@apply bg-sky-600 border-sky-700 hover:bg-sky-700 dark:bg-sky-600 dark:border-sky-900 dark:hover:bg-sky-900;
 			}
 
 			&.secondary {
-				@apply bg-gray-700 border-gray-800 hover:bg-gray-800;
+				@apply bg-gray-700 border-gray-800 hover:bg-gray-800 dark:bg-gray-700 dark:border-gray-800 dark:hover:bg-gray-800;
 			}
 
 			&.plain {

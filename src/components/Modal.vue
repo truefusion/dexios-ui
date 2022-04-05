@@ -119,7 +119,7 @@
 
 	.vigil {
 		&.modal {
-			@apply border-0 divide-y fixed e('left-1/2') m-0 overflow-visible p-0 rounded shadow-lg e('top-1/2') transform e('-translate-x-1/2') e('-translate-y-1/2');
+			@apply border-0 divide-y fixed e('left-1/2') m-0 overflow-visible p-0 rounded shadow-lg e('top-1/2') transform e('-translate-x-1/2') e('-translate-y-1/2') dark:bg-gray-500 dark:divide-gray-600;
 			--animation-duration: 1s;
 
 			&.fade-out {
@@ -143,15 +143,15 @@
 			}
 
 			&::backdrop, + .backdrop {
-				@apply backdrop-contrast-25 backdrop-filter bg-gray-300 bg-opacity-60;
+				@apply backdrop-contrast-25 backdrop-filter bg-gray-300 bg-opacity-60 dark:bg-gray-800 dark:bg-opacity-60;
 			}
 
 			> .modal-actions {
-				@apply bg-gray-100 flex items-center justify-end p-4 rounded-b space-x-4;
+				@apply bg-gray-100 flex items-center justify-end p-4 rounded-b space-x-4 dark:bg-gray-700;
 			}
 
 			> .modal-content {
-				@apply p-8 space-y-8;
+				@apply p-8 space-y-8 dark:text-white;
 			}
 
 			> .modal-header {

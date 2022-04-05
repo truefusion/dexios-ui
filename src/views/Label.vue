@@ -48,6 +48,10 @@
 				<span>Label</span>
 				<span class="label-detail">Detail</span>
 			</VigilLabel>
+			<VigilLabel>
+				<VigilIcon icon="mail"></VigilIcon>
+				<span class="label-detail">Detail</span>
+			</VigilLabel>
 			<VigilLabel plain>
 				<VigilIcon icon="mail"></VigilIcon>
 				<span class="label-detail">Detail</span>

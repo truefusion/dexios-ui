@@ -44,7 +44,7 @@
 <style lang="less">
 	.vigil {
 		&.buttons {
-			@apply border border-gray-300 inline-flex overflow-hidden rounded;
+			@apply border border-gray-300 inline-flex overflow-hidden rounded dark:border-gray-700;
 
 			&:not(.vertical) {
 				@apply divide-x;

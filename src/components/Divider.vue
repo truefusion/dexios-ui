@@ -28,10 +28,10 @@
 <style lang="less">
 	.vigil {
 		&.divider {
-			@apply flex items-center justify-center leading-none;
+			@apply flex items-center justify-center leading-none dark:text-white;
 
 			&::after, &::before {
-				@apply bg-gray-200 block flex-1;
+				@apply bg-gray-200 block flex-1 dark:bg-gray-600;
 				content: '';
 			}
 

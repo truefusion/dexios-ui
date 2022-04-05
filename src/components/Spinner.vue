@@ -29,7 +29,7 @@
 			@apply flex-col inline-flex items-center justify-center space-y-4;
 
 			&::before {
-				@apply border-3 border-gray-300 border-t-gray-600 h-10 max-h-full max-w-full rounded-full w-10;
+				@apply border-3 border-gray-300 border-t-gray-600 h-10 max-h-full max-w-full rounded-full w-10 dark:border-gray-700 dark:border-t-gray-400;
 				animation: spinner .6s infinite linear;
 				content: '';
 				// min-width: 0.75rem;

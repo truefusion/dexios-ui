@@ -33,10 +33,10 @@
 <style lang="less">
 	.vigil {
 		&.menu {
-			@apply cursor-default flex dark:bg-gray-900;
+			@apply cursor-default flex;
 
-			> .input {
-				@apply ring-transparent z-1;
+			> .input:not(.plain) {
+				@apply ring-transparent z-1 dark:ring-transparent dark:focus-within:ring-sky-500;
 			}
 
 			> .item {
@@ -48,7 +48,7 @@
 			}
 
 			&.standard {
-				@apply bg-white border rounded shadow dark:bg-gray-800 dark:border-gray-700 dark:divide-gray-700;
+				@apply bg-white border rounded shadow dark:bg-gray-800 dark:border-gray-600 dark:divide-gray-600;
 
 				&:not(.vertical) {
 					@apply divide-x;
@@ -87,7 +87,7 @@
 				}
 
 				> .active {
-					@apply bg-gray-50;
+					@apply bg-gray-50 dark:bg-gray-700;
 				}
 			}
 
@@ -100,26 +100,26 @@
 			}
 
 			&.tabular {
-				@apply border-b border-gray-300;
+				@apply border-b border-gray-300 dark:border-gray-600;
 
 				> * {
 					@apply -mb-px;
 				}
 
 				> .active {
-					@apply bg-white border border-b-0 border-gray-300 rounded-t;
+					@apply bg-white border border-b-0 border-gray-300 rounded-t dark:bg-gray-800 dark:border-gray-600;
 				}
 			}
 
 			&.secondary {
-				@apply border-b-2 dark:border-gray-800;
+				@apply border-b-2 dark:border-gray-600;
 
 				> .link {
-					@apply border-b-2 dark:border-gray-800;
+					@apply border-b-2 dark:border-gray-600;
 					margin-bottom: -2px;
 
 					&.active {
-						@apply border-gray-800 dark:border-gray-200;
+						@apply border-gray-800 dark:border-gray-300;
 					}
 				}
 			}

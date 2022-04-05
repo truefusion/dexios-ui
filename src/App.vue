@@ -14,6 +14,7 @@
 <template>
 	<aside :class="{ dark }">
 		<VigilMenu secondary>
+			<VigilItem header>Vigil</VigilItem>
 			<VigilItem :key="item.href" :to="item.href" v-for="item in menu">{{item.label}}</VigilItem>
 			<VigilItem spacer></VigilItem>
 			<VigilInput plain type="checkbox" v-model="dark">
@@ -28,12 +29,14 @@
 	#app {
 		@apply fixed font-inter flex flex-col inset-0;
 
-		article {
-			@apply flex-1 max-w-full overflow-y-auto p-16 space-y-8;
-
+		article, aside {
 			&.dark {
 				@apply bg-black;
 			}
+		}
+
+		article {
+			@apply flex-1 max-w-full overflow-y-auto p-16 space-y-8;
 		}
 	}
 </style>

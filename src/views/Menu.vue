@@ -84,7 +84,12 @@
 						<span>100</span>
 					</VigilLabel>
 				</VigilItem>
-				<VigilItem href="#">Item</VigilItem>
+				<VigilItem class="flex" href="#">
+					<span class="flex-1">Item</span>
+					<VigilLabel plain>
+						<span>100</span>
+					</VigilLabel>
+				</VigilItem>
 				<VigilItem href="#">Item</VigilItem>
 				<VigilInput icon-right="magnify" placeholder="Search"></VigilInput>
 			</VigilMenu>
