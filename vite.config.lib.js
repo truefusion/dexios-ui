@@ -25,6 +25,5 @@ export default defineConfig(Object.assign(viteConfig, {
 				},
 			},
 		},
-		outDir: 'dist-plugin',
 	},
 }));
