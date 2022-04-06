@@ -24,7 +24,7 @@
 <style lang="less">
 	.vigil {
 		&.icon {
-			@apply transition-opacity dark:text-white;
+			@apply dark:text-white;
 		}
 	}
 </style>

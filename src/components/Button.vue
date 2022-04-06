@@ -39,9 +39,7 @@
 	<button class="vigil button" :class="classes" :disabled="disabled" type="button">
 		<div class="button-label">
 			<VigilIcon class="button-icon" :icon="icon" v-if="icon" />
-			<div class="button-label-slot">
-				<slot></slot>
-			</div>
+			<slot></slot>
 		</div>
 		<div class="button-hover">
 			<slot name="hover"></slot>
@@ -55,17 +53,13 @@
 			@apply cursor-pointer inline-flex items-center justify-center overflow-hidden px-4 e('py-1.5') relative transition-colors;
 
 			&:hover {
-				.button-label {
-					@apply text-opacity-100 dark:text-opacity-100;
-				}
-
-				.button-icon {
+				.button-icon, .button-label {
 					@apply text-opacity-100 dark:text-opacity-100;
 				}
 			}
 
-			.button-icon {
-				@apply text-opacity-70 transition-colors dark:text-opacity-70;
+			.button-icon, .button-label {
+				@apply text-gray-800 text-opacity-70 transition-colors dark:text-opacity-70 dark:text-white;
 			}
 
 			.button-hover {
@@ -73,7 +67,7 @@
 			}
 
 			.button-label {
-				@apply flex items-center justify-center space-x-2 text-opacity-70 transition dark:text-opacity-70 dark:text-white;
+				@apply flex items-center justify-center space-x-2 transition;
 			}
 
 			&:not(.plain) {

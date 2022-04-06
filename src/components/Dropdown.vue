@@ -133,7 +133,7 @@
 		<div class="dropdown-label-wrapper">
 			<slot></slot>
 			<!-- <VigilIcon icon="backspace" v-if="clearable && ActiveItem" ref="clear" /> -->
-			<VigilIcon :icon="open ? 'chevron-up' : 'chevron-down'" v-if="!props.button && !props.noArrow" />
+			<VigilIcon class="dropdown-icon" :icon="open ? 'chevron-up' : 'chevron-down'" v-if="!props.button && !props.noArrow" />
 		</div>
 		<VigilMenu ref="$menu" vertical>
 			<slot :close="close" :isActive="isActive" :setValue="setValue" name="menu"></slot>
@@ -147,11 +147,7 @@
 			@apply flex-col inline-flex relative;
 
 			.dropdown-label-wrapper {
-				@apply flex items-center space-x-2 transition-colors dark:text-white;
-
-				> * {
-					@apply transition-colors;
-				}
+				@apply flex items-center space-x-2 text-gray-800 transition-colors dark:text-white;
 			}
 
 			.menu {
@@ -167,20 +163,14 @@
 			&:not(.open) {
 				@apply cursor-pointer;
 
-				.dropdown-label-wrapper {
-					@apply text-opacity-70 dark:text-opacity-70 dark:text-white;
-
-					> * {
-						@apply text-opacity-70;
-					}
-
-					&:hover {
+				&:hover {
+					.icon, .dropdown-label-wrapper {
 						@apply text-opacity-100 dark:text-opacity-100;
-
-						> * {
-							@apply text-opacity-100;
-						}
 					}
+				}
+
+				.icon, .dropdown-label-wrapper {
+					@apply text-gray-800 text-opacity-70 transition-colors dark:text-opacity-70 dark:text-white;
 				}
 
 				.menu {
