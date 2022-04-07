@@ -96,8 +96,9 @@ module.exports = {
 				'open-sans': 'Open Sans',
 				'open-sans-condensed': 'Open Sans Condensed',
 				'oswald': 'Oswald',
+				'poppins': ['Poppins', 'sans-serif'],
 				'roboto': 'Roboto',
-				'source-sans': 'Source Sans Pro',
+				'source-sans': ['Source Sans Pro', 'sans-serif'],
 			},
 			height: sizes,
 			inset: {
