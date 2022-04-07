@@ -24,7 +24,7 @@
 <style lang="less">
 	.vigil {
 		&.icon {
-			@apply dark:text-white;
+			@apply inline-flex items-center justify-center dark:text-white;
 		}
 	}
 </style>
