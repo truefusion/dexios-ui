@@ -7,22 +7,22 @@
         "preview": "vite preview --port 5050"
     },
     "dependencies": {
-        "@mdi/font": "^6.5.95",
-        "@popperjs/core": "^2.11.4",
+        "@mdi/font": "^6.6.96",
+        "@popperjs/core": "^2.11.5",
         "vue": "^3.2.31",
         "vue-router": "^4.0.12"
     },
     "devDependencies": {
         "@rollup/plugin-url": "^6.1.0",
         "@tailwindcss/typography": "^0.5.2",
-        "@vitejs/plugin-vue": "^2.2.2",
+        "@vitejs/plugin-vue": "^2.3.1",
         "autoprefixer": "^10.4.4",
         "dialog-polyfill": "^0.5.6",
         "less": "^4.1.2",
         "less-loader": "^10.2.0",
         "postcss": "^8.4.12",
         "tailwindcss": "^3.0.23",
-        "vite": "^2.8.4"
+        "vite": "^2.9.1"
     },
-    "main": "./dist/vigil.umd.js"
+    "main": "./dist/vigil.umd.js",
 }
