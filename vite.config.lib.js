@@ -14,7 +14,6 @@ export default defineConfig(Object.assign(viteConfig, {
 		cssCodeSplit: true,
 		lib: {
 			entry: resolve(__dirname, 'src/plugin.js'),
-			format: ['umd'],
 			name: 'vigil',
 		},
 		rollupOptions: {
