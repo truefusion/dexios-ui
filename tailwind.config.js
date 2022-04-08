@@ -1,9 +1,19 @@
-const content = process.env.NODE_ENV == 'development' ? [
-	"./index.html",
-	"./src/**/*.{vue,js,ts,jsx,tsx}",
-] : [
-	"./src/components/**/*.{vue,js,ts,jsx,tsx}",
-];
+var content = [];
+var plugins = [];
+
+if (process.env.NODE_ENV == 'development') {
+	content = [
+		"./index.html",
+		"./src/**/*.{vue,js,ts,jsx,tsx}",
+	];
+	plugins = [
+		require('@tailwindcss/typography'),
+	];
+} else {
+	content = [
+		"./src/components/**/*.{vue,js,ts,jsx,tsx}",
+	];
+}
 
 const baseSizes = (function () {
 	var ret = {};
@@ -61,9 +71,7 @@ module.exports = {
 	content,
 	darkMode: 'class', // false or 'media' or 'class'
 	important: true,
-	plugins: [
-		require('@tailwindcss/typography'),
-	],
+	plugins,
 	theme: {
 		extend: {
 			backdropBlur: {
