@@ -19,6 +19,10 @@
 		clearable: Boolean,
 		modelValue: null,
 		noArrow: Boolean,
+		placement: {
+			type: String,
+			default: 'bottom-start',
+		},
 		selection: Boolean,
 		strategy: {
 			type: String,
@@ -53,7 +57,7 @@
 		} = props;
 		return {
 			modifiers: unref(modifiers),
-			placement: selection ? 'bottom' : 'bottom-start',
+			placement: selection ? 'bottom' : props.placement,
 			strategy,
 		};
 	});
