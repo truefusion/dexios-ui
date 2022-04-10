@@ -17,7 +17,7 @@ export default defineConfig(Object.assign(viteConfig, {
 			name: 'vigil',
 		},
 		rollupOptions: {
-			external: ['vue'],
+			external: ['vue', 'vue-router'],
 			output: {
 				globals: {
 					vue: 'Vue',
