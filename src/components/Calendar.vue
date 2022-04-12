@@ -50,7 +50,10 @@
         return ret;
     });
     const title = computed(() => {
-        return format($props.modelValue, "MMMM yyyy");
+        return {
+            month: format($props.modelValue, "MMMM"),
+            year: format($props.modelValue, "yyyy"),
+        };
     });
 
     function setActive(d) {
@@ -66,10 +69,10 @@
 
 <template>
     <div class="vigil calendar">
-        <slot :days="days" :nextMonth="nextMonth" :prevMonth="prevMonth" :setActive="setActive" :weekDayNames="weekDayNames">
+        <slot :days="days" :nextMonth="nextMonth" :prevMonth="prevMonth" :setActive="setActive" :title="title" :weekDayNames="weekDayNames">
             <header>
                 <VigilButton icon="chevron-left" plain @click="prevMonth"></VigilButton>
-                <span>{{title}}</span>
+                <span>{{title.month}} {{title.year}}</span>
                 <VigilButton icon="chevron-right" plain @click="nextMonth"></VigilButton>
             </header>
             <div class="dates week-days">
