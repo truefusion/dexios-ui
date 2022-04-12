@@ -97,6 +97,8 @@
 
             .days {
                 .day {
+                    @apply min-h-8 min-w-8;
+
                     &.current {
                         @apply font-bold;
 
@@ -110,7 +112,7 @@
                     }
 
                     > * {
-                        @apply rounded-full;
+                        @apply h-8 inline-flex items-center justify-center rounded-full text-center w-8;
                     }
                 }
             }
