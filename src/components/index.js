@@ -1,5 +1,6 @@
 export { default as Button } from './Button.vue';
 export { default as Buttons } from './Buttons.vue';
+export { default as Calendar } from './Calendar.vue';
 export { default as Card } from './Card.vue';
 export { default as Dimmer } from './Dimmer.vue';
 export { default as Divider } from './Divider.vue';

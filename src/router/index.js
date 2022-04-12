@@ -4,6 +4,7 @@ import {
 } from 'vue-router';
 
 import Button from '../views/Button.vue';
+import Calendar from '../views/Calendar.vue';
 import Card from '../views/Card.vue';
 import Divider from '../views/Divider.vue';
 import Dropdown from '../views/Dropdown.vue';
@@ -21,6 +22,11 @@ const router = createRouter({
 			path: '/',
 			name: 'Button',
 			component: Button,
+		},
+		{
+			path: '/calendar',
+			name: 'Calendar',
+			component: Calendar,
 		},
 		{
 			path: '/card',
