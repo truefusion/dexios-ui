@@ -94,6 +94,23 @@
 				<VigilInput icon-right="magnify" placeholder="Search"></VigilInput>
 			</VigilMenu>
 		</div>
+		<div class="flex items-start space-x-5">
+			<VigilMenu class="flex-1" flat vertical>
+				<VigilItem active href="#">Item</VigilItem>
+				<VigilItem href="#">Item</VigilItem>
+				<VigilItem href="#">Item</VigilItem>
+			</VigilMenu>
+			<VigilMenu class="flex-1" secondary vertical>
+				<VigilItem active href="#">Item</VigilItem>
+				<VigilItem href="#">Item</VigilItem>
+				<VigilItem href="#">Item</VigilItem>
+			</VigilMenu>
+			<VigilMenu class="flex-1" tabular vertical>
+				<VigilItem active href="#">Item</VigilItem>
+				<VigilItem href="#">Item</VigilItem>
+				<VigilItem href="#">Item</VigilItem>
+			</VigilMenu>
+		</div>
 
 		<h3>Components</h3>
 		<VigilMenu>

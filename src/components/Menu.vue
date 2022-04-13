@@ -83,16 +83,22 @@
 
 			&.standard, &.flat {
 				> .active, > .link {
-					@apply hover:bg-gray-50 dark:hover:bg-gray-700;
+					@apply hover:bg-gray-100 dark:hover:bg-gray-700;
 				}
 
 				> .active {
-					@apply bg-gray-50 dark:bg-gray-700;
+					@apply bg-gray-100 dark:bg-gray-700;
 				}
 			}
 
 			&.flat {
-				@apply space-x-2;
+				&:not(.vertical) {
+					@apply space-x-2;
+				}
+
+				&.vertical {
+					@apply space-y-2;
+				}
 
 				> .link {
 					@apply rounded-md;
