@@ -158,10 +158,8 @@
 				@apply border-gray-300 transition-opacity visible z-1;
 			}
 
-			&:not(.button) {
-				.dropdown-label-wrapper {
-					@apply px-4 e('py-1.5');
-				}
+			.dropdown-label-wrapper {
+				@apply px-4 e('py-1.5');
 			}
 
 			&:not(.open) {
@@ -183,10 +181,10 @@
 			}
 
 			&.button, &.selection {
-				@apply overflow-visible dark:bg-gray-800;
+				@apply overflow-visible p-0;
 
 				.dropdown-label-wrapper {
-					@apply rounded dark:border-gray-600;
+					@apply rounded dark:bg-gray-700 dark:border-gray-800;
 				}
 			}
 
@@ -198,7 +196,7 @@
 				}
 
 				.menu {
-					@apply border-sky-500 overflow-y-auto w-full;
+					@apply border-sky-500 overflow-y-auto w-full dark:border-sky-300 dark:divide-sky-300;
 				}
 
 				&.open {
@@ -223,7 +221,7 @@
 					}
 
 					.dropdown-label-wrapper {
-						@apply border-sky-500;
+						@apply border-sky-500 dark:border-sky-300;
 					}
 				}
 			}

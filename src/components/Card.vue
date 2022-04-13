@@ -20,7 +20,7 @@
 <style lang="less">
 	.vigil {
 		&.card {
-			@apply bg-white border divide-y flex-col inline-flex min-h-0 max-w-full rounded shadow w-72;
+			@apply bg-white border divide-y flex-col inline-flex min-h-0 max-w-full rounded shadow w-72 dark:bg-gray-700 dark:border-gray-800 dark:divide-gray-800 dark:text-white;
 
 			.card-content {
 				@apply p-4;

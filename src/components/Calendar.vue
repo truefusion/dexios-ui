@@ -91,7 +91,7 @@
     .vigil {
         &.calendar {
             header {
-                @apply flex items-center justify-between;
+                @apply flex items-center justify-between dark:text-white;
             }
 
             .dates {
@@ -106,7 +106,7 @@
                         @apply font-bold;
 
                         > * {
-                            @apply bg-gray-50 p-2;
+                            @apply bg-gray-50 p-2 dark:bg-gray-700;
                         }
                     }
 
@@ -121,7 +121,7 @@
             }
 
             .week-days {
-                @apply border-t py-2;
+                @apply border-t py-2 dark:text-white;
 
                 .week-day {
                     @apply font-bold uppercase;

@@ -23,17 +23,17 @@
 <style lang="less">
 	.vigil {
 		&.message {
-			@apply bg-sky-50 border-blue-300 space-y-2;
+			@apply bg-sky-50 border-blue-300 space-y-2 dark:bg-sky-900 dark:border-blue-400 dark:text-blue-100;
 
 			* {
-				@apply text-blue-900;
+				@apply text-blue-900 dark:text-blue-100;
 			}
 
 			&.green {
-				@apply bg-green-50 border-green-400 text-green-900;
+				@apply bg-green-50 border-green-400 text-green-900 dark:bg-green-900 dark:border-green-500;
 
 				* {
-					@apply text-green-900;
+					@apply text-green-900 dark:text-green-100;
 				}
 			}
 

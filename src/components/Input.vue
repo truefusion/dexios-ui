@@ -106,13 +106,13 @@
 			@apply divide-gray-300 inline-flex items-center ring-gray-300 transition-shadow dark:text-white;
 
 			&:not(.plain) {
-				@apply divide-x ring-1 rounded dark:bg-gray-800 dark:divide-gray-600 dark:ring-gray-600;
+				@apply divide-x ring-1 rounded dark:bg-gray-700 dark:divide-gray-800 dark:ring-gray-800;
 
 				&:focus-within {
-					@apply divide-sky-500 ring-sky-500;
+					@apply divide-sky-500 ring-sky-500 dark:divide-sky-300 dark:ring-sky-300;
 
 					.input-icon {
-						@apply text-opacity-100 text-sky-500;
+						@apply text-opacity-100 text-sky-500 dark:text-sky-300;
 					}
 				}
 			}
@@ -197,10 +197,10 @@
 				}
 
 				&:focus-within {
-					@apply divide-rose-500 ring-rose-500;
+					@apply divide-rose-500 ring-rose-500 dark:divide-rose-500 dark:ring-rose-500;
 
 					.input-icon {
-						@apply text-rose-500;
+						@apply text-rose-500 dark:text-rose-500;
 					}
 				}
 			}
