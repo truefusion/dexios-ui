@@ -106,7 +106,7 @@
                         @apply font-bold;
 
                         > * {
-                            @apply bg-gray-50 p-2 dark:bg-gray-700;
+                            @apply bg-gray-100 p-2 dark:bg-gray-700;
                         }
                     }
 
