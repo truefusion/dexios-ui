@@ -83,6 +83,14 @@
 	function clear() {
 		value.value = '';
 	}
+	function focus() {
+		$input.value.focus();
+	}
+
+	defineExpose({
+		clear,
+		focus,
+	});
 </script>
 
 <template>
