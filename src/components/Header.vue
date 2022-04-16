@@ -19,7 +19,7 @@
 <style lang="less">
 	.vigil {
 		&.header:not(.item) {
-			@apply font-bold mb-4 !text-opacity-100 dark:text-white;
+			@apply font-bold space-x-2 !text-opacity-100 dark:text-white;
 		}
 	}
 </style>
