@@ -136,5 +136,28 @@
 			<VigilButton icon="emoticon"></VigilButton>
 			<VigilItem href="#">Link</VigilItem>
 		</VigilMenu>
+		<VigilMenu flat>
+			<VigilHeader>Header</VigilHeader>
+			<VigilInput icon-left="filter" placeholder="Filter"></VigilInput>
+			<VigilDropdown>
+				<span>Dropdown</span>
+				<template #menu="{close}">
+					<VigilItem>Item</VigilItem>
+					<VigilItem>Item</VigilItem>
+					<VigilItem>Item</VigilItem>
+				</template>
+			</VigilDropdown>
+			<VigilDropdown selection>
+				<span>Selection</span>
+				<template #menu="{close}">
+					<VigilItem>Item</VigilItem>
+					<VigilItem>Item</VigilItem>
+					<VigilItem>Item</VigilItem>
+				</template>
+			</VigilDropdown>
+			<VigilButton>Button</VigilButton>
+			<VigilButton icon="emoticon"></VigilButton>
+			<VigilItem href="#">Link</VigilItem>
+		</VigilMenu>
 	</article>
 </template>

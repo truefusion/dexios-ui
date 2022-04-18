@@ -39,10 +39,6 @@
 				@apply px-4 e('py-1.5');
 			}
 
-			> .input:not(.plain) {
-				@apply ring-transparent z-1 dark:ring-transparent dark:focus-within:ring-sky-300;
-			}
-
 			> .item {
 				@apply px-4 e('py-1.5');
 
@@ -72,6 +68,10 @@
 							@apply border-transparent;
 						}
 					}
+				}
+
+				> .input:not(.plain) {
+					@apply ring-transparent z-1 dark:ring-transparent dark:focus-within:ring-sky-300;
 				}
 
 				.input.icon-right {
