@@ -71,7 +71,7 @@
 			}
 
 			&:not(.plain) {
-				@apply bg-white border border-gray-300 rounded hover:shadow dark:bg-transparent dark:border-gray-600;
+				@apply border border-gray-300 rounded hover:shadow dark:bg-transparent dark:border-gray-600;
 			}
 
 			&.circular {
@@ -163,14 +163,14 @@
 			}
 
 			&[disabled] {
-				@apply pointer-events-none opacity-60 dark:opacity-30;
+				@apply pointer-events-none text-opacity-50;
 
 				&:not(.plain) {
-					@apply bg-gray-100 dark:bg-gray-700;
+					@apply bg-gray-100 bg-opacity-50 border-opacity-50 dark:bg-gray-700 dark:bg-opacity-40 dark:border-opacity-40;
 				}
 
 				.button-label {
-					@apply text-gray-800 text-opacity-60 dark:text-white;
+					@apply text-gray-800 text-opacity-50 dark:text-opacity-40 dark:text-white;
 				}
 			}
 		}

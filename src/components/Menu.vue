@@ -36,11 +36,11 @@
 			@apply cursor-default flex;
 
 			> .header {
-				@apply px-4 e('py-1.5');
+				@apply px-4 py-2;
 			}
 
 			> .item {
-				@apply px-4 e('py-1.5');
+				@apply px-4 py-2;
 
 				&.spacer {
 					@apply flex-1;
@@ -71,18 +71,18 @@
 				}
 
 				> .input:not(.plain) {
-					@apply ring-transparent z-1 dark:ring-transparent dark:focus-within:ring-sky-300;
+					@apply bg-transparent ring-transparent z-1 focus-within:ring-sky-500 dark:ring-transparent dark:focus-within:ring-sky-300;
 				}
 
-				.input.icon-right {
-					input {
-						@apply pl-4;
-					}
-
-					.icon {
-						@apply mx-3;
-					}
-				}
+				// .input.icon-right {
+				// 	input {
+				// 		@apply pl-4;
+				// 	}
+				//
+				// 	.icon {
+				// 		@apply mx-3;
+				// 	}
+				// }
 			}
 
 			&.standard, &.flat {

@@ -133,6 +133,7 @@
 				</template>
 			</VigilDropdown>
 			<VigilButton>Button</VigilButton>
+			<VigilButton disabled>Disabled</VigilButton>
 			<VigilButton icon="emoticon"></VigilButton>
 			<VigilItem href="#">Link</VigilItem>
 		</VigilMenu>
@@ -156,6 +157,7 @@
 				</template>
 			</VigilDropdown>
 			<VigilButton>Button</VigilButton>
+			<VigilButton disabled>Disabled</VigilButton>
 			<VigilButton icon="emoticon"></VigilButton>
 			<VigilItem href="#">Link</VigilItem>
 		</VigilMenu>
