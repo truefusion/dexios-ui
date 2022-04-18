@@ -114,6 +114,7 @@
 
 		<h3>Components</h3>
 		<VigilMenu>
+			<VigilHeader>Header</VigilHeader>
 			<VigilInput icon-left="filter" placeholder="Filter"></VigilInput>
 			<VigilDropdown>
 				<span>Dropdown</span>
