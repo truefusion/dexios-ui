@@ -163,7 +163,15 @@
 			}
 
 			&[disabled] {
-				@apply bg-gray-100 pointer-events-none opacity-60 text-opacity-40;
+				@apply pointer-events-none opacity-60 dark:opacity-30;
+
+				&:not(.plain) {
+					@apply bg-gray-100 dark:bg-gray-700;
+				}
+
+				.button-label {
+					@apply text-gray-800 text-opacity-60 dark:text-white;
+				}
 			}
 		}
 	}

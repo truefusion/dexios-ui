@@ -53,9 +53,17 @@
 
 		<section>
 			<h3>Disabled</h3>
-			<VigilButton disabled>
-				<span>Disabled</span>
-			</VigilButton>
+			<div class="space-x-2">
+				<VigilButton disabled>
+					<span>Button</span>
+				</VigilButton>
+				<VigilButton disabled plain>
+					<span>Plain</span>
+				</VigilButton>
+				<VigilButton disabled primary>
+					<span>Primary</span>
+				</VigilButton>
+			</div>
 		</section>
 
 		<section>
