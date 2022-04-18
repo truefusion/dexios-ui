@@ -163,7 +163,7 @@
 			}
 
 			&[disabled] {
-				@apply bg-gray-100 pointer-events-none text-opacity-40;
+				@apply bg-gray-100 pointer-events-none opacity-60 text-opacity-40;
 			}
 		}
 	}
