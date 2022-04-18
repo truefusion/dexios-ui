@@ -114,7 +114,7 @@
 			@apply divide-gray-300 inline-flex items-center ring-gray-300 transition-shadow dark:text-white;
 
 			&:not(.plain) {
-				@apply divide-x ring-1 rounded dark:bg-gray-700 dark:divide-gray-800 dark:ring-gray-800;
+				@apply bg-white divide-x ring-1 rounded dark:bg-gray-700 dark:divide-gray-800 dark:ring-gray-800;
 
 				&:focus-within {
 					@apply divide-sky-500 ring-sky-500 dark:divide-sky-300 dark:ring-sky-300;
