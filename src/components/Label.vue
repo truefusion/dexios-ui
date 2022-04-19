@@ -32,7 +32,7 @@
 				@apply bg-gray-100 dark:bg-gray-800;
 
 				.label-detail {
-					@apply bg-black bg-opacity-10 dark:bg-gray-200 dark:bg-opacity-10;
+					@apply bg-black bg-opacity-5 dark:bg-gray-200 dark:bg-opacity-10;
 				}
 			}
 
