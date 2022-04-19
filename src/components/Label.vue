@@ -26,7 +26,7 @@
 <style lang="less">
 	.vigil {
 		&.label {
-			@apply auto-cols-max cursor-default grid grid-flow-col overflow-hidden rounded text-sm dark:text-white;
+			@apply auto-cols-max cursor-default grid grid-flow-col overflow-hidden rounded self-center text-sm dark:text-white;
 
 			&:not(.plain) {
 				@apply bg-gray-100 dark:bg-gray-800;
