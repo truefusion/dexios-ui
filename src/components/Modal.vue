@@ -124,7 +124,7 @@
 
 			&.fade-out {
 				animation: FadeOutDialog;
-				animation-duration: var(--animation-duration);
+				animation-duration: 0.5s;
 			}
 
 			&.fade-in {
@@ -134,7 +134,7 @@
 
 			&.scale-out {
 				animation: ScaleOutDialog;
-				animation-duration: var(--animation-duration);
+				animation-duration: 0.5s;
 			}
 
 			&.scale-in {
