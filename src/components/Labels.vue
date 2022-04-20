@@ -8,6 +8,7 @@
 		props: {
 			circular: Boolean,
 			plain: Boolean,
+			secondary: Boolean,
 		},
 		setup(props, { slots }) {
 			return () => {
