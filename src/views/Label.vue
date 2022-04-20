@@ -5,6 +5,10 @@
 		},
 		{
 			label: 'Label 2',
+			secondary: true,
+		},
+		{
+			label: 'Label 3',
 			plain: true,
 		},
 	];
@@ -21,6 +25,9 @@
 			<VigilLabel>
 				<span>Label</span>
 			</VigilLabel>
+			<VigilLabel secondary>
+				<span>Label</span>
+			</VigilLabel>
 			<VigilLabel plain>
 				<span>Label</span>
 			</VigilLabel>
@@ -29,6 +36,9 @@
 		<h3>Icon</h3>
 		<VigilLabels>
 			<VigilLabel>
+				<span>Label</span>
+			</VigilLabel>
+			<VigilLabel secondary>
 				<span>Label</span>
 			</VigilLabel>
 			<VigilLabel plain>
@@ -43,7 +53,7 @@
 				<span>Label</span>
 				<span class="label-detail">Detail</span>
 			</VigilLabel>
-			<VigilLabel plain>
+			<VigilLabel secondary>
 				<VigilIcon class="label-icon" icon="mail"></VigilIcon>
 				<span>Label</span>
 				<span class="label-detail">Detail</span>
@@ -52,7 +62,7 @@
 				<VigilIcon icon="mail"></VigilIcon>
 				<span class="label-detail">Detail</span>
 			</VigilLabel>
-			<VigilLabel plain>
+			<VigilLabel secondary>
 				<VigilIcon icon="mail"></VigilIcon>
 				<span class="label-detail">Detail</span>
 			</VigilLabel>
@@ -63,7 +73,7 @@
 			<VigilLabel circular>
 				<VigilIcon icon="mail"></VigilIcon>
 			</VigilLabel>
-			<VigilLabel circular plain>
+			<VigilLabel circular secondary>
 				<VigilIcon icon="mail"></VigilIcon>
 			</VigilLabel>
 			<VigilLabel circular>
@@ -71,7 +81,7 @@
 				<span>Label</span>
 				<span class="label-detail">Detail</span>
 			</VigilLabel>
-			<VigilLabel circular plain>
+			<VigilLabel circular secondary>
 				<VigilIcon class="label-icon" icon="mail"></VigilIcon>
 				<span>Label</span>
 				<span class="label-detail">Detail</span>
@@ -80,7 +90,7 @@
 
 		<h3>Closable</h3>
 		<VigilLabels>
-			<VigilLabel :plain="label.plain" @close="doSomething(label)" v-for="label in labels">
+			<VigilLabel :plain="label.plain" :secondary="label.secondary" @close="doSomething(label)" v-for="label in labels">
 				<template v-slot="{close}">
 					<span>{{label.label}}</span>
 					<VigilIcon class="label-close" icon="close-thick" @click="close"></VigilIcon>

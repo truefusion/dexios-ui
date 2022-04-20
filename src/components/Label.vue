@@ -8,6 +8,7 @@
 		props: {
 			circular: Boolean,
 			plain: Boolean,
+			secondary: Boolean,
 		},
 		methods: {
 			close() {
@@ -28,7 +29,7 @@
 		&.label {
 			@apply auto-cols-max cursor-default grid grid-flow-col overflow-hidden rounded self-center text-sm dark:text-white;
 
-			&:not(.plain) {
+			&:not(.plain):not(.secondary) {
 				@apply bg-gray-100 dark:bg-gray-800;
 
 				.label-detail {
@@ -40,7 +41,7 @@
 				@apply rounded-full;
 			}
 
-			&.plain {
+			&.secondary {
 				@apply border border-gray-300 dark:border-gray-600;
 
 				.label-detail {
