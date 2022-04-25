@@ -1,7 +1,8 @@
 <script setup>
-	import { computed, ref, unref } from 'vue';
+	import { computed, ref, unref, useAttrs } from 'vue';
 	import Base from './../lib/Base.js';
 
+	const $attrs = useAttrs();
 	const $emit = defineEmits(['update:modelValue']);
 	const $props = defineProps({
 		clearable: Boolean,
@@ -62,6 +63,7 @@
 			placeholder,
 			readonly,
 			type,
+			...$attrs,
 		};
 		switch (type) {
 			case 'checkbox':
@@ -91,6 +93,12 @@
 		clear,
 		focus,
 	});
+</script>
+
+<script>
+	export default {
+		inheritAttrs: false,
+	}
 </script>
 
 <template>

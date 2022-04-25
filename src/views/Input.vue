@@ -6,12 +6,16 @@
 	const chk = ref(['1']);
 	const rad = ref('1');
 	const val = ref('');
+
+	function onEnter() {
+		console.log('enter key pressed');
+	}
 </script>
 
 <template>
 	<article class="input prose">
 		<h1>Input</h1>
-		<VigilInput placeholder="Search"></VigilInput>
+		<VigilInput placeholder="Search" @keydown.enter="onEnter"></VigilInput>
 
 		<h3>Number</h3>
 		<div class="flex flex-col items-start space-y-2">
