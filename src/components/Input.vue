@@ -57,13 +57,21 @@
 			type,
 			value,
 		} = $props;
+
+		var events = Object.entries($attrs).reduce((ret, [key, val]) => {
+			if (String(key).startsWith('on')) {
+				ret[key] = val;
+			}
+			return ret;
+		}, {});
+
 		var ret = {
 			disabled,
 			name,
 			placeholder,
 			readonly,
 			type,
-			...$attrs,
+			...events,
 		};
 		switch (type) {
 			case 'checkbox':
@@ -93,12 +101,6 @@
 		clear,
 		focus,
 	});
-</script>
-
-<script>
-	export default {
-		inheritAttrs: false,
-	}
 </script>
 
 <template>
