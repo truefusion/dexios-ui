@@ -48,6 +48,22 @@
 			[type]: true,
 		};
 	});
+	const filteredAttrs = computed(() => {
+		return Object.entries($attrs).reduce((ret, [key, val]) => {
+			if (!String(key).startsWith('on')) {
+				ret[key] = val;
+			}
+			return ret;
+		}, {});
+	});
+	const inputEvents = computed(() => {
+		return Object.entries($attrs).reduce((ret, [key, val]) => {
+			if (String(key).startsWith('on')) {
+				ret[key] = val;
+			}
+			return ret;
+		}, {});
+	});
 	const inputProps = computed(() => {
 		var {
 			disabled,
@@ -57,21 +73,13 @@
 			type,
 			value,
 		} = $props;
-
-		var events = Object.entries($attrs).reduce((ret, [key, val]) => {
-			if (String(key).startsWith('on')) {
-				ret[key] = val;
-			}
-			return ret;
-		}, {});
-
 		var ret = {
 			disabled,
 			name,
 			placeholder,
 			readonly,
 			type,
-			...events,
+			...unref(inputEvents),
 		};
 		switch (type) {
 			case 'checkbox':
@@ -103,8 +111,14 @@
 	});
 </script>
 
+<script>
+	export default {
+		inheritAttrs: false,
+	}
+</script>
+
 <template>
-	<label class="vigil input" :class="classes">
+	<label class="vigil input" :class="classes" v-bind="filteredAttrs">
 		<slot name="prefix"></slot>
 		<span class="input-wrapper">
 			<VigilSpinner class="input-spinner left" v-if="$props.iconLeft && $props.loading"></VigilSpinner>
