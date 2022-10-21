@@ -14,7 +14,7 @@ export default defineConfig(Object.assign(viteConfig, {
 		cssCodeSplit: true,
 		lib: {
 			entry: resolve(__dirname, 'src/plugin.js'),
-			name: 'dexios',
+			name: 'dexios-ui',
 		},
 		rollupOptions: {
 			external: ['vue', 'vue-router'],
