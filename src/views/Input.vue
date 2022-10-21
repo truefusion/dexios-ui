@@ -89,6 +89,9 @@
 				</template>
 				<DexiosItem>Suffix</DexiosItem>
 			</DexiosInput>
+			<DexiosInput icon-left="magnify" placeholder="Search">
+				<DexiosButton plain>Suffix</DexiosButton>
+			</DexiosInput>
 		</div>
 
 		<h3>Plain</h3>

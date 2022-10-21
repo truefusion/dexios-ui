@@ -100,7 +100,7 @@
 
             .days {
                 .day {
-                    @apply min-h-8 min-w-8;
+                    @apply cursor-pointer min-h-8 min-w-8;
 
                     &.current {
                         @apply font-bold;
