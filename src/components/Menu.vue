@@ -73,16 +73,6 @@
 				> .input:not(.plain) {
 					@apply bg-transparent ring-transparent z-1 focus-within:ring-sky-500 dark:ring-transparent dark:focus-within:ring-sky-300;
 				}
-
-				// .input.icon-right {
-				// 	input {
-				// 		@apply pl-4;
-				// 	}
-				//
-				// 	.icon {
-				// 		@apply mx-3;
-				// 	}
-				// }
 			}
 
 			&.standard, &.flat {
