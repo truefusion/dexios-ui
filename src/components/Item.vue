@@ -28,7 +28,7 @@
 				const classes = computed(() => {
 					var { active, ariaCurrentValue, to, ...other } = props;
 					return {
-						vigil: true,
+						dexios: true,
 						item: true,
 						active: active || unref(isActive) || unref(exact),
 						link: Boolean(unref(link)),
@@ -55,7 +55,7 @@
 </script>
 
 <style lang="less">
-	.vigil {
+	.dexios {
 		&.item {
 			@apply transition-colors dark:text-white;
 

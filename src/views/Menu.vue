@@ -1,165 +1,165 @@
 <template>
 	<article class="menu prose">
 		<h1>Menu</h1>
-		<VigilMenu>
-			<VigilItem active href="#">Item</VigilItem>
-			<VigilItem href="#">Item</VigilItem>
-			<VigilItem href="#">Item</VigilItem>
-		</VigilMenu>
+		<DexiosMenu>
+			<DexiosItem active href="#">Item</DexiosItem>
+			<DexiosItem href="#">Item</DexiosItem>
+			<DexiosItem href="#">Item</DexiosItem>
+		</DexiosMenu>
 
 		<h3>Flat</h3>
-		<VigilMenu flat>
-			<VigilItem active href="#">Item</VigilItem>
-			<VigilItem href="#">Item</VigilItem>
-			<VigilItem href="#">Item</VigilItem>
-		</VigilMenu>
+		<DexiosMenu flat>
+			<DexiosItem active href="#">Item</DexiosItem>
+			<DexiosItem href="#">Item</DexiosItem>
+			<DexiosItem href="#">Item</DexiosItem>
+		</DexiosMenu>
 
 		<h3>Secondary</h3>
-		<VigilMenu secondary>
-			<VigilItem active href="#">Item</VigilItem>
-			<VigilItem href="#">Item</VigilItem>
-			<VigilItem href="#">Item</VigilItem>
-		</VigilMenu>
+		<DexiosMenu secondary>
+			<DexiosItem active href="#">Item</DexiosItem>
+			<DexiosItem href="#">Item</DexiosItem>
+			<DexiosItem href="#">Item</DexiosItem>
+		</DexiosMenu>
 
 		<h3>Tabs</h3>
-		<VigilMenu tabular>
-			<VigilItem active href="#">Item</VigilItem>
-			<VigilItem href="#">Item</VigilItem>
-			<VigilItem href="#">Item</VigilItem>
-		</VigilMenu>
+		<DexiosMenu tabular>
+			<DexiosItem active href="#">Item</DexiosItem>
+			<DexiosItem href="#">Item</DexiosItem>
+			<DexiosItem href="#">Item</DexiosItem>
+		</DexiosMenu>
 
 		<h3>Header</h3>
-		<VigilMenu>
-			<VigilItem header>Header</VigilItem>
-			<VigilItem active href="#">Item</VigilItem>
-			<VigilItem href="#">Item</VigilItem>
-			<VigilItem href="#">Item</VigilItem>
-		</VigilMenu>
+		<DexiosMenu>
+			<DexiosItem header>Header</DexiosItem>
+			<DexiosItem active href="#">Item</DexiosItem>
+			<DexiosItem href="#">Item</DexiosItem>
+			<DexiosItem href="#">Item</DexiosItem>
+		</DexiosMenu>
 
 		<h3>Vertical</h3>
 		<div class="flex items-start space-x-5">
-			<VigilMenu class="flex-1" vertical>
-				<VigilMenu plain vertical>
-					<VigilItem header>Header</VigilItem>
-					<VigilItem active href="#">Item</VigilItem>
-					<VigilItem href="#">Item</VigilItem>
-					<VigilItem href="#">Item</VigilItem>
-				</VigilMenu>
-				<VigilMenu plain vertical>
-					<VigilItem header>Header</VigilItem>
-					<VigilItem href="#">Item</VigilItem>
-					<VigilItem href="#">Item</VigilItem>
-					<VigilItem href="#">Item</VigilItem>
-				</VigilMenu>
-				<VigilMenu plain vertical>
-					<VigilItem header>Header</VigilItem>
-					<VigilItem href="#">Item</VigilItem>
-					<VigilItem href="#">Item</VigilItem>
-					<VigilItem href="#">Item</VigilItem>
-				</VigilMenu>
-			</VigilMenu>
-			<VigilMenu class="flex-1" vertical>
-				<VigilItem active href="#">Item</VigilItem>
-				<VigilItem href="#">Item</VigilItem>
-				<VigilItem href="#">Item</VigilItem>
-			</VigilMenu>
-			<VigilMenu class="flex-1" vertical>
-				<VigilItem active href="#">
-					<VigilHeader>Header</VigilHeader>
+			<DexiosMenu class="flex-1" vertical>
+				<DexiosMenu plain vertical>
+					<DexiosItem header>Header</DexiosItem>
+					<DexiosItem active href="#">Item</DexiosItem>
+					<DexiosItem href="#">Item</DexiosItem>
+					<DexiosItem href="#">Item</DexiosItem>
+				</DexiosMenu>
+				<DexiosMenu plain vertical>
+					<DexiosItem header>Header</DexiosItem>
+					<DexiosItem href="#">Item</DexiosItem>
+					<DexiosItem href="#">Item</DexiosItem>
+					<DexiosItem href="#">Item</DexiosItem>
+				</DexiosMenu>
+				<DexiosMenu plain vertical>
+					<DexiosItem header>Header</DexiosItem>
+					<DexiosItem href="#">Item</DexiosItem>
+					<DexiosItem href="#">Item</DexiosItem>
+					<DexiosItem href="#">Item</DexiosItem>
+				</DexiosMenu>
+			</DexiosMenu>
+			<DexiosMenu class="flex-1" vertical>
+				<DexiosItem active href="#">Item</DexiosItem>
+				<DexiosItem href="#">Item</DexiosItem>
+				<DexiosItem href="#">Item</DexiosItem>
+			</DexiosMenu>
+			<DexiosMenu class="flex-1" vertical>
+				<DexiosItem active href="#">
+					<DexiosHeader>Header</DexiosHeader>
 					<div>Some text here.</div>
-				</VigilItem>
-				<VigilItem href="#">
-					<VigilHeader>Header</VigilHeader>
+				</DexiosItem>
+				<DexiosItem href="#">
+					<DexiosHeader>Header</DexiosHeader>
 					<div>Some text here.</div>
-				</VigilItem>
-				<VigilItem href="#">
-					<VigilHeader>Header</VigilHeader>
+				</DexiosItem>
+				<DexiosItem href="#">
+					<DexiosHeader>Header</DexiosHeader>
 					<div>Some text here.</div>
-				</VigilItem>
-			</VigilMenu>
-			<VigilMenu class="flex-1" vertical>
-				<VigilItem active class="flex" href="#">
+				</DexiosItem>
+			</DexiosMenu>
+			<DexiosMenu class="flex-1" vertical>
+				<DexiosItem active class="flex" href="#">
 					<span class="flex-1">Item</span>
-					<VigilLabel>
+					<DexiosLabel>
 						<span>100</span>
-					</VigilLabel>
-				</VigilItem>
-				<VigilItem class="flex" href="#">
+					</DexiosLabel>
+				</DexiosItem>
+				<DexiosItem class="flex" href="#">
 					<span class="flex-1">Item</span>
-					<VigilLabel plain>
+					<DexiosLabel plain>
 						<span>100</span>
-					</VigilLabel>
-				</VigilItem>
-				<VigilItem href="#">Item</VigilItem>
-				<VigilInput icon-right="magnify" placeholder="Search"></VigilInput>
-			</VigilMenu>
+					</DexiosLabel>
+				</DexiosItem>
+				<DexiosItem href="#">Item</DexiosItem>
+				<DexiosInput icon-right="magnify" placeholder="Search"></DexiosInput>
+			</DexiosMenu>
 		</div>
 		<div class="flex items-start space-x-5">
-			<VigilMenu class="flex-1" flat vertical>
-				<VigilItem active href="#">Item</VigilItem>
-				<VigilItem href="#">Item</VigilItem>
-				<VigilItem href="#">Item</VigilItem>
-			</VigilMenu>
-			<VigilMenu class="flex-1" secondary vertical>
-				<VigilItem active href="#">Item</VigilItem>
-				<VigilItem href="#">Item</VigilItem>
-				<VigilItem href="#">Item</VigilItem>
-			</VigilMenu>
-			<VigilMenu class="flex-1" tabular vertical>
-				<VigilItem active href="#">Item</VigilItem>
-				<VigilItem href="#">Item</VigilItem>
-				<VigilItem href="#">Item</VigilItem>
-			</VigilMenu>
+			<DexiosMenu class="flex-1" flat vertical>
+				<DexiosItem active href="#">Item</DexiosItem>
+				<DexiosItem href="#">Item</DexiosItem>
+				<DexiosItem href="#">Item</DexiosItem>
+			</DexiosMenu>
+			<DexiosMenu class="flex-1" secondary vertical>
+				<DexiosItem active href="#">Item</DexiosItem>
+				<DexiosItem href="#">Item</DexiosItem>
+				<DexiosItem href="#">Item</DexiosItem>
+			</DexiosMenu>
+			<DexiosMenu class="flex-1" tabular vertical>
+				<DexiosItem active href="#">Item</DexiosItem>
+				<DexiosItem href="#">Item</DexiosItem>
+				<DexiosItem href="#">Item</DexiosItem>
+			</DexiosMenu>
 		</div>
 
 		<h3>Components</h3>
-		<VigilMenu>
-			<VigilHeader>Header</VigilHeader>
-			<VigilInput icon-left="filter" placeholder="Filter"></VigilInput>
-			<VigilDropdown>
+		<DexiosMenu>
+			<DexiosHeader>Header</DexiosHeader>
+			<DexiosInput icon-left="filter" placeholder="Filter"></DexiosInput>
+			<DexiosDropdown>
 				<span>Dropdown</span>
 				<template #menu="{close}">
-					<VigilItem>Item</VigilItem>
-					<VigilItem>Item</VigilItem>
-					<VigilItem>Item</VigilItem>
+					<DexiosItem>Item</DexiosItem>
+					<DexiosItem>Item</DexiosItem>
+					<DexiosItem>Item</DexiosItem>
 				</template>
-			</VigilDropdown>
-			<VigilDropdown selection>
+			</DexiosDropdown>
+			<DexiosDropdown selection>
 				<span>Selection</span>
 				<template #menu="{close}">
-					<VigilItem>Item</VigilItem>
-					<VigilItem>Item</VigilItem>
-					<VigilItem>Item</VigilItem>
+					<DexiosItem>Item</DexiosItem>
+					<DexiosItem>Item</DexiosItem>
+					<DexiosItem>Item</DexiosItem>
 				</template>
-			</VigilDropdown>
-			<VigilButton>Button</VigilButton>
-			<VigilButton disabled>Disabled</VigilButton>
-			<VigilButton icon="emoticon"></VigilButton>
-			<VigilItem href="#">Link</VigilItem>
-		</VigilMenu>
-		<VigilMenu flat>
-			<VigilHeader>Header</VigilHeader>
-			<VigilInput icon-left="filter" placeholder="Filter"></VigilInput>
-			<VigilDropdown>
+			</DexiosDropdown>
+			<DexiosButton>Button</DexiosButton>
+			<DexiosButton disabled>Disabled</DexiosButton>
+			<DexiosButton icon="emoticon"></DexiosButton>
+			<DexiosItem href="#">Link</DexiosItem>
+		</DexiosMenu>
+		<DexiosMenu flat>
+			<DexiosHeader>Header</DexiosHeader>
+			<DexiosInput icon-left="filter" placeholder="Filter"></DexiosInput>
+			<DexiosDropdown>
 				<span>Dropdown</span>
 				<template #menu="{close}">
-					<VigilItem>Item</VigilItem>
-					<VigilItem>Item</VigilItem>
-					<VigilItem>Item</VigilItem>
+					<DexiosItem>Item</DexiosItem>
+					<DexiosItem>Item</DexiosItem>
+					<DexiosItem>Item</DexiosItem>
 				</template>
-			</VigilDropdown>
-			<VigilDropdown selection>
+			</DexiosDropdown>
+			<DexiosDropdown selection>
 				<span>Selection</span>
 				<template #menu="{close}">
-					<VigilItem>Item</VigilItem>
-					<VigilItem>Item</VigilItem>
-					<VigilItem>Item</VigilItem>
+					<DexiosItem>Item</DexiosItem>
+					<DexiosItem>Item</DexiosItem>
+					<DexiosItem>Item</DexiosItem>
 				</template>
-			</VigilDropdown>
-			<VigilButton>Button</VigilButton>
-			<VigilButton disabled>Disabled</VigilButton>
-			<VigilButton icon="emoticon"></VigilButton>
-			<VigilItem href="#">Link</VigilItem>
-		</VigilMenu>
+			</DexiosDropdown>
+			<DexiosButton>Button</DexiosButton>
+			<DexiosButton disabled>Disabled</DexiosButton>
+			<DexiosButton icon="emoticon"></DexiosButton>
+			<DexiosItem href="#">Link</DexiosItem>
+		</DexiosMenu>
 	</article>
 </template>

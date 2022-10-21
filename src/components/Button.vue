@@ -36,9 +36,9 @@
 </script>
 
 <template>
-	<button class="vigil button" :class="classes" :disabled="disabled" type="button">
+	<button class="dexios button" :class="classes" :disabled="disabled" type="button">
 		<div class="button-label">
-			<VigilIcon class="button-icon" :icon="icon" v-if="icon" />
+			<DexiosIcon class="button-icon" :icon="icon" v-if="icon" />
 			<slot></slot>
 		</div>
 		<div class="button-hover">
@@ -48,7 +48,7 @@
 </template>
 
 <style lang="less">
-	.vigil {
+	.dexios {
 		&.button {
 			@apply cursor-pointer inline-flex items-center justify-center overflow-hidden px-4 e('py-1.5') relative transition-colors;
 

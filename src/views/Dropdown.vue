@@ -9,93 +9,93 @@
 		<h1>Dropdown</h1>
 
 		<h3>Standard</h3>
-		<VigilDropdown v-model="value">
+		<DexiosDropdown v-model="value">
 			<span>{{value}}</span>
 			<template #menu="{ close, isActive, setValue }">
-				<VigilItem @click="setValue(1)">Item</VigilItem>
-				<VigilItem @click="setValue(2)">Item</VigilItem>
-				<VigilItem @click="setValue(3)">Item</VigilItem>
+				<DexiosItem @click="setValue(1)">Item</DexiosItem>
+				<DexiosItem @click="setValue(2)">Item</DexiosItem>
+				<DexiosItem @click="setValue(3)">Item</DexiosItem>
 			</template>
-		</VigilDropdown>
+		</DexiosDropdown>
 
 		<h3>Selection</h3>
-		<VigilDropdown selection>
+		<DexiosDropdown selection>
 			<span>Label</span>
 			<template #menu="{ close, isActive, setValue }">
-				<VigilItem>Item</VigilItem>
-				<VigilItem>Item</VigilItem>
-				<VigilItem>Item</VigilItem>
+				<DexiosItem>Item</DexiosItem>
+				<DexiosItem>Item</DexiosItem>
+				<DexiosItem>Item</DexiosItem>
 			</template>
-		</VigilDropdown>
+		</DexiosDropdown>
 
 		<h3>Inner HTML</h3>
-		<VigilDropdown selection>
+		<DexiosDropdown selection>
 			<span class="flex-1">Label</span>
-			<VigilLabel>
+			<DexiosLabel>
 				<span>100</span>
-			</VigilLabel>
+			</DexiosLabel>
 			<template #menu="{ close, isActive, setValue }">
-				<VigilItem>Item</VigilItem>
-				<VigilItem>Item</VigilItem>
-				<VigilItem>Item</VigilItem>
+				<DexiosItem>Item</DexiosItem>
+				<DexiosItem>Item</DexiosItem>
+				<DexiosItem>Item</DexiosItem>
 			</template>
-		</VigilDropdown>
+		</DexiosDropdown>
 
 		<h3>Button</h3>
-		<VigilDropdown button>
+		<DexiosDropdown button>
 			<span>Label</span>
 			<template #menu="{ close, isActive, setValue }">
-				<VigilItem>Item</VigilItem>
-				<VigilItem>Item</VigilItem>
-				<VigilItem>Item</VigilItem>
+				<DexiosItem>Item</DexiosItem>
+				<DexiosItem>Item</DexiosItem>
+				<DexiosItem>Item</DexiosItem>
 			</template>
-		</VigilDropdown>
+		</DexiosDropdown>
 
 		<h3>Complex</h3>
-		<VigilDropdown button>
-			<VigilIcon icon="filter" />
+		<DexiosDropdown button>
+			<DexiosIcon icon="filter" />
 			<span>Label</span>
 			<template #menu="{setValue}">
 				<div class="p-2">
-					<VigilInput placeholder="Search ..." />
+					<DexiosInput placeholder="Search ..." />
 				</div>
-				<VigilMenu plain vertical>
-					<VigilItem header icon>
-						<VigilIcon icon="tag" />
+				<DexiosMenu plain vertical>
+					<DexiosItem header icon>
+						<DexiosIcon icon="tag" />
 						<span>Filter by tag</span>
-					</VigilItem>
-					<VigilItem icon @click="setValue('important')">
-						<VigilIcon icon="circle" />
+					</DexiosItem>
+					<DexiosItem icon @click="setValue('important')">
+						<DexiosIcon icon="circle" />
 						<span>Important</span>
-					</VigilItem>
-					<VigilItem icon @click="setValue('announcement')">
-						<VigilIcon icon="circle" />
+					</DexiosItem>
+					<DexiosItem icon @click="setValue('announcement')">
+						<DexiosIcon icon="circle" />
 						<span>Announcement</span>
-					</VigilItem>
-					<VigilItem icon @click="setValue('discussion')">
-						<VigilIcon icon="circle" />
+					</DexiosItem>
+					<DexiosItem icon @click="setValue('discussion')">
+						<DexiosIcon icon="circle" />
 						<span>Discussion</span>
-					</VigilItem>
-				</VigilMenu>
-				<VigilMenu plain vertical>
-					<VigilItem header icon>
-						<VigilIcon icon="calendar" />
+					</DexiosItem>
+				</DexiosMenu>
+				<DexiosMenu plain vertical>
+					<DexiosItem header icon>
+						<DexiosIcon icon="calendar" />
 						<span>Filter by date</span>
-					</VigilItem>
-					<VigilItem icon @click="setValue('week')">
-						<VigilIcon icon="circle" />
+					</DexiosItem>
+					<DexiosItem icon @click="setValue('week')">
+						<DexiosIcon icon="circle" />
 						<span>This Week</span>
-					</VigilItem>
-					<VigilItem icon @click="setValue('month')">
-						<VigilIcon icon="circle" />
+					</DexiosItem>
+					<DexiosItem icon @click="setValue('month')">
+						<DexiosIcon icon="circle" />
 						<span>This Month</span>
-					</VigilItem>
-					<VigilItem icon @click="setValue('year')">
-						<VigilIcon icon="circle" />
+					</DexiosItem>
+					<DexiosItem icon @click="setValue('year')">
+						<DexiosIcon icon="circle" />
 						<span>This Year</span>
-					</VigilItem>
-				</VigilMenu>
+					</DexiosItem>
+				</DexiosMenu>
 			</template>
-		</VigilDropdown>
+		</DexiosDropdown>
 	</article>
 </template>

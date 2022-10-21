@@ -3,43 +3,43 @@
 		<h1>Segment</h1>
 
 		<h3>Standard</h3>
-		<VigilSegment>
+		<DexiosSegment>
 			Some text.
-		</VigilSegment>
+		</DexiosSegment>
 
 		<h3>Placeholder</h3>
-		<VigilSegment class="text-center" placeholder>
+		<DexiosSegment class="text-center" placeholder>
 			Some text.
-		</VigilSegment>
+		</DexiosSegment>
 
 		<h3>Raised</h3>
-		<VigilSegment raised>
+		<DexiosSegment raised>
 			Some text.
-		</VigilSegment>
+		</DexiosSegment>
 
 		<h3>Stacked</h3>
-		<VigilSegment stacked>
+		<DexiosSegment stacked>
 			Some text.
-		</VigilSegment>
+		</DexiosSegment>
 
 		<h3>Tall Stacked</h3>
-		<VigilSegment stacked-tall>
+		<DexiosSegment stacked-tall>
 			Some text.
-		</VigilSegment>
+		</DexiosSegment>
 
 		<h3>Circular</h3>
-		<VigilSegment class="h-40 w-40" circular>
+		<DexiosSegment class="h-40 w-40" circular>
 			Some text.
-		</VigilSegment>
+		</DexiosSegment>
 
 		<h3>Plain</h3>
-		<VigilSegment plain>
+		<DexiosSegment plain>
 			Some text.
-		</VigilSegment>
+		</DexiosSegment>
 
 		<h3>Loading</h3>
-		<VigilSegment loading>
+		<DexiosSegment loading>
 			Some text.
-		</VigilSegment>
+		</DexiosSegment>
 	</article>
 </template>

@@ -118,22 +118,22 @@
 </script>
 
 <template>
-	<label class="vigil input" :class="classes" v-bind="filteredAttrs">
+	<label class="dexios input" :class="classes" v-bind="filteredAttrs">
 		<slot name="prefix"></slot>
 		<span class="input-wrapper">
-			<VigilSpinner class="input-spinner left" v-if="$props.iconLeft && $props.loading"></VigilSpinner>
-			<VigilIcon class="input-icon left" :icon="$props.iconLeft" v-else-if="$props.iconLeft"></VigilIcon>
+			<DexiosSpinner class="input-spinner left" v-if="$props.iconLeft && $props.loading"></DexiosSpinner>
+			<DexiosIcon class="input-icon left" :icon="$props.iconLeft" v-else-if="$props.iconLeft"></DexiosIcon>
 			<input ref="$input" v-bind="inputProps" v-model="value">
-			<VigilIcon class="cursor-pointer right" icon="backspace" @click="clear" v-if="$props.clearable && value"></VigilIcon>
-			<VigilSpinner class="input-spinner right" v-if="$props.iconRight && $props.loading"></VigilSpinner>
-			<VigilIcon class="input-icon right" :icon="$props.iconRight" v-else-if="$props.iconRight"></VigilIcon>
+			<DexiosIcon class="cursor-pointer right" icon="backspace" @click="clear" v-if="$props.clearable && value"></DexiosIcon>
+			<DexiosSpinner class="input-spinner right" v-if="$props.iconRight && $props.loading"></DexiosSpinner>
+			<DexiosIcon class="input-icon right" :icon="$props.iconRight" v-else-if="$props.iconRight"></DexiosIcon>
 		</span>
 		<slot></slot>
 	</label>
 </template>
 
 <style lang="less">
-	.vigil {
+	.dexios {
 		&.input {
 			@apply divide-gray-300 inline-flex items-center ring-gray-300 transition-shadow dark:text-white;
 

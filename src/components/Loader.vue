@@ -10,15 +10,15 @@
 </script>
 
 <template>
-	<VigilDimmer class="loader" :class="{ hidden: !$props.run, running: $props.run, }">
-		<VigilSpinner>
+	<DexiosDimmer class="loader" :class="{ hidden: !$props.run, running: $props.run, }">
+		<DexiosSpinner>
 			<slot></slot>
-		</VigilSpinner>
-	</VigilDimmer>
+		</DexiosSpinner>
+	</DexiosDimmer>
 </template>
 
 <style lang="less">
-	.vigil {
+	.dexios {
 		&.loader {
 			animation-name: FadeOut;
 			animation-duration: 1s;

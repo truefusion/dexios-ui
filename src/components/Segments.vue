@@ -25,7 +25,7 @@
 
 				return h('div', {
 					class: {
-						vigil: true,
+						dexios: true,
 						buttons: true,
 						...props,
 					},
@@ -40,7 +40,7 @@
 </script>
 
 <style lang="less">
-	.vigil {
+	.dexios {
 		&.segments {
 			&:not(.plain) {
 				@apply border border-gray-300 flex rounded dark:border-gray-700;

@@ -19,13 +19,13 @@
 </script>
 
 <template>
-	<div class="vigil label" :class="$props">
+	<div class="dexios label" :class="$props">
 		<slot :close="close"></slot>
 	</div>
 </template>
 
 <style lang="less">
-	.vigil {
+	.dexios {
 		&.label {
 			@apply auto-cols-max cursor-default grid grid-flow-col overflow-hidden rounded self-center text-sm dark:text-white;
 

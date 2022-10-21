@@ -7,7 +7,7 @@
 <template>
 	<article class="calendar prose">
 		<h1>Calendar</h1>
-		<VigilCalendar class="w-112" v-model="day">
-		</VigilCalendar>
+		<DexiosCalendar class="w-112" v-model="day">
+		</DexiosCalendar>
 	</article>
 </template>

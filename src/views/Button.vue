@@ -2,193 +2,193 @@
 	<article class="button prose">
 		<section>
 			<h1>Button</h1>
-			<VigilButton>
+			<DexiosButton>
 				<span>Button</span>
-			</VigilButton>
+			</DexiosButton>
 		</section>
 
 		<section>
 			<h3>Plain</h3>
-			<VigilButton plain>
+			<DexiosButton plain>
 				<span>Button</span>
-			</VigilButton>
+			</DexiosButton>
 		</section>
 
 		<section>
 			<h3>Compact</h3>
-			<VigilButton compact>
+			<DexiosButton compact>
 				<span>Button</span>
-			</VigilButton>
+			</DexiosButton>
 		</section>
 
 		<section>
 			<h3>Emphasis</h3>
 			<div class="space-x-2">
-				<VigilButton primary>
+				<DexiosButton primary>
 					<span>Primary</span>
-				</VigilButton>
-				<VigilButton secondary>
+				</DexiosButton>
+				<DexiosButton secondary>
 					<span>Secondary</span>
-				</VigilButton>
+				</DexiosButton>
 			</div>
 		</section>
 
 		<section>
 			<h3>Content Switching</h3>
 			<div class="space-x-2">
-				<VigilButton animated>
+				<DexiosButton animated>
 					Hover over me!
 					<template #hover>Hey, there!</template>
-				</VigilButton>
-				<VigilButton animated="vertical">
+				</DexiosButton>
+				<DexiosButton animated="vertical">
 					Hover over me!
 					<template #hover>Hey, there!</template>
-				</VigilButton>
-				<VigilButton animated="fade">
+				</DexiosButton>
+				<DexiosButton animated="fade">
 					Hover over me!
 					<template #hover>Hey, there!</template>
-				</VigilButton>
+				</DexiosButton>
 			</div>
 		</section>
 
 		<section>
 			<h3>Disabled</h3>
 			<div class="space-x-2">
-				<VigilButton disabled>
+				<DexiosButton disabled>
 					<span>Button</span>
-				</VigilButton>
-				<VigilButton disabled plain>
+				</DexiosButton>
+				<DexiosButton disabled plain>
 					<span>Plain</span>
-				</VigilButton>
-				<VigilButton disabled primary>
+				</DexiosButton>
+				<DexiosButton disabled primary>
 					<span>Primary</span>
-				</VigilButton>
+				</DexiosButton>
 			</div>
 		</section>
 
 		<section>
 			<h3>Icon</h3>
 			<div class="space-x-2">
-				<VigilButton icon="email"></VigilButton>
-				<VigilButton icon="email" circular></VigilButton>
+				<DexiosButton icon="email"></DexiosButton>
+				<DexiosButton icon="email" circular></DexiosButton>
 			</div>
 		</section>
 
 		<section>
 			<h3>Labeled Icon</h3>
 			<div class="space-x-2">
-				<VigilButton icon="email" plain>
+				<DexiosButton icon="email" plain>
 					<span>Label</span>
-				</VigilButton>
-				<VigilButton icon="email">
+				</DexiosButton>
+				<DexiosButton icon="email">
 					<span>Label</span>
-				</VigilButton>
-				<VigilButton icon="content-save" primary>
+				</DexiosButton>
+				<DexiosButton icon="content-save" primary>
 					<span>Primary</span>
-				</VigilButton>
-				<VigilButton icon="delete" secondary>
+				</DexiosButton>
+				<DexiosButton icon="delete" secondary>
 					<span>Secondary</span>
-				</VigilButton>
+				</DexiosButton>
 			</div>
 		</section>
 
 		<section>
 			<h3>Button Group</h3>
 			<div class="flex flex-col items-start space-y-3">
-				<VigilButtons plain>
-					<VigilButton icon="reply">
+				<DexiosButtons plain>
+					<DexiosButton icon="reply">
 						<span>Reply</span>
-					</VigilButton>
-					<VigilButton icon="forward">
+					</DexiosButton>
+					<DexiosButton icon="forward">
 						<span>Forward</span>
-					</VigilButton>
-					<VigilButton icon="delete">
+					</DexiosButton>
+					<DexiosButton icon="delete">
 						<span>Delete</span>
-					</VigilButton>
-				</VigilButtons>
-				<VigilButtons>
-					<VigilButton icon="reply">
+					</DexiosButton>
+				</DexiosButtons>
+				<DexiosButtons>
+					<DexiosButton icon="reply">
 						<span>Reply</span>
-					</VigilButton>
-					<VigilButton icon="forward">
+					</DexiosButton>
+					<DexiosButton icon="forward">
 						<span>Forward</span>
-					</VigilButton>
-					<VigilButton icon="delete">
+					</DexiosButton>
+					<DexiosButton icon="delete">
 						<span>Delete</span>
-					</VigilButton>
-				</VigilButtons>
-				<VigilButtons primary>
-					<VigilButton icon="reply">
+					</DexiosButton>
+				</DexiosButtons>
+				<DexiosButtons primary>
+					<DexiosButton icon="reply">
 						<span>Reply</span>
-					</VigilButton>
-					<VigilButton icon="forward">
+					</DexiosButton>
+					<DexiosButton icon="forward">
 						<span>Forward</span>
-					</VigilButton>
-					<VigilButton icon="delete">
+					</DexiosButton>
+					<DexiosButton icon="delete">
 						<span>Delete</span>
-					</VigilButton>
-				</VigilButtons>
-				<VigilButtons secondary>
-					<VigilButton icon="reply">
+					</DexiosButton>
+				</DexiosButtons>
+				<DexiosButtons secondary>
+					<DexiosButton icon="reply">
 						<span>Reply</span>
-					</VigilButton>
-					<VigilButton icon="forward">
+					</DexiosButton>
+					<DexiosButton icon="forward">
 						<span>Forward</span>
-					</VigilButton>
-					<VigilButton icon="delete">
+					</DexiosButton>
+					<DexiosButton icon="delete">
 						<span>Delete</span>
-					</VigilButton>
-				</VigilButtons>
+					</DexiosButton>
+				</DexiosButtons>
 			</div>
 		</section>
 
 		<section>
 			<h3>Button Group (Vertical)</h3>
 			<div class="flex space-x-3">
-				<VigilButtons plain vertical>
-					<VigilButton icon="reply">
+				<DexiosButtons plain vertical>
+					<DexiosButton icon="reply">
 						<span>Reply</span>
-					</VigilButton>
-					<VigilButton icon="forward">
+					</DexiosButton>
+					<DexiosButton icon="forward">
 						<span>Forward</span>
-					</VigilButton>
-					<VigilButton icon="delete">
+					</DexiosButton>
+					<DexiosButton icon="delete">
 						<span>Delete</span>
-					</VigilButton>
-				</VigilButtons>
-				<VigilButtons vertical>
-					<VigilButton icon="reply">
+					</DexiosButton>
+				</DexiosButtons>
+				<DexiosButtons vertical>
+					<DexiosButton icon="reply">
 						<span>Reply</span>
-					</VigilButton>
-					<VigilButton icon="forward">
+					</DexiosButton>
+					<DexiosButton icon="forward">
 						<span>Forward</span>
-					</VigilButton>
-					<VigilButton icon="delete">
+					</DexiosButton>
+					<DexiosButton icon="delete">
 						<span>Delete</span>
-					</VigilButton>
-				</VigilButtons>
-				<VigilButtons primary vertical>
-					<VigilButton icon="reply">
+					</DexiosButton>
+				</DexiosButtons>
+				<DexiosButtons primary vertical>
+					<DexiosButton icon="reply">
 						<span>Reply</span>
-					</VigilButton>
-					<VigilButton icon="forward">
+					</DexiosButton>
+					<DexiosButton icon="forward">
 						<span>Forward</span>
-					</VigilButton>
-					<VigilButton icon="delete">
+					</DexiosButton>
+					<DexiosButton icon="delete">
 						<span>Delete</span>
-					</VigilButton>
-				</VigilButtons>
-				<VigilButtons secondary vertical>
-					<VigilButton icon="reply">
+					</DexiosButton>
+				</DexiosButtons>
+				<DexiosButtons secondary vertical>
+					<DexiosButton icon="reply">
 						<span>Reply</span>
-					</VigilButton>
-					<VigilButton icon="forward">
+					</DexiosButton>
+					<DexiosButton icon="forward">
 						<span>Forward</span>
-					</VigilButton>
-					<VigilButton icon="delete">
+					</DexiosButton>
+					<DexiosButton icon="delete">
 						<span>Delete</span>
-					</VigilButton>
-				</VigilButtons>
+					</DexiosButton>
+				</DexiosButtons>
 			</div>
 		</section>
 	</article>

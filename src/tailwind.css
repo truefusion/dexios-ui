@@ -20,6 +20,6 @@
 	}
 }
 
-.vigil {
-	@apply text-gray-800;
+.dexios {
+	@apply text-gray-800 focus:outline-none;
 }

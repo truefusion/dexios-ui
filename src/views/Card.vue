@@ -1,7 +1,7 @@
 <template>
 	<article class="card prose">
 		<h1>Card</h1>
-		<VigilCard>
+		<DexiosCard>
 			<div class="card-image">
 				<img src="https://via.placeholder.com/290">
 			</div>
@@ -19,6 +19,6 @@
 			<div class="card-extra">
 				Extra content.
 			</div>
-		</VigilCard>
+		</DexiosCard>
 	</article>
 </template>

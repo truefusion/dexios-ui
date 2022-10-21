@@ -3,47 +3,47 @@
 		<h1>Message</h1>
 
 		<h3>Standard</h3>
-		<VigilMessage>
-			<VigilHeader>Header</VigilHeader>
+		<DexiosMessage>
+			<DexiosHeader>Header</DexiosHeader>
 			<div>Message</div>
-		</VigilMessage>
+		</DexiosMessage>
 
 		<h3>Raised</h3>
-		<VigilMessage raised>
-			<VigilHeader>Header</VigilHeader>
+		<DexiosMessage raised>
+			<DexiosHeader>Header</DexiosHeader>
 			<div>Message</div>
-		</VigilMessage>
+		</DexiosMessage>
 
 		<h3>Colors</h3>
 		<section class="flex flex-col space-y-4">
-			<VigilMessage class="green">
-				<VigilHeader>Green</VigilHeader>
+			<DexiosMessage class="green">
+				<DexiosHeader>Green</DexiosHeader>
 				<div>Message</div>
-			</VigilMessage>
-			<VigilMessage class="lime">
-				<VigilHeader>Lime</VigilHeader>
+			</DexiosMessage>
+			<DexiosMessage class="lime">
+				<DexiosHeader>Lime</DexiosHeader>
 				<div>Message</div>
-			</VigilMessage>
-			<VigilMessage class="orange">
-				<VigilHeader>Orange</VigilHeader>
+			</DexiosMessage>
+			<DexiosMessage class="orange">
+				<DexiosHeader>Orange</DexiosHeader>
 				<div>Message</div>
-			</VigilMessage>
-			<VigilMessage class="pink">
-				<VigilHeader>Pink</VigilHeader>
+			</DexiosMessage>
+			<DexiosMessage class="pink">
+				<DexiosHeader>Pink</DexiosHeader>
 				<div>Message</div>
-			</VigilMessage>
-			<VigilMessage class="red">
-				<VigilHeader>Red</VigilHeader>
+			</DexiosMessage>
+			<DexiosMessage class="red">
+				<DexiosHeader>Red</DexiosHeader>
 				<div>Message</div>
-			</VigilMessage>
-			<VigilMessage class="sky">
-				<VigilHeader>Sky</VigilHeader>
+			</DexiosMessage>
+			<DexiosMessage class="sky">
+				<DexiosHeader>Sky</DexiosHeader>
 				<div>Message</div>
-			</VigilMessage>
-			<VigilMessage class="yellow">
-				<VigilHeader>Yellow</VigilHeader>
+			</DexiosMessage>
+			<DexiosMessage class="yellow">
+				<DexiosHeader>Yellow</DexiosHeader>
 				<div>Message</div>
-			</VigilMessage>
+			</DexiosMessage>
 		</section>
 	</article>
 </template>

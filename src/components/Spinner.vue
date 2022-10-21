@@ -13,7 +13,7 @@
 
 				return h('div', {
 					class: {
-						vigil: true,
+						dexios: true,
 						spinner: true,
 						...props,
 					},
@@ -24,7 +24,7 @@
 </script>
 
 <style lang="less">
-	.vigil {
+	.dexios {
 		&.spinner {
 			@apply flex-col inline-flex items-center justify-center space-y-4;
 

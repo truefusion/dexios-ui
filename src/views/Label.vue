@@ -21,81 +21,81 @@
 <template>
 	<article class="label prose">
 		<h1>Label</h1>
-		<VigilLabels>
-			<VigilLabel>
+		<DexiosLabels>
+			<DexiosLabel>
 				<span>Label</span>
-			</VigilLabel>
-			<VigilLabel secondary>
+			</DexiosLabel>
+			<DexiosLabel secondary>
 				<span>Label</span>
-			</VigilLabel>
-			<VigilLabel plain>
+			</DexiosLabel>
+			<DexiosLabel plain>
 				<span>Label</span>
-			</VigilLabel>
-		</VigilLabels>
+			</DexiosLabel>
+		</DexiosLabels>
 
 		<h3>Icon</h3>
-		<VigilLabels>
-			<VigilLabel>
+		<DexiosLabels>
+			<DexiosLabel>
 				<span>Label</span>
-			</VigilLabel>
-			<VigilLabel secondary>
+			</DexiosLabel>
+			<DexiosLabel secondary>
 				<span>Label</span>
-			</VigilLabel>
-			<VigilLabel plain>
+			</DexiosLabel>
+			<DexiosLabel plain>
 				<span>Label</span>
-			</VigilLabel>
-		</VigilLabels>
+			</DexiosLabel>
+		</DexiosLabels>
 
 		<h3>Detail</h3>
-		<VigilLabels>
-			<VigilLabel>
-				<VigilIcon class="label-icon" icon="mail"></VigilIcon>
+		<DexiosLabels>
+			<DexiosLabel>
+				<DexiosIcon class="label-icon" icon="mail"></DexiosIcon>
 				<span>Label</span>
 				<span class="label-detail">Detail</span>
-			</VigilLabel>
-			<VigilLabel secondary>
-				<VigilIcon class="label-icon" icon="mail"></VigilIcon>
+			</DexiosLabel>
+			<DexiosLabel secondary>
+				<DexiosIcon class="label-icon" icon="mail"></DexiosIcon>
 				<span>Label</span>
 				<span class="label-detail">Detail</span>
-			</VigilLabel>
-			<VigilLabel>
-				<VigilIcon icon="mail"></VigilIcon>
+			</DexiosLabel>
+			<DexiosLabel>
+				<DexiosIcon icon="mail"></DexiosIcon>
 				<span class="label-detail">Detail</span>
-			</VigilLabel>
-			<VigilLabel secondary>
-				<VigilIcon icon="mail"></VigilIcon>
+			</DexiosLabel>
+			<DexiosLabel secondary>
+				<DexiosIcon icon="mail"></DexiosIcon>
 				<span class="label-detail">Detail</span>
-			</VigilLabel>
-		</VigilLabels>
+			</DexiosLabel>
+		</DexiosLabels>
 
 		<h3>Circular</h3>
-		<VigilLabels>
-			<VigilLabel circular>
-				<VigilIcon icon="mail"></VigilIcon>
-			</VigilLabel>
-			<VigilLabel circular secondary>
-				<VigilIcon icon="mail"></VigilIcon>
-			</VigilLabel>
-			<VigilLabel circular>
-				<VigilIcon class="label-icon" icon="mail"></VigilIcon>
+		<DexiosLabels>
+			<DexiosLabel circular>
+				<DexiosIcon icon="mail"></DexiosIcon>
+			</DexiosLabel>
+			<DexiosLabel circular secondary>
+				<DexiosIcon icon="mail"></DexiosIcon>
+			</DexiosLabel>
+			<DexiosLabel circular>
+				<DexiosIcon class="label-icon" icon="mail"></DexiosIcon>
 				<span>Label</span>
 				<span class="label-detail">Detail</span>
-			</VigilLabel>
-			<VigilLabel circular secondary>
-				<VigilIcon class="label-icon" icon="mail"></VigilIcon>
+			</DexiosLabel>
+			<DexiosLabel circular secondary>
+				<DexiosIcon class="label-icon" icon="mail"></DexiosIcon>
 				<span>Label</span>
 				<span class="label-detail">Detail</span>
-			</VigilLabel>
-		</VigilLabels>
+			</DexiosLabel>
+		</DexiosLabels>
 
 		<h3>Closable</h3>
-		<VigilLabels>
-			<VigilLabel :plain="label.plain" :secondary="label.secondary" @close="doSomething(label)" v-for="label in labels">
+		<DexiosLabels>
+			<DexiosLabel :plain="label.plain" :secondary="label.secondary" @close="doSomething(label)" v-for="label in labels">
 				<template v-slot="{close}">
 					<span>{{label.label}}</span>
-					<VigilIcon class="label-close" icon="close-thick" @click="close"></VigilIcon>
+					<DexiosIcon class="label-close" icon="close-thick" @click="close"></DexiosIcon>
 				</template>
-			</VigilLabel>
-		</VigilLabels>
+			</DexiosLabel>
+		</DexiosLabels>
 	</article>
 </template>

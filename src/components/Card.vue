@@ -12,13 +12,13 @@
 </script>
 
 <template>
-	<div class="vigil card" :class="$props">
+	<div class="dexios card" :class="$props">
 		<slot></slot>
 	</div>
 </template>
 
 <style lang="less">
-	.vigil {
+.dexios {
 		&.card {
 			@apply bg-white border divide-y flex-col inline-flex min-h-0 max-w-full rounded shadow w-72 dark:bg-gray-700 dark:border-gray-800 dark:divide-gray-800 dark:text-white;
 
@@ -34,7 +34,7 @@
 				@apply px-4 py-3;
 			}
 
-			.card-header:not(.vigil) {
+			.card-header:not(.dexios) {
 				@apply font-bold text-xl;
 			}
 

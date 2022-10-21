@@ -1,15 +1,15 @@
 <template>
 	<article class="modal">
-		<VigilButton @click="$refs.modal.open()">Open Modal</VigilButton>
-		<VigilModal class="container" :animation="animation" ref="modal">
+		<DexiosButton @click="$refs.modal.open()">Open Modal</DexiosButton>
+		<DexiosModal class="container" :animation="animation" ref="modal">
 			<template v-slot="{close}">
-				<VigilHeader class="modal-header">Example Modal</VigilHeader>
+				<DexiosHeader class="modal-header">Example Modal</DexiosHeader>
 				<p class="modal-content">Example Content</p>
 				<div class="modal-actions">
-					<VigilButton @click="close">Close</VigilButton>
+					<DexiosButton @click="close">Close</DexiosButton>
 				</div>
 			</template>
-		</VigilModal>
+		</DexiosModal>
 	</article>
 </template>
 

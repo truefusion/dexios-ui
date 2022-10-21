@@ -10,7 +10,7 @@
 		setup(props) {
 			return () => h('i', {
 				class: {
-					vigil: true,
+					dexios: true,
 					icon: true,
 					dark: props.dark,
 					mdi: true,
@@ -22,7 +22,7 @@
 </script>
 
 <style lang="less">
-	.vigil {
+	.dexios {
 		&.icon {
 			@apply inline-flex items-center justify-center dark:text-white;
 		}

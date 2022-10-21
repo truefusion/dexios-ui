@@ -14,7 +14,7 @@
 
 				return h('div', {
 					class: {
-						vigil: true,
+						dexios: true,
 						divider: true,
 						closed: !children.length,
 						...props,
@@ -26,7 +26,7 @@
 </script>
 
 <style lang="less">
-	.vigil {
+	.dexios {
 		&.divider {
 			@apply flex items-center justify-center leading-none dark:text-white;
 

@@ -68,27 +68,27 @@
 </script>
 
 <template>
-    <div class="vigil calendar">
+    <div class="dexios calendar">
         <slot :days="days" :nextMonth="nextMonth" :prevMonth="prevMonth" :setActive="setActive" :title="title" :weekDayNames="weekDayNames">
             <header>
-                <VigilButton icon="chevron-left" plain @click="prevMonth"></VigilButton>
+                <DexiosButton icon="chevron-left" plain @click="prevMonth"></DexiosButton>
                 <span>{{title.month}} {{title.year}}</span>
-                <VigilButton icon="chevron-right" plain @click="nextMonth"></VigilButton>
+                <DexiosButton icon="chevron-right" plain @click="nextMonth"></DexiosButton>
             </header>
             <div class="dates week-days">
                 <span class="week-day" v-for="weekDay in weekDayNames">{{weekDay}}</span>
             </div>
             <div class="dates days">
-                <VigilItem :active="current" class="day" :class="{ current, month }" v-for="{ current, day, month } in days" @click="setActive(day)">
+                <DexiosItem :active="current" class="day" :class="{ current, month }" v-for="{ current, day, month } in days" @click="setActive(day)">
                     <span>{{format(day, 'd')}}</span>
-                </VigilItem>
+                </DexiosItem>
             </div>
         </slot>
     </div>
 </template>
 
 <style lang="less">
-    .vigil {
+    .dexios {
         &.calendar {
             header {
                 @apply flex items-center justify-between dark:text-white;

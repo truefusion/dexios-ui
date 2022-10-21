@@ -24,7 +24,7 @@
 
 				return h('div', {
 					class: {
-						vigil: true,
+						dexios: true,
 						labels: true,
 						...props,
 					},
@@ -41,7 +41,7 @@
 </script>
 
 <style lang="less">
-	.vigil {
+	.dexios {
 		&.labels {
 			@apply flex items-center space-x-2;
 		}

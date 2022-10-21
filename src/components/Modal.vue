@@ -46,7 +46,7 @@
 
 			return () => h('dialog', {
 				class: {
-					vigil: true,
+					dexios: true,
 					modal: true,
 					...props,
 				},
@@ -69,7 +69,7 @@
 </script>
 
 <style lang="less">
-	@keyframes FadeInDialog {
+@keyframes FadeInDialog {
 		from {
 			opacity: 0.5;
 		}
@@ -117,7 +117,7 @@
 		@apply fixed inset-0;
 	}
 
-	.vigil {
+	.dexios {
 		&.modal {
 			@apply border-0 divide-y fixed e('left-1/2') m-0 overflow-visible p-0 rounded shadow-lg e('top-1/2') transform e('-translate-x-1/2') e('-translate-y-1/2') dark:bg-gray-500 dark:divide-gray-600;
 			--animation-duration: 1s;

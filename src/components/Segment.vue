@@ -15,7 +15,7 @@
 
 	const classes = computed(() => {
 		var ret = {
-			vigil: true,
+			dexios: true,
 			segment: true,
 			...$props,
 		};
@@ -32,14 +32,14 @@
 </script>
 
 <template>
-	<div class="vigil segment" :class="classes">
-		<VigilLoader run v-if="$props.loading"></VigilLoader>
+	<div class="dexios segment" :class="classes">
+		<DexiosLoader run v-if="$props.loading"></DexiosLoader>
 		<slot></slot>
 	</div>
 </template>
 
 <style lang="less">
-	.vigil {
+	.dexios {
 		&.segment {
 			@apply border p-4 relative rounded dark:bg-gray-700 dark:border-gray-800 dark:text-white;
 

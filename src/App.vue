@@ -13,14 +13,14 @@
 
 <template>
 	<aside :class="{ dark }">
-		<VigilMenu secondary>
-			<VigilItem header>Vigil</VigilItem>
-			<VigilItem :key="item.href" :to="item.href" v-for="item in menu">{{item.label}}</VigilItem>
-			<VigilItem spacer></VigilItem>
-			<VigilInput plain type="checkbox" v-model="dark">
-				<VigilItem class="flex-1">Dark Mode</VigilItem>
-			</VigilInput>
-		</VigilMenu>
+		<DexiosMenu secondary>
+			<DexiosItem header>Dexios</DexiosItem>
+			<DexiosItem :key="item.href" :to="item.href" v-for="item in menu">{{item.label}}</DexiosItem>
+			<DexiosItem spacer></DexiosItem>
+			<DexiosInput plain type="checkbox" v-model="dark">
+				<DexiosItem class="flex-1">Dark Mode</DexiosItem>
+			</DexiosInput>
+		</DexiosMenu>
 	</aside>
 	<RouterView class="view" :class="{ dark }" />
 </template>

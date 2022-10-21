@@ -25,13 +25,13 @@
 </script>
 
 <template>
-	<nav class="vigil menu" :class="{...props, standard}" ref="$el">
+	<nav class="dexios menu" :class="{...props, standard}" ref="$el">
 		<slot></slot>
 	</nav>
 </template>
 
 <style lang="less">
-	.vigil {
+	.dexios {
 		&.menu {
 			@apply cursor-default flex;
 

@@ -11,7 +11,7 @@
 		setup(props, { slots }) {
 			return () => h(Segment, {
 				class: {
-					vigil: true,
+					dexios: true,
 					message: true,
 					...props,
 				},
@@ -21,7 +21,7 @@
 </script>
 
 <style lang="less">
-	.vigil {
+	.dexios {
 		&.message {
 			@apply bg-sky-50 border-blue-300 space-y-2 dark:bg-sky-900 dark:border-blue-400 dark:text-blue-100;
 

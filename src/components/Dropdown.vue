@@ -4,7 +4,7 @@
 	import { createPopper } from '@popperjs/core';
 	import flip from '@popperjs/core/lib/modifiers/flip.js';
 
-	import VigilMenu from './Menu.vue';
+	import DexiosMenu from './Menu.vue';
 
 	const $emit = defineEmits(['update:modelValue']);
 
@@ -133,20 +133,20 @@
 </script>
 
 <template>
-	<div class="vigil dropdown" :class="classes" ref="$el" tabindex="-1" @focusout="hide" @focusin="show">
+	<div class="dexios dropdown" :class="classes" ref="$el" tabindex="-1" @focusout="hide" @focusin="show">
 		<div class="dropdown-label-wrapper">
 			<slot></slot>
-			<!-- <VigilIcon icon="backspace" v-if="clearable && ActiveItem" ref="clear" /> -->
-			<VigilIcon class="dropdown-icon" :icon="open ? 'chevron-up' : 'chevron-down'" v-if="!props.button && !props.noArrow" />
+			<!-- <DexiosIcon icon="backspace" v-if="clearable && ActiveItem" ref="clear" /> -->
+			<DexiosIcon class="dropdown-icon" :icon="open ? 'chevron-up' : 'chevron-down'" v-if="!props.button && !props.noArrow" />
 		</div>
-		<VigilMenu ref="$menu" vertical>
+		<DexiosMenu ref="$menu" vertical>
 			<slot :close="close" :isActive="isActive" :setValue="setValue" name="menu"></slot>
-		</VigilMenu>
+		</DexiosMenu>
 	</div>
 </template>
 
 <style lang="less">
-	.vigil {
+	.dexios {
 		&.dropdown {
 			@apply flex-col inline-flex relative;
 
