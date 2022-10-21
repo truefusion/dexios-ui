@@ -1,8 +1,8 @@
-# Vigil
- Vigil is a Vue 3 web components library inspired by [Semantic UI](https://semantic-ui.com/).
+# Dexios
+ Dexios is a Vue 3 ui library inspired by [Semantic UI](https://semantic-ui.com/).
 
 ### Icons
- Vigil uses [Material Icons](https://materialdesignicons.com/) for icons.
+ Dexios uses [Material Icons](https://materialdesignicons.com/) for icons.
 
  Install it using:
  ```sh
