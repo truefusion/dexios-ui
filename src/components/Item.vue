@@ -9,7 +9,7 @@
 		spacer: Boolean,
 	});
 	const classes = computed(() => ({
-		active: $props.active,
+		'item-active': $props.active,
 		'item-header': $props.header,
 		'item-link': $attrs.href,
 		'item-icon': $props.icon,

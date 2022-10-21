@@ -21,6 +21,56 @@
 			<DexiosItem href="#">Item</DexiosItem>
 		</DexiosMenu>
 
+		<h3>Components</h3>
+		<DexiosMenu>
+			<DexiosHeader>Header</DexiosHeader>
+			<DexiosInput icon-left="filter" placeholder="Filter"></DexiosInput>
+			<DexiosDropdown>
+				<span>Dropdown</span>
+				<template #menu="{close}">
+					<DexiosItem>Item</DexiosItem>
+					<DexiosItem>Item</DexiosItem>
+					<DexiosItem>Item</DexiosItem>
+				</template>
+			</DexiosDropdown>
+			<DexiosDropdown selection>
+				<span>Selection</span>
+				<template #menu="{close}">
+					<DexiosItem>Item</DexiosItem>
+					<DexiosItem>Item</DexiosItem>
+					<DexiosItem>Item</DexiosItem>
+				</template>
+			</DexiosDropdown>
+			<DexiosButton>Button</DexiosButton>
+			<DexiosButton disabled>Disabled</DexiosButton>
+			<DexiosButton icon="emoticon"></DexiosButton>
+			<DexiosItem href="#">Link</DexiosItem>
+		</DexiosMenu>
+		<DexiosMenu flat>
+			<DexiosHeader>Header</DexiosHeader>
+			<DexiosInput icon-left="filter" placeholder="Filter"></DexiosInput>
+			<DexiosDropdown>
+				<span>Dropdown</span>
+				<template #menu="{close}">
+					<DexiosItem>Item</DexiosItem>
+					<DexiosItem>Item</DexiosItem>
+					<DexiosItem>Item</DexiosItem>
+				</template>
+			</DexiosDropdown>
+			<DexiosDropdown selection>
+				<span>Selection</span>
+				<template #menu="{close}">
+					<DexiosItem>Item</DexiosItem>
+					<DexiosItem>Item</DexiosItem>
+					<DexiosItem>Item</DexiosItem>
+				</template>
+			</DexiosDropdown>
+			<DexiosButton>Button</DexiosButton>
+			<DexiosButton disabled>Disabled</DexiosButton>
+			<DexiosButton icon="emoticon"></DexiosButton>
+			<DexiosItem href="#">Link</DexiosItem>
+		</DexiosMenu>
+
 		<h3>Tabs</h3>
 		<DexiosMenu tabular>
 			<DexiosItem active href="#">Item</DexiosItem>
@@ -111,55 +161,5 @@
 				<DexiosItem href="#">Item</DexiosItem>
 			</DexiosMenu>
 		</div>
-
-		<h3>Components</h3>
-		<DexiosMenu>
-			<DexiosHeader>Header</DexiosHeader>
-			<DexiosInput icon-left="filter" placeholder="Filter"></DexiosInput>
-			<DexiosDropdown>
-				<span>Dropdown</span>
-				<template #menu="{close}">
-					<DexiosItem>Item</DexiosItem>
-					<DexiosItem>Item</DexiosItem>
-					<DexiosItem>Item</DexiosItem>
-				</template>
-			</DexiosDropdown>
-			<DexiosDropdown selection>
-				<span>Selection</span>
-				<template #menu="{close}">
-					<DexiosItem>Item</DexiosItem>
-					<DexiosItem>Item</DexiosItem>
-					<DexiosItem>Item</DexiosItem>
-				</template>
-			</DexiosDropdown>
-			<DexiosButton>Button</DexiosButton>
-			<DexiosButton disabled>Disabled</DexiosButton>
-			<DexiosButton icon="emoticon"></DexiosButton>
-			<DexiosItem href="#">Link</DexiosItem>
-		</DexiosMenu>
-		<DexiosMenu flat>
-			<DexiosHeader>Header</DexiosHeader>
-			<DexiosInput icon-left="filter" placeholder="Filter"></DexiosInput>
-			<DexiosDropdown>
-				<span>Dropdown</span>
-				<template #menu="{close}">
-					<DexiosItem>Item</DexiosItem>
-					<DexiosItem>Item</DexiosItem>
-					<DexiosItem>Item</DexiosItem>
-				</template>
-			</DexiosDropdown>
-			<DexiosDropdown selection>
-				<span>Selection</span>
-				<template #menu="{close}">
-					<DexiosItem>Item</DexiosItem>
-					<DexiosItem>Item</DexiosItem>
-					<DexiosItem>Item</DexiosItem>
-				</template>
-			</DexiosDropdown>
-			<DexiosButton>Button</DexiosButton>
-			<DexiosButton disabled>Disabled</DexiosButton>
-			<DexiosButton icon="emoticon"></DexiosButton>
-			<DexiosItem href="#">Link</DexiosItem>
-		</DexiosMenu>
 	</article>
 </template>

@@ -31,7 +31,7 @@
 </template>
 
 <style lang="less">
-	.dexios {
+.dexios {
 		&.menu {
 			@apply cursor-default flex;
 
@@ -76,11 +76,11 @@
 			}
 
 			&.standard, &.flat {
-				> .active, > .link {
+				> .item-active, > .item-link {
 					@apply hover:bg-gray-100 dark:hover:bg-gray-800;
 				}
 
-				> .active {
+				> .item-active {
 					@apply bg-gray-100 dark:bg-gray-800;
 				}
 			}
@@ -94,11 +94,11 @@
 					@apply space-y-2;
 				}
 
-				> .active {
+				> .item-active {
 					@apply bg-gray-100 dark:bg-gray-700;
 				}
 
-				> .link {
+				> .item-link {
 					@apply rounded-md;
 				}
 			}
@@ -106,11 +106,11 @@
 			&.secondary {
 				@apply border-b-2 dark:border-gray-600;
 
-				> .link {
+				> .item-link {
 					@apply border-b-2 dark:border-gray-600;
 					margin-bottom: -2px;
 
-					&.active {
+					&.item-active {
 						@apply border-gray-700 dark:border-gray-300;
 					}
 				}
@@ -123,7 +123,7 @@
 					@apply -mb-px;
 				}
 
-				> .active {
+				> .item-active {
 					@apply bg-white border border-b-0 border-gray-300 rounded-t dark:bg-gray-700 dark:border-gray-600;
 				}
 			}
