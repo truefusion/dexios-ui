@@ -1,10 +1,10 @@
 {
-    "name": "vigil",
+    "name": "dexios-ui",
     "version": "0.9.0",
     "license": "See license in LICENSE",
     "repository": {
         "type": "git",
-        "url": "https://github.com/truefusion/vigil.git"
+        "url": "https://github.com/truefusion/dexios-ui.git"
     },
     "files": [
         "dist/*",
@@ -34,5 +34,5 @@
         "tailwindcss": "^3.0.23",
         "vite": "^2.9.1"
     },
-    "main": "dist/vigil.umd.js"
+    "main": "dist/dexios.umd.js"
 }
