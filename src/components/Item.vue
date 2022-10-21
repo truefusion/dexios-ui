@@ -1,73 +1,42 @@
-<script>
-	import { computed, h, unref } from 'vue';
-	import { RouterLink, useLink } from 'vue-router';
-	import Base from './../lib/Base.js';
+<script setup>
+	import { computed, h, unref, useAttrs } from 'vue';
 
-	RouterLink.props.to.required = false;
-
-	export default {
-		extends: Base,
-		props: {
-			active: Boolean,
-			header: Boolean,
-			icon: Boolean,
-			spacer: Boolean,
-			...RouterLink.props,
-		},
-		setup(props, { attrs, slots }) {
-			return () => {
-				var { active, to } = props;
-				var { href, isActive, isExactActive: exact, navigate: onClick } = to ? useLink(props) : {};
-				const link = computed(() => {
-					var {href, onClick} = attrs;
-					if (onClick || href || props.to) {
-						return true;
-					}
-					return false;
-				});
-				const classes = computed(() => {
-					var { active, ariaCurrentValue, to, ...other } = props;
-					return {
-						dexios: true,
-						item: true,
-						active: active || unref(isActive) || unref(exact),
-						link: Boolean(unref(link)),
-						...other,
-					};
-				});
-				const tag = computed(() => {
-					if (unref(link)) {
-						return 'a';
-					}
-					return 'div';
-				});
-
-				href = unref(href);
-
-				return h(unref(tag), {
-					class: unref(classes),
-					href,
-					onClick,
-				}, slots.default?.());
-			};
-		},
-	}
+	const $attrs = useAttrs();
+	const $props = defineProps({
+		active: Boolean,
+		header: Boolean,
+		icon: Boolean,
+		spacer: Boolean,
+	});
+	const classes = computed(() => ({
+		active: $props.active,
+		'item-header': $props.header,
+		'item-link': $attrs.href,
+		'item-icon': $props.icon,
+		'item-spacer': $props.spacer,
+	}));
 </script>
+
+<template>
+	<a class="dexios item" :class="classes">
+		<slot></slot>
+	</a>
+</template>
 
 <style lang="less">
 	.dexios {
 		&.item {
-			@apply transition-colors dark:text-white;
+			@apply no-underline transition-colors dark:text-white;
 
-			&.header {
+			&.item-header {
 				@apply font-bold;
 			}
 
-			&.icon {
+			&.item-icon {
 				@apply flex space-x-2;
 			}
 
-			&.link {
+			&.item-link {
 				@apply cursor-pointer no-underline text-opacity-70;
 
 				> * {
@@ -82,7 +51,7 @@
 					}
 				}
 
-				&.active {
+				&.item-active {
 					@apply pointer-events-none;
 				}
 			}

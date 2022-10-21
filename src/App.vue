@@ -15,7 +15,11 @@
 	<aside :class="{ dark }">
 		<DexiosMenu secondary>
 			<DexiosItem header>Dexios</DexiosItem>
-			<DexiosItem :key="item.href" :to="item.href" v-for="item in menu">{{item.label}}</DexiosItem>
+			<RouterLink custom :key="item.href" :to="item.href" v-for="item in menu" v-slot="{ isActive, href, navigate }">
+				<DexiosItem :active="isActive" :href="href" @click="navigate">
+					{{item.label}}
+				</DexiosItem>
+			</RouterLink>
 			<DexiosItem spacer></DexiosItem>
 			<DexiosInput plain type="checkbox" v-model="dark">
 				<DexiosItem class="flex-1">Dark Mode</DexiosItem>

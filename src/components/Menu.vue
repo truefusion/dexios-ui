@@ -42,7 +42,7 @@
 			> .item {
 				@apply px-4 py-2;
 
-				&.spacer {
+				&.item-spacer {
 					@apply flex-1;
 				}
 			}
