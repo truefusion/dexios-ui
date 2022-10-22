@@ -11,7 +11,7 @@
 	const classes = computed(() => ({
 		'item-active': $props.active,
 		'item-header': $props.header,
-		'item-link': $attrs.href,
+		'item-link': $attrs.href || $attrs.onClick,
 		'item-icon': $props.icon,
 		'item-spacer': $props.spacer,
 	}));
