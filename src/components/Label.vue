@@ -1,39 +1,39 @@
 <script>
+	import { h } from 'vue';
 	import Base from './../lib/Base.js';
 
 	export default {
 		extends: Base,
 		name: 'Label',
-		emits: ['close'],
-		props: {
-			circular: Boolean,
-			plain: Boolean,
-			secondary: Boolean,
-		},
-		methods: {
-			close() {
-				this.$emit('close');
-			},
-		},
+		setup(props, { emit, expose, slots }) {
+			var children = slots.default ? slots.default() : [];
+			const details = children.filter(({ props }) => {
+				return props && props.class && props.class.includes('label-detail');
+			});
+			const label = children.filter((child) => {
+				return !details.includes(child);
+			});
+
+			return () => h('div', {
+				'class': 'dexios label',
+			}, [
+				h('div', {}, label),
+				...details,
+			]);
+		}
 	}
 </script>
-
-<template>
-	<div class="dexios label" :class="$props">
-		<slot :close="close"></slot>
-	</div>
-</template>
 
 <style lang="less">
 	.dexios {
 		&.label {
-			@apply auto-cols-max cursor-default grid grid-flow-col overflow-hidden rounded self-center text-sm dark:text-white;
+			@apply auto-cols-auto cursor-default grid grid-flow-col overflow-hidden rounded text-sm dark:text-white;
 
 			&:not(.plain):not(.secondary) {
 				@apply bg-gray-100 dark:bg-gray-800;
 
 				.label-detail {
-					@apply bg-black bg-opacity-5 dark:bg-gray-200 dark:bg-opacity-10;
+					@apply bg-gray-200 dark:bg-gray-700;
 				}
 			}
 
@@ -42,27 +42,19 @@
 			}
 
 			&.secondary {
-				@apply border border-gray-300 dark:border-gray-600;
+				@apply border border-gray-300 divide-x dark:border-gray-600;
 
 				.label-detail {
-					@apply border-l border-gray-300 dark:border-gray-600;
+					@apply border-gray-300 dark:border-gray-600;
 				}
 			}
 
 			> * {
-				@apply px-2 py-1;
-			}
-
-			.label-detail {
-				@apply flex-1;
+				@apply flex items-center justify-center px-2 py-1 space-x-2;
 			}
 
 			.label-close {
-				@apply cursor-pointer pl-0;
-			}
-
-			.label-icon {
-				@apply pr-0;
+				@apply cursor-pointer;
 			}
 		}
 	}

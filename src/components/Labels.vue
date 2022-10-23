@@ -1,39 +1,22 @@
 <script>
-	import { h } from 'vue';
+	import { h, isVNode } from 'vue';
 	import Base from './../lib/Base.js';
+	import Label from './Label.vue';
 	import pullChildren from './../lib/pullChildren.js';
 
 	export default {
 		extends: Base,
-		props: {
-			circular: Boolean,
-			plain: Boolean,
-			secondary: Boolean,
-		},
 		setup(props, { slots }) {
 			return () => {
-				var children = slots.default?.() ?? [];
-				children = pullChildren(children, function (type) {
-					if (type?.name == 'Label') {
+				const children = slots.default ? slots.default() : [];
+
+				return h('div', {
+					class: 'dexios labels',
+				}, pullChildren(children, (child) => {
+					if (child  === Label) {
 						return true;
 					}
 					return false;
-				});
-
-				var childProps = {...props};
-
-				return h('div', {
-					class: {
-						dexios: true,
-						labels: true,
-						...props,
-					},
-				}, children.map((child) => {
-					var {props} = child;
-					return h(child, {
-						...childProps,
-						...props,
-					});
 				}));
 			};
 		},

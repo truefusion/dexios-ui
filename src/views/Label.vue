@@ -25,10 +25,10 @@
 			<DexiosLabel>
 				<span>Label</span>
 			</DexiosLabel>
-			<DexiosLabel secondary>
+			<DexiosLabel class="secondary">
 				<span>Label</span>
 			</DexiosLabel>
-			<DexiosLabel plain>
+			<DexiosLabel class="plain">
 				<span>Label</span>
 			</DexiosLabel>
 		</DexiosLabels>
@@ -38,10 +38,10 @@
 			<DexiosLabel>
 				<span>Label</span>
 			</DexiosLabel>
-			<DexiosLabel secondary>
+			<DexiosLabel class="secondary">
 				<span>Label</span>
 			</DexiosLabel>
-			<DexiosLabel plain>
+			<DexiosLabel class="secondary">
 				<span>Label</span>
 			</DexiosLabel>
 		</DexiosLabels>
@@ -53,7 +53,7 @@
 				<span>Label</span>
 				<span class="label-detail">Detail</span>
 			</DexiosLabel>
-			<DexiosLabel secondary>
+			<DexiosLabel class="secondary">
 				<DexiosIcon class="label-icon" icon="mail"></DexiosIcon>
 				<span>Label</span>
 				<span class="label-detail">Detail</span>
@@ -62,7 +62,7 @@
 				<DexiosIcon icon="mail"></DexiosIcon>
 				<span class="label-detail">Detail</span>
 			</DexiosLabel>
-			<DexiosLabel secondary>
+			<DexiosLabel class="secondary">
 				<DexiosIcon icon="mail"></DexiosIcon>
 				<span class="label-detail">Detail</span>
 			</DexiosLabel>
@@ -70,18 +70,18 @@
 
 		<h3>Circular</h3>
 		<DexiosLabels>
-			<DexiosLabel circular>
+			<DexiosLabel class="circular">
 				<DexiosIcon icon="mail"></DexiosIcon>
 			</DexiosLabel>
-			<DexiosLabel circular secondary>
+			<DexiosLabel class="circular secondary">
 				<DexiosIcon icon="mail"></DexiosIcon>
 			</DexiosLabel>
-			<DexiosLabel circular>
+			<DexiosLabel class="circular">
 				<DexiosIcon class="label-icon" icon="mail"></DexiosIcon>
 				<span>Label</span>
 				<span class="label-detail">Detail</span>
 			</DexiosLabel>
-			<DexiosLabel circular secondary>
+			<DexiosLabel class="circular secondary">
 				<DexiosIcon class="label-icon" icon="mail"></DexiosIcon>
 				<span>Label</span>
 				<span class="label-detail">Detail</span>
@@ -90,11 +90,9 @@
 
 		<h3>Closable</h3>
 		<DexiosLabels>
-			<DexiosLabel :plain="label.plain" :secondary="label.secondary" @close="doSomething(label)" v-for="label in labels">
-				<template v-slot="{close}">
-					<span>{{label.label}}</span>
-					<DexiosIcon class="label-close" icon="close-thick" @click="close"></DexiosIcon>
-				</template>
+			<DexiosLabel :class="{ plain: label.plain, secondary: label.secondary }" v-for="label in labels">
+				<span>{{label.label}}</span>
+				<DexiosIcon class="label-close" icon="close-thick" @click="doSomething(label)"></DexiosIcon>
 			</DexiosLabel>
 		</DexiosLabels>
 	</article>
