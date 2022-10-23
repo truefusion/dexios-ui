@@ -9,14 +9,14 @@
 
 		<section>
 			<h3>Plain</h3>
-			<DexiosButton plain>
+			<DexiosButton class="plain">
 				<span>Button</span>
 			</DexiosButton>
 		</section>
 
 		<section>
 			<h3>Compact</h3>
-			<DexiosButton compact>
+			<DexiosButton class="compact">
 				<span>Button</span>
 			</DexiosButton>
 		</section>
@@ -24,10 +24,10 @@
 		<section>
 			<h3>Emphasis</h3>
 			<div class="space-x-2">
-				<DexiosButton primary>
+				<DexiosButton class="primary">
 					<span>Primary</span>
 				</DexiosButton>
-				<DexiosButton secondary>
+				<DexiosButton class="secondary">
 					<span>Secondary</span>
 				</DexiosButton>
 			</div>
@@ -57,10 +57,10 @@
 				<DexiosButton disabled>
 					<span>Button</span>
 				</DexiosButton>
-				<DexiosButton disabled plain>
+				<DexiosButton class="plain" disabled>
 					<span>Plain</span>
 				</DexiosButton>
-				<DexiosButton disabled primary>
+				<DexiosButton class="primary" disabled>
 					<span>Primary</span>
 				</DexiosButton>
 			</div>
@@ -69,24 +69,24 @@
 		<section>
 			<h3>Icon</h3>
 			<div class="space-x-2">
-				<DexiosButton icon="email"></DexiosButton>
-				<DexiosButton icon="email" circular></DexiosButton>
+				<DexiosButton class="icon" icon="email"></DexiosButton>
+				<DexiosButton class="icon" icon="email" circular></DexiosButton>
 			</div>
 		</section>
 
 		<section>
 			<h3>Labeled Icon</h3>
 			<div class="space-x-2">
-				<DexiosButton icon="email" plain>
+				<DexiosButton class="plain" icon="email">
 					<span>Label</span>
 				</DexiosButton>
 				<DexiosButton icon="email">
 					<span>Label</span>
 				</DexiosButton>
-				<DexiosButton icon="content-save" primary>
+				<DexiosButton class="primary" icon="content-save">
 					<span>Primary</span>
 				</DexiosButton>
-				<DexiosButton icon="delete" secondary>
+				<DexiosButton class="secondary" icon="delete">
 					<span>Secondary</span>
 				</DexiosButton>
 			</div>
@@ -95,7 +95,7 @@
 		<section>
 			<h3>Button Group</h3>
 			<div class="flex flex-col items-start space-y-3">
-				<DexiosButtons plain>
+				<DexiosButtons class="plain">
 					<DexiosButton icon="reply">
 						<span>Reply</span>
 					</DexiosButton>
@@ -117,7 +117,7 @@
 						<span>Delete</span>
 					</DexiosButton>
 				</DexiosButtons>
-				<DexiosButtons primary>
+				<DexiosButtons class="primary">
 					<DexiosButton icon="reply">
 						<span>Reply</span>
 					</DexiosButton>
@@ -128,7 +128,7 @@
 						<span>Delete</span>
 					</DexiosButton>
 				</DexiosButtons>
-				<DexiosButtons secondary>
+				<DexiosButtons class="secondary">
 					<DexiosButton icon="reply">
 						<span>Reply</span>
 					</DexiosButton>
@@ -145,7 +145,7 @@
 		<section>
 			<h3>Button Group (Vertical)</h3>
 			<div class="flex space-x-3">
-				<DexiosButtons plain vertical>
+				<DexiosButtons class="plain vertical">
 					<DexiosButton icon="reply">
 						<span>Reply</span>
 					</DexiosButton>
@@ -156,7 +156,7 @@
 						<span>Delete</span>
 					</DexiosButton>
 				</DexiosButtons>
-				<DexiosButtons vertical>
+				<DexiosButtons class="vertical">
 					<DexiosButton icon="reply">
 						<span>Reply</span>
 					</DexiosButton>
@@ -167,7 +167,7 @@
 						<span>Delete</span>
 					</DexiosButton>
 				</DexiosButtons>
-				<DexiosButtons primary vertical>
+				<DexiosButtons class="primary vertical">
 					<DexiosButton icon="reply">
 						<span>Reply</span>
 					</DexiosButton>
@@ -178,7 +178,7 @@
 						<span>Delete</span>
 					</DexiosButton>
 				</DexiosButtons>
-				<DexiosButtons secondary vertical>
+				<DexiosButtons class="secondary vertical">
 					<DexiosButton icon="reply">
 						<span>Reply</span>
 					</DexiosButton>

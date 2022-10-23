@@ -3,17 +3,17 @@ import {
 	createWebHistory
 } from 'vue-router';
 
-import Button from '../views/Button.vue';
-import Calendar from '../views/Calendar.vue';
-import Card from '../views/Card.vue';
-import Divider from '../views/Divider.vue';
-import Dropdown from '../views/Dropdown.vue';
-import Input from '../views/Input.vue';
-import Label from '../views/Label.vue';
-import Menu from '../views/Menu.vue';
-import Message from '../views/Message.vue';
-import Modal from '../views/Modal.vue';
-import Segment from '../views/Segment.vue';
+import Button from '../examples/Button.vue';
+import Calendar from '../examples/Calendar.vue';
+import Card from '../examples/Card.vue';
+import Divider from '../examples/Divider.vue';
+import Dropdown from '../examples/Dropdown.vue';
+import Input from '../examples/Input.vue';
+import Label from '../examples/Label.vue';
+import Menu from '../examples/Menu.vue';
+import Message from '../examples/Message.vue';
+import Modal from '../examples/Modal.vue';
+import Segment from '../examples/Segment.vue';
 
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
