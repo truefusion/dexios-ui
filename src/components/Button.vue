@@ -2,27 +2,7 @@
 	import { computed, unref, useSlots } from 'vue';
 
 	const $props = defineProps({
-		circular: Boolean,
-		compact: Boolean,
-		disabled: Boolean,
 		icon: String,
-		plain: Boolean,
-		primary: Boolean,
-		secondary: Boolean,
-	});
-	const $slots = useSlots();
-
-	const hasLabel = computed(() => {
-		return Boolean($slots.default);
-	});
-	const iconOnly = computed(() => {
-		return $props.icon && !unref(hasLabel);
-	});
-	const classes = computed(() => {
-		return  {
-			...$props,
-			icon: unref(iconOnly),
-		};
 	});
 </script>
 
@@ -36,7 +16,7 @@
 </script>
 
 <template>
-	<button class="dexios button" :class="classes" :disabled="disabled" type="button">
+	<button class="dexios button" type="button">
 		<div class="button-label">
 			<DexiosIcon class="button-icon" :icon="icon" v-if="icon" />
 			<slot></slot>

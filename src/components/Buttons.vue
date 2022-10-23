@@ -2,39 +2,35 @@
 	import { h } from 'vue';
 	import Base from './../lib/Base.js';
 	import pullChildren from './../lib/pullChildren.js';
+	import Button from './Button.vue';
 
 	export default {
 		extends: Base,
-		props: {
-			compact: Boolean,
-			plain: Boolean,
-			primary: Boolean,
-			secondary: Boolean,
-			vertical: Boolean,
-		},
-		setup(props, { slots }) {
+		setup(props, { attrs, slots }) {
 			return () => {
-				var children = slots.default?.() ?? [];
-				children = pullChildren(children, function (type) {
-					if (type?.name == 'Button') {
+				var children = slots.default ? slots.default() : [];
+				children = pullChildren(children, function (child) {
+					if (child === Button) {
 						return true;
 					}
 					return false;
 				});
 
-				var childProps = {...props};
-				delete childProps['vertical'];
+				var cls = [];
+				if (typeof attrs.class == 'string') {
+					cls = attrs.class.split(' ');
+					cls = cls.filter((item) => {
+						return !['vertical'].includes(item);
+					});
+				}
+				var childProps = {
+					'class': cls,
+				};
 
 				return h('div', {
-					class: {
-						dexios: true,
-						buttons: true,
-						...props,
-					},
+					class: 'dexios buttons',
 				}, children.map((child) => {
-					return h(child, {
-						...childProps,
-					});
+					return h(child, childProps);
 				}));
 			};
 		},
