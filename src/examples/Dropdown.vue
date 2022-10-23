@@ -19,7 +19,7 @@
 		</DexiosDropdown>
 
 		<h3>Selection</h3>
-		<DexiosDropdown selection>
+		<DexiosDropdown class="selection">
 			<span>Label</span>
 			<template #menu="{ close, isActive, setValue }">
 				<DexiosItem>Item</DexiosItem>
@@ -29,7 +29,7 @@
 		</DexiosDropdown>
 
 		<h3>Inner HTML</h3>
-		<DexiosDropdown selection>
+		<DexiosDropdown class="selection">
 			<span class="flex-1">Label</span>
 			<DexiosLabel>
 				<span>100</span>
@@ -42,7 +42,7 @@
 		</DexiosDropdown>
 
 		<h3>Button</h3>
-		<DexiosDropdown button>
+		<DexiosDropdown class="button">
 			<span>Label</span>
 			<template #menu="{ close, isActive, setValue }">
 				<DexiosItem>Item</DexiosItem>
@@ -52,7 +52,7 @@
 		</DexiosDropdown>
 
 		<h3>Complex</h3>
-		<DexiosDropdown button>
+		<DexiosDropdown class="button">
 			<DexiosIcon icon="filter" />
 			<span>Label</span>
 			<template #menu="{setValue}">

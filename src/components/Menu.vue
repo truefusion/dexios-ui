@@ -62,9 +62,9 @@
 					@apply border-0 border-gray-200 !rounded-none;
 				}
 
-				.dropdown:not(.open) {
+				> .dropdown:not(.open) {
 					&.selection {
-						.dropdown-label-wrapper {
+						.dropdown-label {
 							@apply border-transparent;
 						}
 					}

@@ -1,227 +1,161 @@
 <script setup>
-	import { computed, onBeforeUnmount, onMounted, ref, unref, watch } from 'vue';
+	import { computed, mergeProps, reactive, ref, unref } from 'vue';
+	import { autoPlacement, computePosition } from '@floating-ui/dom';
 	import Base from './../lib/Base.js';
-	import { createPopper } from '@popperjs/core';
-	import flip from '@popperjs/core/lib/modifiers/flip.js';
-
 	import DexiosMenu from './Menu.vue';
 
 	const $emit = defineEmits(['update:modelValue']);
 
 	const $el = ref(null);
+	const $label = ref(null);
 	const $menu = ref(null);
-	const open = ref(false);
-	const popper = ref(null);
-
-	const props = defineProps({
-		...Base.props,
-		button: Boolean,
-		clearable: Boolean,
-		modelValue: null,
+	const props = defineProps(mergeProps({
 		noArrow: Boolean,
-		placement: {
-			type: String,
-			default: 'bottom-start',
-		},
-		selection: Boolean,
-		strategy: {
-			type: String,
-			default: 'absolute',
-		},
+	}, Base.props));
+	const classes = reactive({
+		open: false,
+		'placement-bottom': true,
+		'placement-top': false,
 	});
-
-	const modifiers = computed(() => {
-		var offset = {
-			name: 'offset',
-			enabled: true,
-			options: {
-				offset: props.selection ? [0,-1] : [0,5],
-			},
-		};
-
-		var events = {
-			name: 'eventListeners',
-			enabled: false,
-		};
-
-		return [
-			events,
-			flip,
-			offset,
-		];
-	});
-	const options = computed(() => {
-		var {
-			selection,
-			strategy,
-		} = props;
-		return {
-			modifiers: unref(modifiers),
-			placement: selection ? 'bottom' : props.placement,
-			strategy,
-		};
-	});
-	const value = computed({
-		get() {
-			return props.modelValue;
-		},
-		set(value) {
-			$emit('update:modelValue', value);
-		},
-	});
-
-	const classes = computed(() => {
-		var {
-			button,
-			selection,
-		} = props;
-
-		var {state} = unref(popper) || {};
-		var {placement} = state || {};
-
-		return {
-			button,
-			open: unref(open),
-			'placement-bottom': placement?.includes('bottom'),
-			'placement-top': placement?.includes('top'),
-			selection,
-		};
+	const middleware = [
+		autoPlacement({
+			alignment: 'start',
+			allowedPlacements: ['top', 'bottom'],
+			autoAlignment: false,
+		}),
+	];
+	const pos = reactive({
+		left: '0px',
+		top: '0px',
 	});
 
 	function close() {
-		hide(true);
+		hide();
 	}
-	function hide(force) {
-		if ((typeof force == 'boolean' && force) || !unref($el).matches(':focus-within')) {
-			open.value = false;
-			unref($el)?.blur();
-
-			popper.value?.setOptions((options) => ({
-				...options,
-				modifiers: [
-					...options.modifiers,
-					{ name: 'eventListeners', enabled: true },
-				],
-			}));
-			popper.value?.update();
-		}
-	}
-	function isActive(v) {
-		return v === unref(value);
-	}
-	function setValue(v, autoclose = true) {
-		value.value = v;
-		autoclose && close();
+	function hide() {
+		classes.open = false;
+		unref($el)?.blur();
 	}
 	function show() {
-		open.value = true;
-		popper.value?.setOptions((options) => ({
-			...options,
-			modifiers: [
-				...options.modifiers,
-				{ name: 'eventListeners', enabled: false },
-			],
-		}));
-	}
+		classes.open = true;
+		var label = unref($label);
+		var menu = unref($menu);
 
-	onMounted(() => {
-		popper.value = createPopper(unref($el), unref($menu).$el, unref(options));
-	});
-	onBeforeUnmount(() => {
-		popper.value?.destroy();
-	});
+		if (label.hasOwnProperty('$el')) {
+			label = label.$el;
+		}
+		if (menu.hasOwnProperty('$el')) {
+			menu = menu.$el;
+		}
+
+		computePosition(label, menu, {
+			middleware,
+			placement: 'bottom-start',
+			strategy: 'fixed',
+		}).then(({x,y,placement,strategy}) => {
+			classes['placement-bottom'] = placement.includes('bottom');
+			classes['placement-top'] = placement.includes('top');
+			pos.left = `${x}px`;
+			pos.top = `${y}px`;
+		}).catch((err) => {
+			console.warn(err);
+		});
+	}
 </script>
 
 <template>
 	<div class="dexios dropdown" :class="classes" ref="$el" tabindex="-1" @focusout="hide" @focusin="show">
-		<div class="dropdown-label-wrapper">
+		<div class="dropdown-label" ref="$label">
 			<slot></slot>
-			<!-- <DexiosIcon icon="backspace" v-if="clearable && ActiveItem" ref="clear" /> -->
-			<DexiosIcon class="dropdown-icon" :icon="open ? 'chevron-up' : 'chevron-down'" v-if="!props.button && !props.noArrow" />
+			<DexiosIcon class="dropdown-icon" :icon="classes.open ? 'chevron-up' : 'chevron-down'" v-if="!props.noArrow" />
 		</div>
-		<DexiosMenu ref="$menu" vertical>
-			<slot :close="close" :isActive="isActive" :setValue="setValue" name="menu"></slot>
+		<DexiosMenu class="dropdown-menu" ref="$menu" :style="pos" vertical>
+			<slot :close="close" name="menu"></slot>
 		</DexiosMenu>
 	</div>
 </template>
 
 <style lang="less">
-	.dexios {
+.dexios {
 		&.dropdown {
-			@apply flex-col inline-flex relative;
+			@apply flex-col inline-flex items-start justify-start relative;
 
-			.dropdown-label-wrapper {
-				@apply flex items-center space-x-2 text-gray-800 transition-colors dark:text-white;
+			.dropdown-label {
+				@apply flex flex-1 items-center px-4 e('py-1.5') space-x-2 text-gray-800 transition-colors dark:text-white;
 			}
 
-			.menu {
-				@apply border-gray-300 transition-opacity visible z-1;
-			}
-
-			.dropdown-label-wrapper {
-				@apply px-4 e('py-1.5');
+			.dropdown-menu {
+				@apply absolute border-gray-300 z-1;
 			}
 
 			&:not(.open) {
 				@apply cursor-pointer;
 
 				&:hover {
-					.icon, .dropdown-label-wrapper {
+					.icon, .dropdown-label {
 						@apply text-opacity-100 dark:text-opacity-100;
 					}
 				}
 
-				.icon, .dropdown-label-wrapper {
+				.icon, .dropdown-label {
 					@apply text-gray-800 text-opacity-70 transition-colors dark:text-opacity-70 dark:text-white;
 				}
 
-				.menu {
-					@apply invisible opacity-10 pointer-events-none;
+				.dropdown-menu {
+					@apply hidden;
+				}
+			}
+
+			&.button {
+				@apply overflow-visible;
+
+				.dropdown-menu {
+					@apply my-2;
 				}
 			}
 
 			&.button, &.selection {
-				@apply overflow-visible p-0;
+				@apply p-0;
 
-				.dropdown-label-wrapper {
+				.dropdown-label {
 					@apply rounded dark:bg-gray-700 dark:border-gray-800;
 				}
 			}
 
 			&.selection {
-				@apply min-w-max hover:shadow;
+				@apply min-w-max rounded hover:shadow;
 
-				.dropdown-label-wrapper {
+				.dropdown-label {
 					@apply border border-gray-300;
 				}
 
-				.menu {
-					@apply border-sky-500 overflow-y-auto w-full dark:border-sky-300 dark:divide-sky-300;
+				.dropdown-menu {
+					@apply border-sky-500 -my-px overflow-y-auto w-full dark:border-sky-300 dark:divide-sky-300;
 				}
 
 				&.open {
+					.dropdown-label{
+						@apply border-sky-500 dark:border-sky-300;
+					}
+
 					&.placement-bottom {
-						.dropdown-label-wrapper {
+						.dropdown-label {
 							@apply rounded-b-none;
 						}
 
-						.menu {
+						.dropdown-menu {
 							@apply rounded-t-none;
 						}
 					}
 
 					&.placement-top {
-						.dropdown-label-wrapper {
+						.dropdown-label {
 							@apply rounded-t-none;
 						}
 
-						.menu {
+						.dropdown-menu {
 							@apply rounded-b-none;
 						}
-					}
-
-					.dropdown-label-wrapper {
-						@apply border-sky-500 dark:border-sky-300;
 					}
 				}
 			}
