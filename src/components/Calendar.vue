@@ -71,9 +71,9 @@
     <div class="dexios calendar">
         <slot :days="days" :nextMonth="nextMonth" :prevMonth="prevMonth" :setActive="setActive" :title="title" :weekDayNames="weekDayNames">
             <header>
-                <DexiosButton icon="chevron-left" plain @click="prevMonth"></DexiosButton>
+                <DexiosButton class="plain" icon="chevron-left" @click="prevMonth"></DexiosButton>
                 <span>{{title.month}} {{title.year}}</span>
-                <DexiosButton icon="chevron-right" plain @click="nextMonth"></DexiosButton>
+                <DexiosButton class="plain" icon="chevron-right" @click="nextMonth"></DexiosButton>
             </header>
             <div class="dates week-days">
                 <span class="week-day" v-for="weekDay in weekDayNames">{{weekDay}}</span>
