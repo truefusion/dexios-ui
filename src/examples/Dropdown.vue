@@ -1,7 +1,8 @@
 <script setup>
 	import { ref } from 'vue';
 
-	const value = ref(1);
+	const value = ref('Item 1');
+	const values = ['Item 1', 'Item 2', 'Item 3'];
 </script>
 
 <template>
@@ -11,43 +12,35 @@
 		<h3>Standard</h3>
 		<DexiosDropdown v-model="value">
 			<span>{{value}}</span>
-			<template #menu="{ close, isActive, setValue }">
-				<DexiosItem @click="setValue(1)">Item</DexiosItem>
-				<DexiosItem @click="setValue(2)">Item</DexiosItem>
-				<DexiosItem @click="setValue(3)">Item</DexiosItem>
+			<template #menu="{ close }">
+				<DexiosItem @click="value = val; close()" v-for="val in values">{{val}}</DexiosItem>
 			</template>
 		</DexiosDropdown>
 
 		<h3>Selection</h3>
 		<DexiosDropdown class="selection">
-			<span>Label</span>
-			<template #menu="{ close, isActive, setValue }">
-				<DexiosItem>Item</DexiosItem>
-				<DexiosItem>Item</DexiosItem>
-				<DexiosItem>Item</DexiosItem>
+			<span>{{value}}</span>
+			<template #menu="{ close }">
+				<DexiosItem @click="value = val; close()" v-for="val in values">{{val}}</DexiosItem>
 			</template>
 		</DexiosDropdown>
 
 		<h3>Inner HTML</h3>
 		<DexiosDropdown class="selection">
-			<span class="flex-1">Label</span>
+			<span class="flex-1">{{value}}</span>
 			<DexiosLabel>
 				<span>100</span>
 			</DexiosLabel>
-			<template #menu="{ close, isActive, setValue }">
-				<DexiosItem>Item</DexiosItem>
-				<DexiosItem>Item</DexiosItem>
-				<DexiosItem>Item</DexiosItem>
+			<template #menu="{ close }">
+				<DexiosItem @click="value = val; close()" v-for="val in values">{{val}}</DexiosItem>
 			</template>
 		</DexiosDropdown>
 
 		<h3>Button</h3>
 		<DexiosDropdown class="button">
-			<span>Label</span>
-			<template #menu="{ close, isActive, setValue }">
-				<DexiosItem>Item</DexiosItem>
-				<DexiosItem>Item</DexiosItem>
-				<DexiosItem>Item</DexiosItem>
+			<span>{{value}}</span>
+			<template #menu="{ close }">
+				<DexiosItem @click="value = val; close()" v-for="val in values">{{val}}</DexiosItem>
 			</template>
 		</DexiosDropdown>
 
@@ -55,7 +48,7 @@
 		<DexiosDropdown class="button">
 			<DexiosIcon icon="filter" />
 			<span>Label</span>
-			<template #menu="{setValue}">
+			<template #menu="{ close }">
 				<div class="p-2">
 					<DexiosInput placeholder="Search ..." />
 				</div>
@@ -64,15 +57,15 @@
 						<DexiosIcon icon="tag" />
 						<span>Filter by tag</span>
 					</DexiosItem>
-					<DexiosItem icon @click="setValue('important')">
+					<DexiosItem icon @click="close()">
 						<DexiosIcon icon="circle" />
 						<span>Important</span>
 					</DexiosItem>
-					<DexiosItem icon @click="setValue('announcement')">
+					<DexiosItem icon @click="close()">
 						<DexiosIcon icon="circle" />
 						<span>Announcement</span>
 					</DexiosItem>
-					<DexiosItem icon @click="setValue('discussion')">
+					<DexiosItem icon @click="close()">
 						<DexiosIcon icon="circle" />
 						<span>Discussion</span>
 					</DexiosItem>
@@ -82,15 +75,15 @@
 						<DexiosIcon icon="calendar" />
 						<span>Filter by date</span>
 					</DexiosItem>
-					<DexiosItem icon @click="setValue('week')">
+					<DexiosItem icon @click="close()">
 						<DexiosIcon icon="circle" />
 						<span>This Week</span>
 					</DexiosItem>
-					<DexiosItem icon @click="setValue('month')">
+					<DexiosItem icon @click="close()">
 						<DexiosIcon icon="circle" />
 						<span>This Month</span>
 					</DexiosItem>
-					<DexiosItem icon @click="setValue('year')">
+					<DexiosItem icon @click="close()">
 						<DexiosIcon icon="circle" />
 						<span>This Year</span>
 					</DexiosItem>

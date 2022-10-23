@@ -1,6 +1,6 @@
 <script setup>
 	import { computed, mergeProps, reactive, ref, unref } from 'vue';
-	import { autoPlacement, computePosition } from '@floating-ui/dom';
+	import { computePosition, flip } from '@floating-ui/dom';
 	import Base from './../lib/Base.js';
 	import DexiosMenu from './Menu.vue';
 
@@ -18,11 +18,7 @@
 		'placement-top': false,
 	});
 	const middleware = [
-		autoPlacement({
-			alignment: 'start',
-			allowedPlacements: ['top', 'bottom'],
-			autoAlignment: false,
-		}),
+		flip(),
 	];
 	const pos = reactive({
 		left: '0px',
@@ -38,17 +34,17 @@
 	}
 	function show() {
 		classes.open = true;
-		var label = unref($label);
+		var root = unref($el);
 		var menu = unref($menu);
 
-		if (label.hasOwnProperty('$el')) {
-			label = label.$el;
+		if (root.hasOwnProperty('$el')) {
+			root = root.$el;
 		}
 		if (menu.hasOwnProperty('$el')) {
 			menu = menu.$el;
 		}
 
-		computePosition(label, menu, {
+		computePosition(root, menu, {
 			middleware,
 			placement: 'bottom-start',
 			strategy: 'fixed',
