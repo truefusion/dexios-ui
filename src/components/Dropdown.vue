@@ -1,6 +1,6 @@
 <script setup>
 	import { computed, mergeProps, reactive, ref, unref } from 'vue';
-	import { computePosition, flip } from '@floating-ui/dom';
+	import { computePosition, flip, shift } from '@floating-ui/dom';
 	import Base from './../lib/Base.js';
 	import DexiosMenu from './Menu.vue';
 
@@ -19,6 +19,7 @@
 	});
 	const middleware = [
 		flip(),
+		shift(),
 	];
 	const pos = reactive({
 		left: '0px',
@@ -47,7 +48,7 @@
 		computePosition(root, menu, {
 			middleware,
 			placement: 'bottom-start',
-			strategy: 'fixed',
+			strategy: 'absolute',
 		}).then(({x,y,placement,strategy}) => {
 			classes['placement-bottom'] = placement.includes('bottom');
 			classes['placement-top'] = placement.includes('top');
@@ -74,14 +75,14 @@
 <style lang="less">
 .dexios {
 		&.dropdown {
-			@apply flex-col inline-flex items-start justify-start relative;
+			@apply flex-col inline-flex relative;
 
 			.dropdown-label {
-				@apply flex flex-1 items-center px-4 e('py-1.5') space-x-2 text-gray-800 transition-colors dark:text-white;
+				@apply flex flex-1 items-center px-4 e('py-1.5') space-x-2 text-gray-800 transition-colors z-1 dark:text-white;
 			}
 
 			.dropdown-menu {
-				@apply absolute border-gray-300 z-1;
+				@apply absolute ring-gray-300 z-10;
 			}
 
 			&:not(.open) {
@@ -114,24 +115,24 @@
 				@apply p-0;
 
 				.dropdown-label {
-					@apply rounded dark:bg-gray-700 dark:border-gray-800;
+					@apply rounded dark:bg-gray-700 dark:ring-gray-800;
 				}
 			}
 
 			&.selection {
-				@apply min-w-max rounded hover:shadow;
+				@apply min-w-max rounded w-60 hover:shadow;
 
 				.dropdown-label {
-					@apply border border-gray-300;
+					@apply ring-1 ring-gray-200;
 				}
 
 				.dropdown-menu {
-					@apply border-sky-500 -my-px overflow-y-auto w-full dark:border-sky-300 dark:divide-sky-300;
+					@apply ring-1 ring-sky-500 -my-px overflow-y-auto w-60 dark:ring-sky-300 dark:divide-sky-300;
 				}
 
 				&.open {
 					.dropdown-label{
-						@apply border-sky-500 dark:border-sky-300;
+						@apply ring-sky-500 dark:ring-sky-300;
 					}
 
 					&.placement-bottom {

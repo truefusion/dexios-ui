@@ -34,7 +34,7 @@
 				</template>
 			</DexiosDropdown>
 			<DexiosDropdown class="selection">
-				<span>Selection</span>
+				<span class="flex-1 truncate">Selection</span>
 				<template #menu="{close}">
 					<DexiosItem>Item</DexiosItem>
 					<DexiosItem>Item</DexiosItem>
@@ -58,7 +58,7 @@
 				</template>
 			</DexiosDropdown>
 			<DexiosDropdown class="selection">
-				<span>Selection</span>
+				<span class="flex-1 truncate">Selection</span>
 				<template #menu="{close}">
 					<DexiosItem>Item</DexiosItem>
 					<DexiosItem>Item</DexiosItem>

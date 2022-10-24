@@ -19,7 +19,7 @@
 
 		<h3>Selection</h3>
 		<DexiosDropdown class="selection">
-			<span>{{value}}</span>
+			<span class="flex-1 truncate">{{value}}</span>
 			<template #menu="{ close }">
 				<DexiosItem @click="value = val; close()" v-for="val in values">{{val}}</DexiosItem>
 			</template>
@@ -27,7 +27,7 @@
 
 		<h3>Inner HTML</h3>
 		<DexiosDropdown class="selection">
-			<span class="flex-1">{{value}}</span>
+			<span class="flex-1 truncate">{{value}}</span>
 			<DexiosLabel>
 				<span>100</span>
 			</DexiosLabel>

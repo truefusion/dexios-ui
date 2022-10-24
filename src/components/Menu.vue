@@ -65,7 +65,7 @@
 				> .dropdown:not(.open) {
 					&.selection {
 						.dropdown-label {
-							@apply border-transparent;
+							@apply ring-transparent;
 						}
 					}
 				}
