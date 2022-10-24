@@ -59,7 +59,7 @@
 				}
 
 				> * {
-					@apply border-0 border-gray-200 !rounded-none;
+					@apply border-0 border-gray-300 !rounded-none;
 				}
 
 				> .dropdown:not(.open) {

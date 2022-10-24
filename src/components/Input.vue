@@ -135,7 +135,7 @@
 <style lang="less">
 	.dexios {
 		&.input {
-			@apply divide-gray-200 inline-flex items-center ring-gray-200 transition-shadow dark:text-white;
+			@apply divide-gray-300 inline-flex items-center ring-gray-300 transition-shadow dark:text-white;
 
 			&:not(.plain) {
 				@apply bg-white divide-x ring-1 rounded dark:bg-gray-700 dark:divide-gray-800 dark:ring-gray-800;
@@ -218,10 +218,10 @@
 			}
 
 			&.error {
-				@apply bg-rose-50 divide-rose-200 ring-rose-200 dark:divide-rose-300 dark:ring-rose-300;
+				@apply bg-rose-50 divide-rose-300 ring-rose-300 dark:divide-rose-300 dark:ring-rose-300;
 
 				input {
-					@apply placeholder-rose-200 text-rose-500;
+					@apply placeholder-rose-300 text-rose-500;
 				}
 
 				.input-icon {
@@ -238,7 +238,7 @@
 			}
 
 			&.disabled, &.loading {
-				@apply bg-gray-50 pointer-events-none ring-gray-200 select-none opacity-80 dark:opacity-50;
+				@apply bg-gray-50 pointer-events-none ring-gray-300 select-none opacity-80 dark:opacity-50;
 
 				input {
 					@apply placeholder-gray-300;

@@ -123,7 +123,7 @@
 				@apply min-w-max rounded w-60 hover:shadow;
 
 				.dropdown-label {
-					@apply ring-1 ring-gray-200;
+					@apply ring-1 ring-gray-300;
 				}
 
 				.dropdown-menu {
