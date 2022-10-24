@@ -88,34 +88,26 @@
 </template>
 
 <style lang="less">
-    .dexios {
+.dexios {
         &.calendar {
             header {
                 @apply flex items-center justify-between dark:text-white;
             }
 
             .dates {
-                @apply gap-2 grid grid-cols-7 text-center;
+                @apply gap-y-2 grid grid-cols-7 text-center;
             }
 
             .days {
                 .day {
-                    @apply cursor-pointer min-h-8 min-w-8;
+                    @apply cursor-pointer font-medium inline-flex items-center justify-center min-h-10 min-w-10;
 
                     &.current {
-                        @apply font-bold;
-
-                        > * {
-                            @apply bg-gray-100 p-2 dark:bg-gray-700;
-                        }
+                        @apply bg-gray-600 font-bold text-white dark:bg-gray-700;
                     }
 
                     &:not(.month) {
-                        @apply opacity-40;
-                    }
-
-                    > * {
-                        @apply h-8 inline-flex items-center justify-center rounded-full text-center w-8;
+                        @apply bg-gray-50 font-normal dark:bg-gray-900;
                     }
                 }
             }

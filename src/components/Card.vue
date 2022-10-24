@@ -45,7 +45,7 @@
 			}
 
 			.card-meta {
-				@apply space-x-1 text-base text-gray-400;
+				@apply space-x-1 text-sm text-gray-500;
 			}
 		}
 	}
