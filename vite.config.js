@@ -1,4 +1,7 @@
+import { resolve } from 'path';
+import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 
 export default defineConfig(({ command, mode, ssrBuild }) => {
 	if (command === 'serve') {
@@ -12,6 +15,7 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
 		};
 	} else {
 		return {
+			plugins: [vue()],
 			build: {
 				cssCodeSplit: true,
 				lib: {
