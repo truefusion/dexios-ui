@@ -1,7 +1,6 @@
 <script setup>
-	import { computed, mergeProps, reactive, ref, unref } from 'vue';
+	import { reactive, ref, unref } from 'vue';
 	import { computePosition, flip, shift } from '@floating-ui/dom';
-	import Base from './../lib/Base.js';
 	import DexiosMenu from './Menu.vue';
 
 	const $emit = defineEmits(['update:modelValue']);
@@ -9,9 +8,9 @@
 	const $el = ref(null);
 	const $label = ref(null);
 	const $menu = ref(null);
-	const props = defineProps(mergeProps({
+	const props = defineProps({
 		noArrow: Boolean,
-	}, Base.props));
+	});
 	const classes = reactive({
 		open: false,
 		'placement-bottom': true,
@@ -73,7 +72,7 @@
 </template>
 
 <style lang="less">
-.dexios {
+	.dexios {
 		&.dropdown {
 			@apply flex-col inline-flex relative;
 

@@ -1,9 +1,7 @@
 <script>
 	import { h } from 'vue';
-	import Base from './../lib/Base.js';
 
 	export default {
-		extends: Base,
 		setup(props, { slots }) {
 			return () => {
 				var children = slots.default?.() ?? [];

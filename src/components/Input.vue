@@ -1,6 +1,5 @@
 <script setup>
 	import { computed, ref, unref, useAttrs } from 'vue';
-	import Base from './../lib/Base.js';
 
 	const $attrs = useAttrs();
 	const $emit = defineEmits(['update:modelValue']);
@@ -31,20 +30,14 @@
 	const classes = computed(() => {
 		var {
 			disabled,
-			error,
 			iconLeft,
 			iconRight,
-			loading,
-			plain,
 			type,
 		} = $props;
 		return {
 			disabled,
-			error,
 			'icon-left': Boolean(iconLeft),
 			'icon-right': Boolean(iconRight),
-			loading,
-			plain,
 			[type]: true,
 		};
 	});

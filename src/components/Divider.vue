@@ -1,23 +1,16 @@
 <script>
 	import { h } from 'vue';
-	import Base from './../lib/Base.js';
 
 	export default {
-		extends: Base,
-		props: {
-			inline: Boolean,
-			vertical: Boolean,
-		},
 		setup(props, { slots }) {
 			return () => {
-				var children = slots.default?.() ?? [];
+				var children = typeof slots.default == 'function' ? slots.default() : [];
 
 				return h('div', {
 					class: {
 						dexios: true,
 						divider: true,
 						closed: !children.length,
-						...props,
 					},
 				}, children);
 			};

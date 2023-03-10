@@ -17,16 +17,6 @@
 			Some text.
 		</DexiosSegment>
 
-		<h3>Stacked</h3>
-		<DexiosSegment stacked>
-			Some text.
-		</DexiosSegment>
-
-		<h3>Tall Stacked</h3>
-		<DexiosSegment stacked-tall>
-			Some text.
-		</DexiosSegment>
-
 		<h3>Circular</h3>
 		<DexiosSegment class="h-40 w-40" circular>
 			Some text.

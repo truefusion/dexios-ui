@@ -1,22 +1,18 @@
 <script>
 	import { h } from 'vue';
-	import Base from './../lib/Base.js';
+	import Segment from "./Segment.vue";
 	import pullChildren from './../lib/pullChildren.js';
 
 	export default {
-		extends: Base,
 		props: {
 			plain: Boolean,
 			vertical: Boolean,
 		},
 		setup(props, { slots }) {
 			return () => {
-				var children = slots.default?.() ?? [];
-				children = pullChildren(children, function (type) {
-					if (type?.name == 'Segment') {
-						return true;
-					}
-					return false;
+				var children = typeof slots.default == 'function' ? slots.default() : [];
+				children = pullChildren(children, function (child) {
+					return child === Segment;
 				});
 
 				var childProps = {
@@ -26,8 +22,7 @@
 				return h('div', {
 					class: {
 						dexios: true,
-						buttons: true,
-						...props,
+						segments: true,
 					},
 				}, children.map((child) => {
 					return h(child, {

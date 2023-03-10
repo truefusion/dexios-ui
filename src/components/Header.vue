@@ -1,20 +1,8 @@
-<script>
-	import { h } from 'vue';
-	import Base from './../lib/Base.js';
-
-	export default {
-		extends: Base,
-		setup(props, { slots }) {
-			return () => h('div', {
-				class: {
-					dexios: true,
-					header: true,
-					...props,
-				},
-			}, slots.default?.());
-		},
-	}
-</script>
+<template>
+	<div class="dexios header">
+		<slot></slot>
+	</div>
+</template>
 
 <style lang="less">
 	.dexios {

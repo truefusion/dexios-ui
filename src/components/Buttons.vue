@@ -1,19 +1,14 @@
 <script>
 	import { h } from 'vue';
-	import Base from './../lib/Base.js';
 	import pullChildren from './../lib/pullChildren.js';
 	import Button from './Button.vue';
 
 	export default {
-		extends: Base,
 		setup(props, { attrs, slots }) {
 			return () => {
-				var children = slots.default ? slots.default() : [];
+				var children = typeof slots.default == 'function' ? slots.default() : [];
 				children = pullChildren(children, function (child) {
-					if (child === Button) {
-						return true;
-					}
-					return false;
+					return child === Button;
 				});
 
 				var cls = [];
@@ -59,7 +54,7 @@
 			}
 
 			.button {
-				@apply border-0 flex-1 rounded-none;
+				@apply border-0 rounded-none;
 			}
 		}
 	}

@@ -1,24 +1,8 @@
-<script>
-	import { h } from 'vue';
-	import Segment from './Segment.vue';
-	import Base from './../lib/Base.js';
-
-	export default {
-		extends: Base,
-		props: {
-			raised: Boolean,
-		},
-		setup(props, { slots }) {
-			return () => h(Segment, {
-				class: {
-					dexios: true,
-					message: true,
-					...props,
-				},
-			}, slots.default);
-		},
-	}
-</script>
+<template>
+	<DexiosSegment class="message">
+		<slot></slot>
+	</DexiosSegment>
+</template>
 
 <style lang="less">
 	.dexios {

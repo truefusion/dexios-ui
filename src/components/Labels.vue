@@ -1,22 +1,17 @@
 <script>
 	import { h, isVNode } from 'vue';
-	import Base from './../lib/Base.js';
 	import Label from './Label.vue';
 	import pullChildren from './../lib/pullChildren.js';
 
 	export default {
-		extends: Base,
 		setup(props, { slots }) {
 			return () => {
-				const children = slots.default ? slots.default() : [];
+				var children = typeof slots.default == 'function' ? slots.default() : [];
 
 				return h('div', {
 					class: 'dexios labels',
 				}, pullChildren(children, (child) => {
-					if (child  === Label) {
-						return true;
-					}
-					return false;
+					return child  === Label;
 				}));
 			};
 		},

@@ -1,24 +1,13 @@
 <script setup>
-	import { computed, unref, useSlots } from 'vue';
-
 	const $props = defineProps({
 		icon: String,
 	});
 </script>
 
-<script>
-	import Base from './../lib/Base.js';
-
-	export default {
-		extends: Base,
-		name: 'Button',
-	}
-</script>
-
 <template>
 	<button class="dexios button" type="button">
 		<div class="button-label">
-			<DexiosIcon class="button-icon" :icon="icon" v-if="icon" />
+			<DexiosIcon class="button-icon" :icon="$props.icon" v-if="$props.icon" />
 			<slot></slot>
 		</div>
 		<div class="button-hover">

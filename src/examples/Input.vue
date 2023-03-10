@@ -73,7 +73,7 @@
 		<DexiosInput class="w-60" disabled icon-right="magnify" placeholder="Search"></DexiosInput>
 
 		<h3>Error</h3>
-		<DexiosInput class="w-60" error icon-right="magnify" placeholder="Search"></DexiosInput>
+		<DexiosInput class="error w-60" icon-right="magnify" placeholder="Search"></DexiosInput>
 
 		<h3>Loading</h3>
 		<div class="flex flex-col items-start space-y-2">
@@ -96,14 +96,14 @@
 
 		<h3>Plain</h3>
 		<div class="flex flex-col items-start space-y-2">
-			<DexiosInput class="w-60" icon-left="magnify" plain placeholder="Search">
+			<DexiosInput class="plain w-60" icon-left="magnify" placeholder="Search">
 				<DexiosItem class="input-prefix">Prefix</DexiosItem>
 				<DexiosItem>Suffix</DexiosItem>
 			</DexiosInput>
-			<DexiosInput plain type="radio" value="1" v-model="rad">
+			<DexiosInput class="plain" type="radio" value="1" v-model="rad">
 				<DexiosItem>1</DexiosItem>
 			</DexiosInput>
-			<DexiosInput plain type="checkbox" v-model="b">
+			<DexiosInput class="plain" type="checkbox" v-model="b">
 				<DexiosItem>Boolean</DexiosItem>
 			</DexiosInput>
 		</div>

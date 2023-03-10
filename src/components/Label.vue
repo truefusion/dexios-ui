@@ -1,10 +1,7 @@
 <script>
 	import { h } from 'vue';
-	import Base from './../lib/Base.js';
 
 	export default {
-		extends: Base,
-		name: 'Label',
 		setup(props, { emit, expose, slots }) {
 			var children = slots.default ? slots.default() : [];
 			const details = children.filter(({ props }) => {

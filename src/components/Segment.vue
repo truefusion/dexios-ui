@@ -1,38 +1,10 @@
 <script setup>
-	import { computed } from 'vue';
-	import Base from './../lib/Base.js';
-
 	const $props = defineProps({
-		...Base.props,
-		circular: Boolean,
 		loading: Boolean,
-		placeholder: Boolean,
-		plain: Boolean,
-		raised: Boolean,
-		stacked: Boolean,
-		stackedTall: Boolean,
-	});
-
-	const classes = computed(() => {
-		var ret = {
-			dexios: true,
-			segment: true,
-			...$props,
-		};
-		ret['stacked-tall'] = ret.stackedTall;
-		delete ret['stackedTall'];
-		return ret;
 	});
 </script>
-
-<script>
-	export default {
-		name: 'Segment',
-	}
-</script>
-
 <template>
-	<div class="dexios segment" :class="classes">
+	<div class="dexios segment">
 		<DexiosLoader run v-if="$props.loading"></DexiosLoader>
 		<slot></slot>
 	</div>

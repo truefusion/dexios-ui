@@ -21,7 +21,7 @@
 				</DexiosItem>
 			</RouterLink>
 			<DexiosItem spacer></DexiosItem>
-			<DexiosInput plain type="checkbox" v-model="dark">
+			<DexiosInput class="plain" type="checkbox" v-model="dark">
 				<DexiosItem class="flex-1">Dark Mode</DexiosItem>
 			</DexiosInput>
 		</DexiosMenu>

@@ -1,14 +1,5 @@
-<script>
-	import Base from './../lib/Base.js';
-
-	export default {
-		extends: Base,
-		name: 'Dimmer',
-	}
-</script>
-
 <template>
-	<div class="dexios dimmer" :class="$props">
+	<div class="dexios dimmer">
 		<slot></slot>
 	</div>
 </template>

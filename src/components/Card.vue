@@ -2,17 +2,8 @@
 	const $props = defineProps({});
 </script>
 
-<script>
-	import Base from './../lib/Base.js';
-
-	export default {
-		extends: Base,
-		name: 'Card',
-	}
-</script>
-
 <template>
-	<div class="dexios card" :class="$props">
+	<div class="dexios card">
 		<slot></slot>
 	</div>
 </template>

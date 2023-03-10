@@ -1,12 +1,7 @@
-<script>
-	import Base from './../lib/Base.js';
-
-	export default {
-		extends: Base,
-		props: {
-			run: Boolean,
-		},
-	}
+<script setup>
+	const $props = defineProps({
+		run: Boolean,
+	});
 </script>
 
 <template>

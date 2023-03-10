@@ -1,25 +1,28 @@
-<script>
-	import { h } from 'vue';
-	import Base from './../lib/Base.js';
+<script setup>
+	import { computed } from 'vue';
 
-	export default {
-		extends: Base,
-		props: {
-			icon: String,
+	const $props = defineProps({
+		icon: String,
+		iconPack: {
+			type: String,
+			default: 'mdi',
 		},
-		setup(props) {
-			return () => h('i', {
-				class: {
-					dexios: true,
-					icon: true,
-					dark: props.dark,
-					mdi: true,
-					[`mdi-${props.icon}`]: Boolean(props.icon),
-				},
-			});
-		},
-	}
+	});
+	const iconClasses = computed(() => {
+		switch ($props.iconPack) {
+			case 'mdi': {
+				return [
+					$props.iconPack,
+					$props.iconPack + '-' + $props.icon,
+				];
+			}
+		}
+	});
 </script>
+
+<template>
+	<i class="dexios icon" :class="iconClasses"></i>
+</template>
 
 <style lang="less">
 	.dexios {

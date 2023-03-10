@@ -1,11 +1,8 @@
 <script setup>
 	import { computed, ref } from 'vue';
-	import Base from './../lib/Base.js';
 
 	const $el = ref(null);
-
-	const props = defineProps({
-		...Base.props,
+	const $props = defineProps({
 		flat: Boolean,
 		plain: Boolean,
 		pointing: Boolean,
@@ -15,7 +12,7 @@
 	});
 
 	const standard = computed(() => {
-		var {plain, flat, secondary, tabular } = props;
+		var { plain, flat, secondary, tabular } = $props;
 		return ![plain, flat, secondary, tabular].some(x => x);
 	});
 
@@ -25,13 +22,13 @@
 </script>
 
 <template>
-	<nav class="dexios menu" :class="{...props, standard}" ref="$el">
+	<nav class="dexios menu" :class="{...$props, standard}" ref="$el">
 		<slot></slot>
 	</nav>
 </template>
 
 <style lang="less">
-.dexios {
+	.dexios {
 		&.menu {
 			@apply cursor-default flex;
 

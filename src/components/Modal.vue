@@ -1,10 +1,7 @@
 <script>
-	import { computed, h, onMounted, ref } from 'vue';
-	import dialogPolyfill from 'dialog-polyfill';
-	import Base from './../lib/Base.js';
+	import { computed, h, ref } from 'vue';
 
 	export default {
-		extends: Base,
 		setup(props, { attrs, expose, slots }) {
 			const $el = ref(null);
 			const isOpen = computed(() => {
@@ -40,15 +37,10 @@
 				show,
 			});
 
-			onMounted(() => {
-				dialogPolyfill.registerDialog($el.value);
-			})
-
 			return () => h('dialog', {
 				class: {
 					dexios: true,
 					modal: true,
-					...props,
 				},
 				ref: $el,
 				onAnimationend(e) {
