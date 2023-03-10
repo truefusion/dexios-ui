@@ -1,12 +1,15 @@
 # Dexios
-Dexios is a Vue 3 ui library inspired by [Semantic UI](https://semantic-ui.com/).
+
+Dexios is a Vue 3 UI library inspired by [Semantic UI](https://semantic-ui.com/).
 
 ```sh
-npm install dexios-ui
+npm install @truefusion/dexios-ui
 ```
 
-### Icons (Frameworks)
-Dexios uses [Material Icons](https://materialdesignicons.com/) for icons.
+### Icons
+
+Dexios uses [Material Icons](https://materialdesignicons.com/) for icons by default.
+Support for other icon sets coming soon.
 
 Install it using:
 ```sh
@@ -14,7 +17,7 @@ npm install @mdi/font --save
 ```
 
 And then import the stylesheet:
-```sh
+```js
 import '@mdi/font/css/materialdesignicons.css';
 ```
 
