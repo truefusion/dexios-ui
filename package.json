@@ -39,5 +39,5 @@
 		"vue-router": "^4.0.12"
 	},
 	"main": "dist/dexios-ui.es.js",
-	"packageManager": "yarn@3.4.1"
+	"packageManager": "pnpm@7.29.1"
 }
