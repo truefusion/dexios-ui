@@ -38,6 +38,5 @@
 		"vite": "^2.9.1",
 		"vue-router": "^4.0.12"
 	},
-	"main": "dist/dexios-ui.es.js",
-	"packageManager": "pnpm@7.29.1"
+	"main": "dist/dexios-ui.es.js"
 }
