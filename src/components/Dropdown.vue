@@ -77,11 +77,11 @@
 			@apply flex-col inline-flex relative;
 
 			.dropdown-label {
-				@apply flex flex-1 items-center px-4 e('py-1.5') space-x-2 text-gray-800 transition-colors z-1 dark:text-white;
+				@apply flex flex-1 items-center px-4 e('py-1.5') ring-inset space-x-2 text-gray-800 transition-colors z-1 dark:text-white;
 			}
 
 			.dropdown-menu {
-				@apply absolute ring-gray-300 z-10;
+				@apply absolute ring-gray-300 ring-inset z-10;
 			}
 
 			&:not(.open) {

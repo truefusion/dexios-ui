@@ -128,7 +128,7 @@
 <style lang="less">
 	.dexios {
 		&.input {
-			@apply divide-gray-300 inline-flex items-center ring-gray-300 transition-shadow dark:text-white;
+			@apply divide-gray-300 inline-flex items-center ring-gray-300 ring-inset transition-shadow dark:text-white;
 
 			&:not(.plain) {
 				@apply bg-white divide-x ring-1 rounded dark:bg-gray-700 dark:divide-gray-800 dark:ring-gray-800;
