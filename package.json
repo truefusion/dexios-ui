@@ -1,6 +1,6 @@
 {
 	"name": "@truefusion/dexios-ui",
-	"version": "0.12.0",
+	"version": "0.12.1",
 	"license": "See license in LICENSE",
 	"publishConfig": {
 		"access": "public"
