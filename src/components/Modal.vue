@@ -7,16 +7,24 @@
 			const isOpen = computed(() => {
 				return $el.value?.open;
 			});
+			const reject = ref(null);
+			const resolve = ref(null);
 
 			function close() {
 				$el.value?.close();
 			}
 			function closeWithAnimation() {
-				var {animation} = attrs;
+				var { animation } = attrs;
+				if (!animation) {
+					animation = 'scale';
+				}
 				$el.value.classList.remove(animation + '-in');
 				$el.value.classList.add(animation + '-out');
 			}
-			function hide() {
+			function confirm() {
+				if (typeof resolve.value == 'function') {
+					resolve.value();
+				}
 				closeWithAnimation();
 			}
 			function open() {
@@ -24,14 +32,18 @@
 				$el.value.classList.remove(animation + '-out');
 				$el.value.classList.add(animation + '-in');
 				$el.value.showModal();
+
+				return new Promise((res, rej) => {
+					resolve.value = res;
+				});
 			}
 			function show() {
-				open();
+				return open();
 			}
 
 			expose({
-				close,
-				closeWithAnimation,
+				close: closeWithAnimation,
+				confirm,
 				isOpen,
 				open,
 				show,
@@ -55,6 +67,7 @@
 				},
 			}, slots.default?.({
 				close: closeWithAnimation,
+				confirm,
 			}));
 		},
 	}
@@ -112,7 +125,7 @@
 	.dexios {
 		&.modal {
 			@apply border-0 divide-y fixed e('left-1/2') m-0 overflow-visible p-0 rounded shadow-lg e('top-1/2') transform e('-translate-x-1/2') e('-translate-y-1/2') dark:bg-gray-500 dark:divide-gray-600;
-			--animation-duration: 1s;
+			--animation-duration: 0.75s;
 
 			&.fade-out {
 				animation: FadeOutDialog;

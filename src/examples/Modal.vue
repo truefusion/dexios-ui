@@ -1,12 +1,13 @@
 <template>
 	<article class="modal">
-		<DexiosButton @click="$refs.modal.open()">Open Modal</DexiosButton>
-		<DexiosModal class="container" :animation="animation" ref="modal">
-			<template v-slot="{close}">
+		<DexiosButton @click="open">Open Modal</DexiosButton>
+		<DexiosModal class="w-96" :animation="animation" ref="modal">
+			<template v-slot="{ close, confirm }">
 				<DexiosHeader class="modal-header">Example Modal</DexiosHeader>
 				<p class="modal-content">Example Content</p>
 				<div class="modal-actions">
-					<DexiosButton @click="close">Close</DexiosButton>
+					<DexiosButton class="secondary" @click="close">Close</DexiosButton>
+					<DexiosButton class="primary" @click="confirm">Confirm</DexiosButton>
 				</div>
 			</template>
 		</DexiosModal>
@@ -19,6 +20,13 @@
 			return {
 				animation: 'scale',
 			};
+		},
+		methods: {
+			open() {
+				this.$refs.modal.open().then(() => {
+					console.log('confirmed');
+				});
+			},
 		},
 	}
 </script>
