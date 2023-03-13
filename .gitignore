@@ -20,6 +20,7 @@ coverage
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+*.lock
 
 /cypress/videos/
 /cypress/screenshots/
