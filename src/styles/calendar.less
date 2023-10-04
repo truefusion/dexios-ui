@@ -1,23 +1,28 @@
 @layer components {
 	.dexios-calendar {
-		@apply overflow-hidden text-gray-700 text-center;
+		@apply text-center text-gray-700;
 		@apply grid grid-cols-7 items-center justify-center overflow-hidden;
 		@apply disabled:opacity-50 disabled:pointer-events-none;
-		@apply dark:text-white;
+		@apply dark:text-gray-400;
 	}
 
 	.dexios-calendar-day {
-		@apply bg-gray-50 px-4 py-2 rounded-none;
-		@apply dark:bg-gray-900 dark:text-white;
+		@apply opacity-50 px-4 py-2 rounded-none;
+		@apply hover:opacity-60;
 	}
 
 	.dexios-calendar-month {
-		@apply bg-transparent;
-		@apply dark:bg-transparent;
+		@apply bg-transparent opacity-100;
+		@apply hover:opacity-100;
+	}
+
+	.dexios-calendar-weekday {
+		@apply font-bold uppercase;
 	}
 
 	.dexios-calendar-current {
-		@apply bg-gray-700 text-white;
+		@apply bg-gray-700 rounded text-white;
+		@apply pointer-events-none;
 		@apply dark:bg-gray-700 dark:text-white;
 	}
 }

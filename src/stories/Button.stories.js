@@ -1,6 +1,7 @@
 import Button from '../components/Button.vue';
 
 const args = {
+	dark: false,
 	disabled: false,
 };
 
@@ -20,7 +21,11 @@ export const Default = {
 			Button,
 		},
 		setup: () => args,
-		template: '<Button :disabled="disabled">Button</Button>',
+		template: `
+			<div class="p-4" :class="{ dark, 'bg-black': dark }">
+				<Button :disabled="disabled">Button</Button>
+			</div>
+		`,
 	}),
 };
 
@@ -31,7 +36,11 @@ export const Plain = {
 			Button,
 		},
 		setup: () => args,
-		template: '<Button class="dexios-btn-plain" :disabled="disabled">Button</Button>',
+		template: `
+			<div class="p-4" :class="{ dark, 'bg-black': dark }">
+				<Button class="dexios-btn-plain" :disabled="disabled">Button</Button>
+			</div>
+		`,
 	}),
 };
 
@@ -42,7 +51,11 @@ export const Primary = {
 			Button,
 		},
 		setup: () => args,
-		template: '<Button class="dexios-btn-primary" :disabled="disabled">Button</Button>',
+		template: `
+			<div class="p-4" :class="{ dark, 'bg-black': dark }">
+			    <Button class="dexios-btn-primary" :disabled="disabled">Button</Button>
+			</div>
+		`,
 	}),
 };
 
@@ -53,6 +66,10 @@ export const Secondary = {
 			Button,
 		},
 		setup: () => args,
-		template: '<Button class="dexios-btn-secondary" :disabled="disabled">Button</Button>',
+		template: `
+			<div class="p-4" :class="{ dark, 'bg-black': dark }">
+				<Button class="dexios-btn-secondary" :disabled="disabled">Button</Button>
+			</div>
+		`,
 	}),
 };

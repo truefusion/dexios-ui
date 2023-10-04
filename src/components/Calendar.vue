@@ -78,7 +78,7 @@
 				<span>{{title.year}}</span>
 			</div>
 			<DexiosIcon class="dexios-btn dexios-btn-plain" icon="chevron-right" @click="nextMonth"></DexiosIcon>
-			<div class="p-2" v-for="weekDay in weekDayNames">{{weekDay}}</div>
+			<div class="dexios-calendar-weekday p-2" v-for="weekDay in weekDayNames">{{weekDay}}</div>
 			<DexiosButton class="dexios-btn-plain dexios-calendar-day" :class="{ 'dexios-calendar-current': current, 'dexios-calendar-month': month }" v-for="{ current, day, month } in days" @click="setActive(day)">
 				<span>{{format(day, 'd')}}</span>
 			</DexiosButton>

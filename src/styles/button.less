@@ -5,15 +5,15 @@
 		@apply gap-2 inline-flex items-center justify-center overflow-hidden px-4 py-2 relative;
 		@apply transition-colors hover:shadow hover:text-gray-500;
 		@apply disabled:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none;
-		@apply dark:bg-transparent dark:border-gray-600;
-		@apply disabled:dark:bg-gray-700 disabled:dark:bg-opacity-40;
+		@apply dark:bg-transparent dark:border-gray-700 dark:text-gray-400;
+		@apply dark:hover:text-gray-300;
 	}
 
 	.dexios-btn-hover {
 		@apply absolute flex items-center justify-center inset-0 opacity-0 pointer-events-none whitespace-nowrap;
 	}
 
-	.dex-ui-btn-label {
+	.dexios-btn-label {
 		@apply flex gap-2 items-center justify-center;
 	}
 
@@ -23,17 +23,19 @@
 		@apply disabled:bg-transparent;
 	}
 
-	.dexios-btn-primary, .dex-ui-btn-secondary {
+	.dexios-btn-primary, .dexios-btn-secondary {
 		@apply border-0 text-white;
 		@apply hover:text-white;
+		@apply dark:text-white;
+		@apply dark:hover:text-white;
 	}
 
 	.dexios-btn-primary {
 		@apply bg-sky-600 border-sky-700;
 		@apply hover:bg-sky-700;
 		@apply disabled:bg-sky-700 disabled:border-sky-700;
-		@apply dark:bg-sky-600 dark:border-sky-900;
-		@apply dark:hover:bg-sky-900;
+		@apply dark:bg-sky-600 dark:border-sky-700;
+		@apply dark:hover:bg-sky-700;
 	}
 
 	.dexios-btn-secondary {
