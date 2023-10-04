@@ -16,19 +16,19 @@
 				};
 
 				if (typeof attrs.class == 'string') {
-					if (attrs.class.includes('dex-ui-btns-plain')) {
-						childProps.class += ' dex-ui-btn-plain';
+					if (attrs.class.includes('dexios-btns-plain')) {
+						childProps.class += ' dexios-btn-plain';
 					}
-					if (attrs.class.includes('dex-ui-btns-primary')) {
-						childProps.class += ' dex-ui-btn-primary';
+					if (attrs.class.includes('dexios-btns-primary')) {
+						childProps.class += ' dexios-btn-primary';
 					}
-					if (attrs.class.includes('dex-ui-btns-secondary')) {
-						childProps.class += ' dex-ui-btn-secondary';
+					if (attrs.class.includes('dexios-btns-secondary')) {
+						childProps.class += ' dexios-btn-secondary';
 					}
 				}
 
 				return h('div', {
-					class: 'dex-ui-btns',
+					class: 'dexios-btns',
 				}, children.map((child) => {
 					return h(child, childProps);
 				}));
