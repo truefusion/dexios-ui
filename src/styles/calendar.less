@@ -1,0 +1,23 @@
+@layer components {
+	.dexios-calendar {
+		@apply overflow-hidden text-gray-700 text-center;
+		@apply grid grid-cols-7 items-center justify-center overflow-hidden;
+		@apply disabled:opacity-50 disabled:pointer-events-none;
+		@apply dark:text-white;
+	}
+
+	.dexios-calendar-day {
+		@apply bg-gray-50 px-4 py-2 rounded-none;
+		@apply dark:bg-gray-900 dark:text-white;
+	}
+
+	.dexios-calendar-month {
+		@apply bg-transparent;
+		@apply dark:bg-transparent;
+	}
+
+	.dexios-calendar-current {
+		@apply bg-gray-700 text-white;
+		@apply dark:bg-gray-700 dark:text-white;
+	}
+}

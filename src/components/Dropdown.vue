@@ -77,7 +77,7 @@
 			@apply flex-col inline-flex relative;
 
 			.dropdown-label {
-				@apply flex flex-1 items-center px-4 e('py-1.5') ring-inset space-x-2 text-gray-800 transition-colors z-1 dark:text-white;
+				@apply flex flex-1 items-center px-4 e('py-1.5') ring-inset space-x-2 text-gray-800 transition-colors dark:text-white;
 			}
 
 			.dropdown-menu {
@@ -126,7 +126,7 @@
 				}
 
 				.dropdown-menu {
-					@apply ring-1 ring-sky-500 -my-px overflow-y-auto w-60 dark:ring-sky-300 dark:divide-sky-300;
+					@apply inset-x-0 ring-1 ring-sky-500 overflow-y-auto w-60 dark:ring-sky-300 dark:divide-sky-300;
 				}
 
 				&.open {

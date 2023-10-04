@@ -1,4 +1,4 @@
-import './tailwind.css';
+import './styles/index.less';
 
 import * as Components from './components';
 

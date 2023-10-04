@@ -20,7 +20,7 @@
 			}
 
 			&.placeholder {
-				@apply bg-gray-50 flex flex-col items-stretch justify-center min-h-72 p-0 dark:bg-gray-800;
+				@apply bg-gray-50 flex flex-col items-stretch justify-center p-0 dark:bg-gray-800;
 			}
 
 			&.raised {

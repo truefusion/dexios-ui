@@ -68,7 +68,7 @@
 				}
 
 				> .input:not(.plain) {
-					@apply bg-transparent ring-transparent z-1 focus-within:ring-sky-500 dark:ring-transparent dark:focus-within:ring-sky-300;
+					@apply bg-transparent ring-transparent focus-within:ring-sky-500 dark:ring-transparent dark:focus-within:ring-sky-300;
 				}
 			}
 

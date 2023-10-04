@@ -7,36 +7,46 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/truefusion/dexios-ui.git"
+		"url": "https://github.com/AimForNaN/dexios-ui.git"
 	},
 	"files": [
 		"dist/*",
 		"dist/**/*"
 	],
 	"scripts": {
-		"dev": "vite",
+		"dev": "storybook dev -p 6006 --no-open",
 		"build": "vite build",
 		"preview": "np --preview",
-		"release": "np --yolo --no-2fa --no-yarn"
+		"release": "np --yolo --no-2fa --no-yarn",
+		"build:storybook": "storybook build"
 	},
 	"dependencies": {
-		"@mdi/font": "^6.6.96",
+		"@mdi/font": "^6.9.96",
 		"vue": "^3.2.31"
 	},
 	"devDependencies": {
-		"@floating-ui/dom": "^1.0.3",
+		"@floating-ui/dom": "^1.5.3",
 		"@rollup/plugin-url": "^6.1.0",
-		"@tailwindcss/typography": "^0.5.2",
-		"@vitejs/plugin-vue": "^2.3.1",
-		"autoprefixer": "^10.4.4",
-		"date-fns": "^2.28.0",
+		"@storybook/addon-essentials": "^7.4.5",
+		"@storybook/addon-interactions": "^7.4.5",
+		"@storybook/addon-links": "^7.4.5",
+		"@storybook/blocks": "^7.4.5",
+		"@storybook/testing-library": "^0.2.2",
+		"@storybook/vue3": "^7.4.5",
+		"@storybook/vue3-vite": "^7.4.5",
+		"@tailwindcss/typography": "^0.5.10",
+		"@vitejs/plugin-vue": "^4.4.0",
+		"autoprefixer": "^10.4.16",
+		"date-fns": "^2.30.0",
 		"dialog-polyfill": "^0.5.6",
-		"less": "^4.1.2",
+		"less": "^4.2.0",
 		"less-loader": "^10.2.0",
-		"postcss": "^8.4.12",
-		"tailwindcss": "^3.0.23",
-		"vite": "^2.9.1",
-		"vue-router": "^4.0.12"
+		"postcss": "^8.4.31",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"storybook": "^7.4.5",
+		"tailwindcss": "^3.3.3",
+		"vite": "^4.4.10"
 	},
 	"main": "dist/dexios-ui.es.js"
 }

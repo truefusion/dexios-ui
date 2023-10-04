@@ -74,7 +74,7 @@
 </script>
 
 <style lang="less">
-@keyframes FadeInDialog {
+	@keyframes FadeInDialog {
 		from {
 			opacity: 0.5;
 		}
@@ -148,7 +148,7 @@
 			}
 
 			&::backdrop, + .backdrop {
-				@apply backdrop-contrast-25 backdrop-filter bg-gray-300 bg-opacity-60 dark:bg-gray-800 dark:bg-opacity-60;
+				@apply backdrop-filter bg-gray-300 bg-opacity-60 dark:bg-gray-800 dark:bg-opacity-60;
 			}
 
 			> .modal-actions {

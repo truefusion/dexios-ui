@@ -1,146 +1,54 @@
-<script setup>
-	const $props = defineProps({
-		icon: String,
-	});
-</script>
-
 <template>
-	<button class="dexios button" type="button">
-		<div class="button-label">
-			<DexiosIcon class="button-icon" :icon="$props.icon" v-if="$props.icon" />
-			<slot></slot>
-		</div>
-		<div class="button-hover">
-			<slot name="hover"></slot>
-		</div>
+	<button class="dexios-btn" type="button">
+		<slot></slot>
 	</button>
 </template>
 
 <style lang="less">
-	.dexios {
-		&.button {
-			@apply cursor-pointer inline-flex items-center justify-center overflow-hidden px-4 e('py-1.5') relative transition-colors;
+	[animated=""] {
+		.button-hover {
+			transform: translatex(-150%);
+		}
 
-			&:hover {
-				.button-icon, .button-label {
-					@apply text-opacity-100 dark:text-opacity-100;
-				}
-			}
-
-			.button-icon, .button-label {
-				@apply text-gray-800 text-opacity-70 transition-colors dark:text-opacity-70 dark:text-white;
-			}
-
+		&:hover {
 			.button-hover {
-				@apply absolute flex items-center justify-center inset-0 px-4 py-2 transition whitespace-nowrap dark:text-white;
+				transform: translatex(0);
 			}
 
 			.button-label {
-				@apply flex items-center justify-center space-x-2 transition;
+				transform: translatex(150%);
+			}
+		}
+	}
+
+	[animated="fade"] {
+		.button-hover {
+			opacity: 0;
+		}
+
+		&:hover {
+			.button-hover {
+				opacity: 1;
 			}
 
-			&:not(.plain) {
-				@apply border border-gray-300 rounded hover:shadow dark:bg-transparent dark:border-gray-600;
+			.button-label {
+				opacity: 0;
+			}
+		}
+	}
+
+	[animated="vertical"] {
+		.button-hover {
+			transform: translateY(-150%);
+		}
+
+		&:hover {
+			.button-hover {
+				transform: translateY(0);
 			}
 
-			&.circular {
-				@apply rounded-full;
-			}
-
-			&.compact {
-				@apply px-3 py-1 !important;
-			}
-
-			&.icon {
-				@apply px-3;
-
-				.button-label-slot {
-					@apply hidden;
-				}
-			}
-
-			&.primary, &.secondary {
-				@apply border-0 text-white;
-
-				.button-label {
-					@apply text-white;
-				}
-
-				.icon {
-					@apply text-white;
-				}
-			}
-
-			&.primary {
-				@apply bg-sky-600 border-sky-700 hover:bg-sky-700 dark:bg-sky-600 dark:border-sky-900 dark:hover:bg-sky-900;
-			}
-
-			&.secondary {
-				@apply bg-gray-700 border-gray-800 hover:bg-gray-800 dark:bg-gray-700 dark:border-gray-800 dark:hover:bg-gray-800;
-			}
-
-			&.plain {
-				@apply bg-transparent border-0 hover:shadow-none;
-			}
-
-			&[animated=""] {
-				.button-hover {
-					transform: translatex(-150%);
-				}
-
-				&:hover {
-					.button-hover {
-						transform: translatex(0);
-					}
-
-					.button-label {
-						transform: translatex(150%);
-					}
-				}
-			}
-
-			&[animated="fade"] {
-				.button-hover {
-					opacity: 0;
-				}
-
-				&:hover {
-					.button-hover {
-						opacity: 1;
-					}
-
-					.button-label {
-						opacity: 0;
-					}
-				}
-			}
-
-			&[animated="vertical"] {
-				.button-hover {
-					transform: translateY(-150%);
-				}
-
-				&:hover {
-					.button-hover {
-						transform: translateY(0);
-					}
-
-					.button-label {
-						transform: translateY(150%);
-					}
-				}
-			}
-
-			&[disabled] {
-				@apply pointer-events-none text-opacity-50;
-
-				&:not(.plain) {
-					@apply bg-gray-100 bg-opacity-50 border-opacity-50 dark:bg-gray-700 dark:bg-opacity-40 dark:border-opacity-40;
-				}
-
-				.button-label {
-					@apply text-gray-800 text-opacity-50 dark:text-opacity-40 dark:text-white;
-				}
+			.button-label {
+				transform: translateY(150%);
 			}
 		}
 	}

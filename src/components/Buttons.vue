@@ -11,19 +11,24 @@
 					return child === Button;
 				});
 
-				var cls = [];
-				if (typeof attrs.class == 'string') {
-					cls = attrs.class.split(' ');
-					cls = cls.filter((item) => {
-						return !['vertical'].includes(item);
-					});
-				}
 				var childProps = {
-					'class': cls,
+					class: 'border-0 flex-1 rounded-none',
 				};
 
+				if (typeof attrs.class == 'string') {
+					if (attrs.class.includes('dex-ui-btns-plain')) {
+						childProps.class += ' dex-ui-btn-plain';
+					}
+					if (attrs.class.includes('dex-ui-btns-primary')) {
+						childProps.class += ' dex-ui-btn-primary';
+					}
+					if (attrs.class.includes('dex-ui-btns-secondary')) {
+						childProps.class += ' dex-ui-btn-secondary';
+					}
+				}
+
 				return h('div', {
-					class: 'dexios buttons',
+					class: 'dex-ui-btns',
 				}, children.map((child) => {
 					return h(child, childProps);
 				}));
@@ -31,31 +36,3 @@
 		},
 	}
 </script>
-
-<style lang="less">
-	.dexios {
-		&.buttons {
-			@apply border border-gray-300 inline-flex overflow-hidden rounded dark:border-gray-700;
-
-			&:not(.vertical) {
-				@apply divide-x;
-			}
-
-			&.vertical {
-				@apply divide-y flex-col;
-			}
-
-			&.plain, &.primary, &.secondary {
-				@apply border-0;
-			}
-
-			&.plain {
-				@apply divide-x-0 divide-y-0;
-			}
-
-			.button {
-				@apply border-0 rounded-none;
-			}
-		}
-	}
-</style>

@@ -23,11 +23,3 @@
 <template>
 	<i class="dexios icon" :class="iconClasses"></i>
 </template>
-
-<style lang="less">
-	.dexios {
-		&.icon {
-			@apply inline-flex items-center justify-center dark:text-white;
-		}
-	}
-</style>
