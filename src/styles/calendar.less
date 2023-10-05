@@ -1,13 +1,13 @@
 @layer components {
 	.dexios-calendar {
-		@apply text-center text-gray-700;
+		@apply text-center text-gray-500;
 		@apply grid grid-cols-7 items-center justify-center overflow-hidden;
 		@apply disabled:opacity-50 disabled:pointer-events-none;
-		@apply dark:text-gray-400;
+		@apply dark:text-gray-300;
 	}
 
 	.dexios-calendar-day {
-		@apply opacity-50 px-4 py-2 rounded-none;
+		@apply opacity-50;
 		@apply hover:opacity-60;
 	}
 
@@ -19,9 +19,11 @@
 	.dexios-calendar-weekday {
 		@apply font-bold uppercase;
 	}
+}
 
+@layer utilities {
 	.dexios-calendar-current {
-		@apply bg-gray-700 rounded text-white;
+		@apply bg-gray-700 text-white;
 		@apply pointer-events-none;
 		@apply dark:bg-gray-700 dark:text-white;
 	}

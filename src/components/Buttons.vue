@@ -11,25 +11,28 @@
 					return child === Button;
 				});
 
+				var parentProps = {
+					class: 'dexios-btns',
+				};
 				var childProps = {
 					class: 'border-0 flex-1 rounded-none',
 				};
 
 				if (typeof attrs.class == 'string') {
-					if (attrs.class.includes('dexios-btns-plain')) {
-						childProps.class += ' dexios-btn-plain';
+					if (attrs.class.includes('dexios-plain')) {
+						childProps.class += ' dexios-plain';
 					}
-					if (attrs.class.includes('dexios-btns-primary')) {
-						childProps.class += ' dexios-btn-primary';
+					if (attrs.class.includes('dexios-primary')) {
+						childProps.class += ' dexios-primary';
+						parentProps.class += ' dexios-btns-primary';
 					}
-					if (attrs.class.includes('dexios-btns-secondary')) {
-						childProps.class += ' dexios-btn-secondary';
+					if (attrs.class.includes('dexios-secondary')) {
+						childProps.class += ' dexios-secondary';
+						parentProps.class += ' dexios-btns-secondary';
 					}
 				}
 
-				return h('div', {
-					class: 'dexios-btns',
-				}, children.map((child) => {
+				return h('div', parentProps, children.map((child) => {
 					return h(child, childProps);
 				}));
 			};

@@ -2,21 +2,14 @@
 	.dexios-btns {
 		@apply bg-gray-300 border border-gray-300 border-solid flex gap-px overflow-hidden rounded;
 	}
+}
 
-	.dexios-btns-plain {
-		@apply bg-transparent border-0;
-	}
-
-	.dexios-btns-primary, .dex-ui-btns-secondary {
-		@apply text-white;
-	}
-
+@layer utilities {
 	.dexios-btns-primary {
-		@apply bg-sky-700 border-sky-700;
-		@apply dark:bg-sky-900 dark:border-sky-900;
+		@apply bg-sky-700;
 	}
 
 	.dexios-btns-secondary {
-		@apply bg-gray-800 border-gray-800 dark:bg-gray-800 dark:border-gray-800;
+		@apply bg-gray-800;
 	}
 }

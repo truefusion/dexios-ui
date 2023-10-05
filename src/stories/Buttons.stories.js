@@ -65,7 +65,7 @@ export const Plain = {
 		setup: () => args,
 		template: `
 			<div class="p-4" :class="{ dark, 'bg-black': dark }">
-				<Buttons class="dexios-btns-plain" :disabled="disabled">
+				<Buttons class="dexios-plain" :disabled="disabled">
 					<Button>One</Button>
 					<Button>Two</Button>
 					<Button>Three</Button>
@@ -85,7 +85,7 @@ export const Primary = {
 		setup: () => args,
 		template: `
 			<div class="p-4" :class="{ dark, 'bg-black': dark }">
-				<Buttons class="dexios-btns-primary" :disabled="disabled">
+				<Buttons class="dexios-primary" :disabled="disabled">
 					<Button>One</Button>
 					<Button>Two</Button>
 					<Button>Three</Button>
@@ -105,7 +105,7 @@ export const Secondary = {
 		setup: () => args,
 		template: `
 			<div class="p-4" :class="{ dark, 'bg-black': dark }">
-				<Buttons class="dexios-btns-secondary" :disabled="disabled">
+				<Buttons class="dexios-secondary" :disabled="disabled">
 					<Button>One</Button>
 					<Button>Two</Button>
 					<Button>Three</Button>

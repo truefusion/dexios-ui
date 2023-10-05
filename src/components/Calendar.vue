@@ -72,14 +72,14 @@
 <template>
     <div class="dexios-calendar">
         <slot :days="days" :nextMonth="nextMonth" :prevMonth="prevMonth" :setActive="setActive" :title="title" :weekDayNames="weekDayNames">
-			<DexiosIcon class="dexios-btn dexios-btn-plain" icon="chevron-left" @click="prevMonth"></DexiosIcon>
+			<DexiosIcon class="dexios-btn dexios-plain" icon="chevron-left" @click="prevMonth"></DexiosIcon>
 			<div class="col-span-5 flex gap-2 justify-center p-2">
 				<span>{{title.month}}</span>
 				<span>{{title.year}}</span>
 			</div>
-			<DexiosIcon class="dexios-btn dexios-btn-plain" icon="chevron-right" @click="nextMonth"></DexiosIcon>
+			<DexiosIcon class="dexios-btn dexios-plain" icon="chevron-right" @click="nextMonth"></DexiosIcon>
 			<div class="dexios-calendar-weekday p-2" v-for="weekDay in weekDayNames">{{weekDay}}</div>
-			<DexiosButton class="dexios-btn-plain dexios-calendar-day" :class="{ 'dexios-calendar-current': current, 'dexios-calendar-month': month }" v-for="{ current, day, month } in days" @click="setActive(day)">
+			<DexiosButton class="dexios-plain dexios-calendar-day" :class="{ 'dexios-calendar-current': current, 'dexios-calendar-month': month }" v-for="{ current, day, month } in days" @click="setActive(day)">
 				<span>{{format(day, 'd')}}</span>
 			</DexiosButton>
         </slot>
