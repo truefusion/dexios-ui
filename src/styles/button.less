@@ -1,16 +1,18 @@
 @layer components {
 	.dexios-btn {
-		@apply bg-white border border-gray-300 border-solid rounded text-base text-gray-500;
+		@apply bg-white border @border-light border-solid rounded text-base @text-light;
 		@apply cursor-pointer;
 		@apply gap-2 inline-flex items-center justify-center overflow-hidden px-4 py-2 relative;
-		@apply transition-colors hover:shadow hover:text-gray-700;
-		@apply disabled:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none;
-		@apply dark:bg-gray-900 dark:border-gray-500 dark:text-gray-300;
-		@apply dark:hover:text-gray-100;
+		@apply transition-colors hover:shadow @text-light-hover;
+		@apply disabled:bg-gray-100 @disabled;
+		@apply @bg-dark @border-dark @text-dark;
+		@apply @text-dark-hover;
 	}
 
 	.dexios-btn-hover {
-		@apply absolute flex items-center justify-center inset-0 opacity-0 pointer-events-none whitespace-nowrap;
+		@apply pointer-events-none;
+		@apply opacity-0;
+		@apply absolute flex items-center justify-center inset-0 whitespace-nowrap;
 	}
 
 	.dexios-btn-label {

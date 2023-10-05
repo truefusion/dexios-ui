@@ -1,19 +1,9 @@
 @layer components {
 	.dexios-calendar {
-		@apply text-center text-gray-500;
-		@apply grid grid-cols-7 items-center justify-center overflow-hidden;
-		@apply disabled:opacity-50 disabled:pointer-events-none;
-		@apply dark:text-gray-300;
-	}
-
-	.dexios-calendar-day {
-		@apply opacity-50;
-		@apply hover:opacity-60;
-	}
-
-	.dexios-calendar-month {
-		@apply bg-transparent opacity-100;
-		@apply hover:opacity-100;
+		@apply @text-light;
+		@apply grid grid-cols-7 items-center justify-center overflow-hidden text-center;
+		@apply @disabled;
+		@apply @text-dark;
 	}
 
 	.dexios-calendar-weekday {

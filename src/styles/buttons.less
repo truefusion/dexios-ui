@@ -1,6 +1,9 @@
 @layer components {
 	.dexios-btns {
-		@apply bg-gray-300 border border-gray-300 border-solid flex gap-px overflow-hidden rounded;
+		@apply bg-gray-300 border @border-light border-solid rounded;
+		@apply flex gap-px overflow-hidden;
+		@apply dark:bg-gray-700 @border-dark;
+		@apply disabled:bg-gray-100 @disabled;
 	}
 }
 
