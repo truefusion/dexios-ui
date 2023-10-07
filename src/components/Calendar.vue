@@ -12,7 +12,6 @@
         startOfWeek,
         subMonths,
     } from "date-fns";
-	import DexiosButton from './Button.vue';
 	import DexiosIcon from './Icon.vue';
 
     const $props = defineProps({
@@ -79,9 +78,9 @@
 			</div>
 			<DexiosIcon class="dexios-btn dexios-plain" icon="chevron-right" @click="nextMonth"></DexiosIcon>
 			<div class="dexios-calendar-weekday p-2" v-for="weekDay in weekDayNames">{{weekDay}}</div>
-			<DexiosButton class="dexios-plain dexios-calendar-day" :class="{ 'dexios-calendar-current': current, 'dexios-calendar-month': month }" v-for="{ current, day, month } in days" @click="setActive(day)">
+			<button class="dexios-btn dexios-plain dexios-calendar-day" :class="{ 'dexios-calendar-current': current, 'dexios-calendar-month': month }" type="button" v-for="{ current, day, month } in days" @click="setActive(day)">
 				<span>{{format(day, 'd')}}</span>
-			</DexiosButton>
+			</button>
         </slot>
     </div>
 </template>

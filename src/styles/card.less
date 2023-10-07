@@ -1,0 +1,33 @@
+@layer components {
+	.dexios-card {
+		@apply bg-gray-300 border border-solid @border-light rounded @text-light;
+		@apply inline-flex flex-col gap-px overflow-hidden;
+		@apply @disabled;
+		@apply dark:bg-gray-700 @border-dark;
+	}
+
+	.dexios-card-content, .dexios-card-description, .dexios-card-extra, .dexios-card-header, .dexios-card-meta {
+		@apply bg-white;
+		@apply @bg-dark;
+	}
+
+	.dexios-card-content {
+		@apply flex flex-col px-4 py-2;
+	}
+
+	.dexios-card-description {
+		@apply mt-2;
+	}
+
+	.dexios-card-extra {
+		@apply p-2;
+	}
+
+	.dexios-card-image {
+		@apply flex;
+	}
+
+	.dexios-card-meta {
+		@apply opacity-75 text-sm;
+	}
+}

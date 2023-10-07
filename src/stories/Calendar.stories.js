@@ -23,7 +23,7 @@ export const Default = {
 		setup: () => args,
 		template: `
 			<div class="p-4" :class="{ dark, 'bg-black': dark }">
-				<Calendar :disabled="disabled"></Calendar>
+				<Calendar :aria-disabled="disabled"></Calendar>
 			</div>
 		`,
 	}),

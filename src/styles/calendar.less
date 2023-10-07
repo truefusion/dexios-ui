@@ -6,6 +6,14 @@
 		@apply @text-dark;
 	}
 
+	.dexios-calendar-day {
+		@apply rounded-none;
+	}
+
+	.dexios-calendar-day:not(.dexios-calendar-month) {
+		@apply opacity-50;
+	}
+
 	.dexios-calendar-weekday {
 		@apply font-bold uppercase;
 	}
@@ -13,7 +21,7 @@
 
 @layer utilities {
 	.dexios-calendar-current {
-		@apply bg-gray-700 text-white;
+		@apply bg-gray-700 rounded text-white;
 		@apply pointer-events-none;
 		@apply dark:bg-gray-700 dark:text-white;
 	}

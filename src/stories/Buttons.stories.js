@@ -1,55 +1,24 @@
-import Button from '../components/Button.vue';
-import Buttons from '../components/Buttons.vue';
-
 const args = {
 	dark: false,
 	disabled: false,
 };
 
 export default {
-	title: 'Examples/Button Groups',
-	component: Buttons,
+	title: 'Examples/Buttons',
 	tags: ['autodocs'],
 	parameters: {
 		layout: 'centered',
 	},
 };
 
+
 export const Default = {
 	args,
 	render: (args) => ({
-		components: {
-			Button,
-			Buttons,
-		},
 		setup: () => args,
 		template: `
 			<div class="p-4" :class="{ dark, 'bg-black': dark }">
-				<Buttons :disabled="disabled">
-					<Button>One</Button>
-					<Button>Two</Button>
-					<Button>Three</Button>
-				</Buttons>
-			</div>
-		`,
-	}),
-};
-
-export const Vertical = {
-	args,
-	render: (args) => ({
-		components: {
-			Button,
-			Buttons,
-		},
-		setup: () => args,
-		template: `
-			<div class="p-4" :class="{ dark, 'bg-black': dark }">
-				<Buttons class="dexios-vertical" :disabled="disabled">
-					<Button>One</Button>
-					<Button>Two</Button>
-					<Button>Three</Button>
-				</Buttons>
+				<button class="dexios-btn" :aria-disabled="disabled">Button</button>
 			</div>
 		`,
 	}),
@@ -58,18 +27,10 @@ export const Vertical = {
 export const Plain = {
 	args,
 	render: (args) => ({
-		components: {
-			Button,
-			Buttons,
-		},
 		setup: () => args,
 		template: `
 			<div class="p-4" :class="{ dark, 'bg-black': dark }">
-				<Buttons class="dexios-plain" :disabled="disabled">
-					<Button>One</Button>
-					<Button>Two</Button>
-					<Button>Three</Button>
-				</Buttons>
+				<button class="dexios-btn dexios-plain" :aria-disabled="disabled">Button</button>
 			</div>
 		`,
 	}),
@@ -78,18 +39,10 @@ export const Plain = {
 export const Primary = {
 	args,
 	render: (args) => ({
-		components: {
-			Button,
-			Buttons,
-		},
 		setup: () => args,
 		template: `
 			<div class="p-4" :class="{ dark, 'bg-black': dark }">
-				<Buttons class="dexios-primary" :disabled="disabled">
-					<Button>One</Button>
-					<Button>Two</Button>
-					<Button>Three</Button>
-				</Buttons>
+				<button class="dexios-btn dexios-primary" :aria-disabled="disabled">Button</button>
 			</div>
 		`,
 	}),
@@ -98,18 +51,90 @@ export const Primary = {
 export const Secondary = {
 	args,
 	render: (args) => ({
-		components: {
-			Button,
-			Buttons,
-		},
 		setup: () => args,
 		template: `
 			<div class="p-4" :class="{ dark, 'bg-black': dark }">
-				<Buttons class="dexios-secondary" :disabled="disabled">
-					<Button>One</Button>
-					<Button>Two</Button>
-					<Button>Three</Button>
-				</Buttons>
+				<button class="dexios-btn dexios-secondary" :aria-disabled="disabled">Button</button>
+			</div>
+		`,
+	}),
+};
+
+export const Group = {
+	args,
+	render: (args) => ({
+		setup: () => args,
+		template: `
+			<div class="p-4" :class="{ dark, 'bg-black': dark }">
+				<div class="dexios-btns" :aria-disabled="disabled">
+					<div class="dexios-btn">One</div>
+					<div class="dexios-btn">Two</div>
+					<div class="dexios-btn">Three</div>
+				</div>
+			</div>
+		`,
+	}),
+};
+
+export const Vertical = {
+	args,
+	render: (args) => ({
+		setup: () => args,
+		template: `
+			<div class="p-4" :class="{ dark, 'bg-black': dark }">
+				<div class="dexios-btns" class="dexios-vertical" :aria-disabled="disabled">
+					<div class="dexios-btn">One</div>
+					<div class="dexios-btn">Two</div>
+					<div class="dexios-btn">Three</div>
+				</div>
+			</div>
+		`,
+	}),
+};
+
+export const PlainGroup = {
+	args,
+	render: (args) => ({
+		setup: () => args,
+		template: `
+			<div class="p-4" :class="{ dark, 'bg-black': dark }">
+				<DexiosButtons class="dexios-plain" :aria-disabled="disabled">
+					<div class="dexios-btn">One</div>
+					<div class="dexios-btn">Two</div>
+					<div class="dexios-btn">Three</div>
+				</DexiosButtons>
+			</div>
+		`,
+	}),
+};
+
+export const PrimaryGroup = {
+	args,
+	render: (args) => ({
+		setup: () => args,
+		template: `
+			<div class="p-4" :class="{ dark, 'bg-black': dark }">
+				<DexiosButtons class="dexios-primary" :aria-disabled="disabled">
+					<div class="dexios-btn">One</div>
+					<div class="dexios-btn">Two</div>
+					<div class="dexios-btn">Three</div>
+				</DexiosButtons>
+			</div>
+		`,
+	}),
+};
+
+export const SecondaryGroup = {
+	args,
+	render: (args) => ({
+		setup: () => args,
+		template: `
+			<div class="p-4" :class="{ dark, 'bg-black': dark }">
+				<DexiosButtons class="dexios-secondary" :aria-disabled="disabled">
+					<div class="dexios-btn">One</div>
+					<div class="dexios-btn">Two</div>
+					<div class="dexios-btn">Three</div>
+				</DexiosButtons>
 			</div>
 		`,
 	}),
