@@ -1,13 +1,7 @@
-export { default as Button } from './Button.vue';
-export { default as Buttons } from './Buttons.vue';
 export { default as Calendar } from './Calendar.vue';
 export { default as Dimmer } from './Dimmer.vue';
-export { default as Divider } from './Divider.vue';
 export { default as Dropdown } from './Dropdown.vue';
-export { default as Icon } from './Icon.vue';
 export { default as Input } from './Input.vue';
-export { default as Label } from './Label.vue';
-export { default as Labels } from './Labels.vue';
 export { default as Loader } from './Loader.vue';
 export { default as Menu } from './Menu.vue';
 export { default as Message } from './Message.vue';

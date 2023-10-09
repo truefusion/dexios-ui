@@ -1,5 +1,5 @@
 import '@mdi/font/css/materialdesignicons.min.css';
-import '../src/styles/index.less';
+import '../src/styles/index.scss';
 
 /** @type { import('@storybook/vue3').Preview } */
 const preview = {

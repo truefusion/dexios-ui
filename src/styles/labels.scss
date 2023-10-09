@@ -1,0 +1,26 @@
+@layer components {
+	.dexios-label {
+		@include colors.bg();
+		@apply rounded text-sm;
+		@apply flex items-center overflow-hidden;
+
+		@include colors.bg-primary("dexios-primary:");
+		@include colors.bg-secondary("dexios-secondary:");
+	}
+
+	.dexios-label-detail {
+		@apply #{colors.color(bg, colors.$light-alt)};
+		@apply flex gap-2 items-center px-2 py-1;
+		@apply dexios-primary:#{colors.color(bg, colors.$primary-alt)};
+		@apply dexios-secondary:#{colors.color(bg, colors.$secondary-alt)};
+	}
+
+	.dexios-label-text {
+		@apply flex gap-2 items-center px-2 py-1;
+	}
+
+	.dexios-labels {
+		@apply bg-transparent #{!important};
+		@apply flex gap-2 items-center justify-start;
+	}
+}

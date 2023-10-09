@@ -1,9 +1,8 @@
 @layer components {
 	.dexios-calendar {
-		@apply @text-light;
+		@include colors.text();
 		@apply grid grid-cols-7 items-center justify-center overflow-hidden text-center;
-		@apply @disabled;
-		@apply @text-dark;
+		@include state.disabled();
 	}
 
 	.dexios-calendar-day {
@@ -21,8 +20,5 @@
 
 @layer utilities {
 	.dexios-calendar-current {
-		@apply bg-gray-700 rounded text-white;
-		@apply pointer-events-none;
-		@apply dark:bg-gray-700 dark:text-white;
 	}
 }

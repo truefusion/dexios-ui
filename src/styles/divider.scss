@@ -1,0 +1,29 @@
+@layer components {
+	.dexios-divide-x {
+		@apply flex items-center;
+		@apply dark:#{colors.color(bg, colors.$border-light)};
+		@apply after:block after:flex-1 after:h-px;
+		@apply after:#{colors.color(bg, colors.$border-light)};
+		@apply before:block before:flex-1 before:h-px;
+		@apply before:#{colors.color(bg, colors.$border-light)};
+		@include state.disabled();
+
+		&::after, &::before {
+			content: '';
+		}
+	}
+
+	.dexios-divide-y {
+		@apply flex flex-col items-center justify-center;
+		@apply dark:#{colors.color(bg, colors.$border-light)};
+		@apply after:block after:flex-1 after:w-px;
+		@apply after:#{colors.color(bg, colors.$border-light)};
+		@apply before:block before:flex-1 before:w-px;
+		@apply before:#{colors.color(bg, colors.$border-light)};
+		@include state.disabled();
+
+		&::after, &::before {
+			content: '';
+		}
+	}
+}

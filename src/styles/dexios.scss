@@ -1,0 +1,42 @@
+@layer utilities {
+	.dexios-circular {
+		@apply overflow-hidden rounded-full;
+	}
+
+	.dexios-plain {
+		@apply appearance-none bg-transparent border-0 shadow-none;
+		@apply hover:bg-transparent hover:border-0 hover:shadow-none;
+		@apply disabled:bg-transparent;
+		@apply dark:bg-transparent dark:border-0;
+		@apply dark:hover:bg-transparent;
+	}
+
+	.dexios-primary, .dexios-primary-hover, .dexios-secondary, .dexios-secondary-hover {
+		@apply border-0 rounded text-white;
+		@apply hover:text-white;
+		@apply dark:text-white;
+		@apply dark:hover:text-white;
+	}
+
+	.dexios-primary {
+		@include colors.bg-primary();
+	}
+
+	.dexios-primary-hover {
+		@include colors.bg-primary();
+		@include colors.bg-primary-hover();
+	}
+
+	.dexios-secondary {
+		@include colors.bg-secondary();
+	}
+
+	.dexios-secondary-hover {
+		@include colors.bg-secondary();
+		@include colors.bg-secondary-hover();
+	}
+
+	.dexios-vertical {
+		@apply flex flex-col;
+	}
+}

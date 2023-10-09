@@ -1,0 +1,71 @@
+@use "sass:string";
+
+$light: gray-100;
+$light-alt: gray-300;
+$neutral: gray-500;
+$dark-alt: gray-700;
+$dark: gray-900;
+
+$bg-light: $light;
+$bg-dark: $dark;
+
+$border-light: $light-alt;
+$border-dark: $dark-alt;
+
+$text-light: $neutral;
+$text-dark: $neutral;
+
+$primary: sky-600;
+$primary-alt: sky-700;
+
+$secondary: gray-700;
+$secondary-alt: gray-800;
+
+@function color($type, $color) {
+	@return #{$type}-#{$color};
+}
+
+@mixin bg($prefix: null) {
+	@apply #{$prefix}#{color(bg, $light)};
+	@apply dark:#{$prefix}#{color(bg, $dark)};
+}
+
+@mixin bg-primary($prefix: null) {
+	@apply #{$prefix}bg-#{$primary};
+	@apply dark:#{$prefix}bg-#{$primary};
+}
+
+@mixin bg-secondary($prefix: null) {
+	@apply #{$prefix}bg-#{$secondary};
+	@apply dark:#{$prefix}bg-#{$secondary};
+}
+
+@mixin bg-hover($prefix: null) {
+	@apply hover:#{$prefix}bg-#{$light-alt};
+	@apply dark:hover:#{$prefix}bg-#{$dark-alt};
+}
+
+@mixin bg-primary-hover($prefix: null) {
+	@apply hover:#{$prefix}bg-#{$primary-alt};
+	@apply dark:hover:#{$prefix}bg-#{$primary-alt};
+}
+
+@mixin bg-secondary-hover($prefix: null) {
+	@apply hover:#{$prefix}bg-#{$secondary-alt};
+	@apply dark:hover:#{$prefix}bg-#{$secondary-alt};
+}
+
+@mixin border($prefix: null) {
+	@apply #{$prefix}border-#{$light-alt};
+	@apply dark:#{$prefix}border-#{$dark-alt};
+}
+
+@mixin text($prefix: null) {
+	@apply #{$prefix}text-#{$neutral};
+	@apply dark:#{$prefix}text-#{$neutral};
+}
+
+@mixin text-hover($prefix: null) {
+	@apply hover:#{$prefix}text-#{$dark-alt};
+	@apply dark:hover:#{$prefix}text-#{$light-alt};
+}

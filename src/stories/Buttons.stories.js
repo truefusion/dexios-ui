@@ -42,7 +42,7 @@ export const Primary = {
 		setup: () => args,
 		template: `
 			<div class="p-4" :class="{ dark, 'bg-black': dark }">
-				<button class="dexios-btn dexios-primary" :aria-disabled="disabled">Button</button>
+				<button class="dexios-btn dexios-primary-hover" :aria-disabled="disabled">Button</button>
 			</div>
 		`,
 	}),
@@ -54,7 +54,7 @@ export const Secondary = {
 		setup: () => args,
 		template: `
 			<div class="p-4" :class="{ dark, 'bg-black': dark }">
-				<button class="dexios-btn dexios-secondary" :aria-disabled="disabled">Button</button>
+				<button class="dexios-btn dexios-secondary-hover" :aria-disabled="disabled">Button</button>
 			</div>
 		`,
 	}),
@@ -66,7 +66,7 @@ export const Group = {
 		setup: () => args,
 		template: `
 			<div class="p-4" :class="{ dark, 'bg-black': dark }">
-				<div class="dexios-btns" :aria-disabled="disabled">
+				<div class="dexios-btns group" :aria-disabled="disabled">
 					<div class="dexios-btn">One</div>
 					<div class="dexios-btn">Two</div>
 					<div class="dexios-btn">Three</div>
@@ -81,8 +81,8 @@ export const Vertical = {
 	render: (args) => ({
 		setup: () => args,
 		template: `
-			<div class="p-4" :class="{ dark, 'bg-black': dark }">
-				<div class="dexios-btns" class="dexios-vertical" :aria-disabled="disabled">
+			<div class="group p-4" :class="{ dark, 'bg-black': dark }">
+				<div class="dexios-btns dexios-vertical" :aria-disabled="disabled">
 					<div class="dexios-btn">One</div>
 					<div class="dexios-btn">Two</div>
 					<div class="dexios-btn">Three</div>
@@ -98,11 +98,11 @@ export const PlainGroup = {
 		setup: () => args,
 		template: `
 			<div class="p-4" :class="{ dark, 'bg-black': dark }">
-				<DexiosButtons class="dexios-plain" :aria-disabled="disabled">
+				<div class="dexios-btns dexios-plain" :aria-disabled="disabled">
 					<div class="dexios-btn">One</div>
 					<div class="dexios-btn">Two</div>
 					<div class="dexios-btn">Three</div>
-				</DexiosButtons>
+				</div>
 			</div>
 		`,
 	}),
@@ -114,11 +114,11 @@ export const PrimaryGroup = {
 		setup: () => args,
 		template: `
 			<div class="p-4" :class="{ dark, 'bg-black': dark }">
-				<DexiosButtons class="dexios-primary" :aria-disabled="disabled">
+				<div class="dexios-btns dexios-primary" :aria-disabled="disabled">
 					<div class="dexios-btn">One</div>
 					<div class="dexios-btn">Two</div>
 					<div class="dexios-btn">Three</div>
-				</DexiosButtons>
+				</div>
 			</div>
 		`,
 	}),
@@ -130,11 +130,11 @@ export const SecondaryGroup = {
 		setup: () => args,
 		template: `
 			<div class="p-4" :class="{ dark, 'bg-black': dark }">
-				<DexiosButtons class="dexios-secondary" :aria-disabled="disabled">
+				<div class="dexios-btns dexios-secondary" :aria-disabled="disabled">
 					<div class="dexios-btn">One</div>
 					<div class="dexios-btn">Two</div>
 					<div class="dexios-btn">Three</div>
-				</DexiosButtons>
+				</div>
 			</div>
 		`,
 	}),

@@ -1,14 +1,16 @@
 @layer components {
 	.dexios-card {
-		@apply bg-gray-300 border border-solid @border-light rounded @text-light;
+		@include colors.border();
+		@include colors.text();
+		@apply #{colors.color(bg, colors.$border-light)} border border-solid rounded;
 		@apply inline-flex flex-col gap-px overflow-hidden;
-		@apply @disabled;
-		@apply dark:bg-gray-700 @border-dark;
+		@apply dark:#{colors.color(bg, colors.$border-dark)};
+		@include state.disabled();
 	}
 
 	.dexios-card-content, .dexios-card-description, .dexios-card-extra, .dexios-card-header, .dexios-card-meta {
 		@apply bg-white;
-		@apply @bg-dark;
+		@apply dark:#{colors.color(bg, colors.$bg-dark)};
 	}
 
 	.dexios-card-content {
