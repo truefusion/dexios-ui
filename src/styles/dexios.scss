@@ -6,6 +6,7 @@
 	.dexios-plain {
 		@apply appearance-none bg-transparent border-0 shadow-none;
 		@apply hover:bg-transparent hover:border-0 hover:shadow-none;
+		@apply after:hidden before:hidden;
 		@apply disabled:bg-transparent;
 		@apply dark:bg-transparent dark:border-0;
 		@apply dark:hover:bg-transparent;
@@ -25,6 +26,10 @@
 	.dexios-primary-hover {
 		@include colors.bg-primary();
 		@include colors.bg-primary-hover();
+	}
+
+	.dexios-raised {
+		@apply shadow-md;
 	}
 
 	.dexios-secondary {

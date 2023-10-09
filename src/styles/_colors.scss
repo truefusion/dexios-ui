@@ -1,5 +1,3 @@
-@use "sass:string";
-
 $light: gray-100;
 $light-alt: gray-300;
 $neutral: gray-500;
@@ -21,13 +19,9 @@ $primary-alt: sky-700;
 $secondary: gray-700;
 $secondary-alt: gray-800;
 
-@function color($type, $color) {
-	@return #{$type}-#{$color};
-}
-
 @mixin bg($prefix: null) {
-	@apply #{$prefix}#{color(bg, $light)};
-	@apply dark:#{$prefix}#{color(bg, $dark)};
+	@apply #{$prefix}bg-#{$light};
+	@apply dark:#{$prefix}bg-#{$dark};
 }
 
 @mixin bg-primary($prefix: null) {
@@ -35,9 +29,19 @@ $secondary-alt: gray-800;
 	@apply dark:#{$prefix}bg-#{$primary};
 }
 
+@mixin bg-primary-alt($prefix: null) {
+	@apply #{$prefix}bg-#{$primary-alt};
+	@apply dark:#{$prefix}bg-#{$primary-alt};
+}
+
 @mixin bg-secondary($prefix: null) {
 	@apply #{$prefix}bg-#{$secondary};
 	@apply dark:#{$prefix}bg-#{$secondary};
+}
+
+@mixin bg-secondary-alt($prefix: null) {
+	@apply #{$prefix}bg-#{$secondary-alt};
+	@apply dark:#{$prefix}bg-#{$secondary-alt};
 }
 
 @mixin bg-hover($prefix: null) {

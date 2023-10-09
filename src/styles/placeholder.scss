@@ -4,9 +4,9 @@
 	}
 
 	.dexios-line {
-		@apply #{colors.color(bg, colors.$light)};
+		@apply bg-#{colors.$light};
 		@apply rounded;
 		@apply block h-4;
-		@apply dark:#{colors.color(bg, colors.$dark-alt)};
+		@apply dark:bg-#{colors.$dark-alt};
 	}
 }

@@ -2,15 +2,15 @@
 	.dexios-card {
 		@include colors.border();
 		@include colors.text();
-		@apply #{colors.color(bg, colors.$border-light)} border border-solid rounded;
+		@apply bg-#{colors.$border-light} border border-solid rounded;
 		@apply inline-flex flex-col gap-px overflow-hidden;
-		@apply dark:#{colors.color(bg, colors.$border-dark)};
+		@apply dark:bg-#{colors.$border-dark};
 		@include state.disabled();
 	}
 
 	.dexios-card-content, .dexios-card-description, .dexios-card-extra, .dexios-card-header, .dexios-card-meta {
 		@apply bg-white;
-		@apply dark:#{colors.color(bg, colors.$bg-dark)};
+		@apply dark:bg-#{colors.$bg-dark};
 	}
 
 	.dexios-card-content {

@@ -1,0 +1,11 @@
+@layer components {
+	.dexios-spinner {
+		@apply before:animate-spin before:border-solid before:border-gray-300 before:border-t-gray-600 before:rounded-full;
+		@apply before:block before:h-full before:w-full;
+		@apply before:dark:border-gray-700 before:dark:border-t-gray-300;
+
+		&::before {
+			content: '';
+		}
+	}
+}

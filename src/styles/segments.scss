@@ -1,0 +1,27 @@
+@layer components {
+	.dexios-segment {
+		@apply border border-solid rounded;
+		@apply p-4 relative;
+		@include colors.border();
+		@include colors.text();
+		@include state.disabled();
+	}
+}
+
+@layer utilities {
+	.dexios-stacked {
+		&::after, &::before {
+			@apply absolute block border-t -bottom-1 h-1 left-0 right-0;
+			@include colors.bg('after:');
+			@include colors.border('after:');
+			@include colors.bg('before:');
+			@include colors.border('before:');
+
+			content: '';
+		}
+
+		&::after {
+			bottom: -1px;
+		}
+	}
+}

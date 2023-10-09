@@ -9,10 +9,11 @@
 	}
 
 	.dexios-label-detail {
-		@apply #{colors.color(bg, colors.$light-alt)};
+		@apply bg-#{colors.$light-alt};
 		@apply flex gap-2 items-center px-2 py-1;
-		@apply dexios-primary:#{colors.color(bg, colors.$primary-alt)};
-		@apply dexios-secondary:#{colors.color(bg, colors.$secondary-alt)};
+
+		@include colors.bg-primary-alt("dexios-primary:");
+		@include colors.bg-secondary-alt("dexios-secondary:");
 	}
 
 	.dexios-label-text {
@@ -20,6 +21,7 @@
 	}
 
 	.dexios-labels {
+		/* @TODO Don't like !important. */
 		@apply bg-transparent #{!important};
 		@apply flex gap-2 items-center justify-start;
 	}

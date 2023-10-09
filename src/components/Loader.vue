@@ -7,8 +7,8 @@
 <template>
 	<DexiosDimmer class="loader" :class="{ hidden: !$props.run, running: $props.run, }">
 		<DexiosSpinner>
-			<slot></slot>
 		</DexiosSpinner>
+		<slot></slot>
 	</DexiosDimmer>
 </template>
 
