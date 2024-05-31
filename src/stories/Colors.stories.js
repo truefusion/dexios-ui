@@ -3,49 +3,60 @@ function render(args) {
 
 	[
 		[
-			['box', 'dexios-ui-solid-[sky-950]'],
-			['box', 'dexios-ui-outline-[sky-950]'],
-			['box', 'dexios-ui-soft-[sky]'],
+			['dexios-ui-box', 'dexios-ui-solid-[sky-950]'],
+			['dexios-ui-box', 'dexios-ui-outline-inner-[sky-950_2]'],
+			['dexios-ui-box', 'dexios-ui-outline-outer-[sky-950_4]'],
+			['dexios-ui-box', 'dexios-ui-soft-[sky]'],
 		],
 		[
-			['box', 'dexios-ui-solid-[sky-900]'],
-			['box', 'dexios-ui-outline-[sky-900]'],
+			['dexios-ui-box', 'dexios-ui-solid-[sky-900]'],
+			['dexios-ui-box', 'dexios-ui-outline-inner-[sky-900_2]'],
+			['dexios-ui-box', 'dexios-ui-outline-outer-[sky-900_4]'],
 		],
 		[
-			['box', 'dexios-ui-solid-[sky-800]'],
-			['box', 'dexios-ui-outline-[sky-800]'],
+			['dexios-ui-box', 'dexios-ui-solid-[sky-800]'],
+			['dexios-ui-box', 'dexios-ui-outline-inner-[sky-800_2]'],
+			['dexios-ui-box', 'dexios-ui-outline-outer-[sky-800_4]'],
 		],
 		[
-			['box', 'dexios-ui-solid-[sky-700]'],
-			['box', 'dexios-ui-outline-[sky-700]'],
+			['dexios-ui-box', 'dexios-ui-solid-[sky-700]'],
+			['dexios-ui-box', 'dexios-ui-outline-inner-[sky-700_2]'],
+			['dexios-ui-box', 'dexios-ui-outline-outer-[sky-700_4]'],
 		],
 		[
-			['box', 'dexios-ui-solid-[sky-600]'],
-			['box', 'dexios-ui-outline-[sky-600]'],
+			['dexios-ui-box', 'dexios-ui-solid-[sky-600]'],
+			['dexios-ui-box', 'dexios-ui-outline-inner-[sky-600_2]'],
+			['dexios-ui-box', 'dexios-ui-outline-outer-[sky-600_4]'],
 		],
 		[
-			['box', 'dexios-ui-solid-[sky-500]'],
-			['box', 'dexios-ui-outline-[sky-500]'],
+			['dexios-ui-box', 'dexios-ui-solid-[sky-500]'],
+			['dexios-ui-box', 'dexios-ui-outline-inner-[sky-500_2]'],
+			['dexios-ui-box', 'dexios-ui-outline-outer-[sky-500_4]'],
 		],
 		[
-			['box', 'dexios-ui-solid-[sky-400]'],
-			['box', 'dexios-ui-outline-[sky-400]'],
+			['dexios-ui-box', 'dexios-ui-solid-[sky-400]'],
+			['dexios-ui-box', 'dexios-ui-outline-inner-[sky-400_2]'],
+			['dexios-ui-box', 'dexios-ui-outline-outer-[sky-400_4]'],
 		],
 		[
-			['box', 'dexios-ui-solid-[sky-300]'],
-			['box', 'dexios-ui-outline-[sky-300]'],
+			['dexios-ui-box', 'dexios-ui-solid-[sky-300]'],
+			['dexios-ui-box', 'dexios-ui-outline-inner-[sky-300_2]'],
+			['dexios-ui-box', 'dexios-ui-outline-outer-[sky-300_4]'],
 		],
 		[
-			['box', 'dexios-ui-solid-[sky-200]'],
-			['box', 'dexios-ui-outline-[sky-200]'],
+			['dexios-ui-box', 'dexios-ui-solid-[sky-200]'],
+			['dexios-ui-box', 'dexios-ui-outline-inner-[sky-200_2]'],
+			['dexios-ui-box', 'dexios-ui-outline-outer-[sky-200_4]'],
 		],
 		[
-			['box', 'dexios-ui-solid-[sky-100]'],
-			['box', 'dexios-ui-outline-[sky-100]'],
+			['dexios-ui-box', 'dexios-ui-solid-[sky-100]'],
+			['dexios-ui-box', 'dexios-ui-outline-inner-[sky-100_2]'],
+			['dexios-ui-box', 'dexios-ui-outline-outer-[sky-100_4]'],
 		],
 		[
-			['box', 'dexios-ui-solid-[sky-50]'],
-			['box', 'dexios-ui-outline-[sky-50]'],
+			['dexios-ui-box', 'dexios-ui-solid-[sky-50]'],
+			['dexios-ui-box', 'dexios-ui-outline-inner-[sky-50_2]'],
+			['dexios-ui-box', 'dexios-ui-outline-outer-[sky-50_4]'],
 		],
 	].forEach((items) => {
 		const wrapper = document.createElement('div');

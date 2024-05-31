@@ -21,7 +21,7 @@ export default plugin(function ({ addComponents, matchComponents }) {
 	matchComponents({
 		'input-outline': (value) => {
 			const input_outline = [
-				`dexios-ui-outline-inset-[${value}]`,
+				`dexios-ui-outline-inner-[${value}]`,
 				'shadow-sm',
 				'focus:ring-2',
 			];

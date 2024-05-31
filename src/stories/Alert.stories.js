@@ -35,7 +35,7 @@ export const AlertOutline = {
 		const nlt = document.createTextNode('\n\t');
 		const title = document.createElement('div');
 
-		div.classList.add('alert-base', 'dexios-ui-outline-inset-[zinc-200]', 'flex', 'flex-col', 'gap-2');
+		div.classList.add('alert-base', 'dexios-ui-outline-inner-[zinc-200]', 'flex', 'flex-col', 'gap-2');
 		div.appendChild(nlt.cloneNode());
 		div.appendChild(title);
 		div.appendChild(nlt.cloneNode());

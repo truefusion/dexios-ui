@@ -1,0 +1,21 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Utilities/dexios-ui-outline-outer" />
+
+# dexios-ui-outline-outer
+
+Used to apply an outline that is one pixel wide by default and an outline color with matching text color.
+Uses arbitrary values for specifying color, shade of outline and outline width.
+The outline color will take on the color of the arbitrary value.
+Regardless of the shade specified, the matching text color will always be of the shade 950.
+If the color specified has no shade, a text color without shade will be chosen.
+
+Expected syntax for arbitrary value is in the `[color-shade_width]` form.
+
+### Examples
+
+```
+dexios-ui-outline-outer-[zinc-300]
+dexios-ui-outline-outer-[zinc-300_4]
+dexios-ui-outline-outer-[black_2]
+```

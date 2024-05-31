@@ -30,8 +30,8 @@ export const ButtonCombined = {
 		btn_three.innerText = 'Button';
 
 		btn_one.classList.add('btn-base', 'btn-outline-[zinc-300]', 'hover:dexios-ui-solid-[zinc-100]');
-		btn_two.classList.add('btn-base', 'btn-outline-[zinc-300]', 'btn-solid-[zinc-100]', 'hover:dexios-ui-outline-[zinc-400]');
-		btn_three.classList.add('btn-base', 'btn-outline-[zinc-300]', 'btn-solid-[zinc-50]', 'hover:dexios-ui-outline-[sky-300]', 'hover:dexios-ui-solid-[sky-50]');
+		btn_two.classList.add('btn-base', 'btn-outline-[zinc-300]', 'btn-solid-[zinc-100]', 'hover:dexios-ui-outline-inner-[zinc-400]');
+		btn_three.classList.add('btn-base', 'btn-outline-[zinc-300]', 'btn-solid-[zinc-50]', 'hover:dexios-ui-outline-inner-[sky-300]', 'hover:dexios-ui-solid-[sky-50]');
 
 		div.appendChild(nlt.cloneNode());
 		div.appendChild(btn_one);
@@ -49,7 +49,7 @@ export const ButtonOutline = {
 	render() {
 		const button = document.createElement('button');
 
-		button.classList.add('btn-base', 'btn-outline-[zinc-300]', 'hover:dexios-ui-outline-[zinc-400]');
+		button.classList.add('btn-base', 'btn-outline-[zinc-300]', 'hover:dexios-ui-outline-inner-[zinc-400]');
 		button.innerText = 'Button';
 
 		return button;

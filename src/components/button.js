@@ -24,7 +24,7 @@ export default plugin(function ({ addComponents, matchComponents }) {
 	matchComponents({
 		'btn-outline': (value) => {
 			const btn_outline = [
-				`dexios-ui-outline-inset-[${value}]`,
+				`dexios-ui-outline-inner-[${value}]`,
 				'shadow-sm',
 			];
 			return {

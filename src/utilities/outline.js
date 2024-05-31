@@ -5,7 +5,7 @@ import plugin from 'tailwindcss/plugin';
 
 export default plugin(function ({ matchUtilities }) {
 	matchUtilities({
-		'dexios-ui-outline': (value) => {
+		'dexios-ui-outline-inner': (value) => {
 			var { color, width } = parseOutline(value);
 
 			if (!width) {
@@ -15,6 +15,7 @@ export default plugin(function ({ matchUtilities }) {
 			const color_text = colorForOutlineText(color);
 			const outline = [
 				`ring-${width}`,
+				'ring-inset',
 				`ring-${color}`,
 				`text-${color_text}`,
 			];
@@ -23,11 +24,21 @@ export default plugin(function ({ matchUtilities }) {
 				[applyCss(outline)]: {},
 			};
 		},
-		'dexios-ui-outline-inset': (value) => {
+		'dexios-ui-outline-outer': (value) => {
+			var { color, width } = parseOutline(value);
+
+			if (!width) {
+				width = 1;
+			}
+
+			const color_text = colorForOutlineText(color);
 			const outline = [
-				`dexios-ui-outline-[${value}]`,
-				'ring-inset',
+				'outline',
+				`outline-${width}`,
+				`outline-${color}`,
+				`text-${color_text}`,
 			];
+
 			return {
 				[applyCss(outline)]: {},
 			};

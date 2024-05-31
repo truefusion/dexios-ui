@@ -17,7 +17,7 @@ export const BadgeOutline = {
 	render() {
 		const span = document.createElement('span');
 
-		span.classList.add('badge-base', 'dexios-ui-outline-inset-[zinc-200]');
+		span.classList.add('badge-base', 'dexios-ui-outline-inner-[zinc-200]');
 		span.innerText = 'Badge';
 
 		return span;
