@@ -1,0 +1,26 @@
+import { Canvas, Controls, Meta, Primary } from '@storybook/blocks';
+import * as BadgeStories from '../Badge.stories';
+
+<Meta of={BadgeStories} />
+
+# Badge
+
+| Class      | Inherits      |
+| ---------- | ------------- |
+| badge-base | dexios-ui-box |
+
+### Base
+
+<Canvas withToolbar of={BadgeStories.BadgeBase} />
+
+### Outline
+
+<Canvas withToolbar of={BadgeStories.BadgeOutline} />
+
+### Soft
+
+<Canvas withToolbar of={BadgeStories.BadgeSoft} />
+
+### Solid
+
+<Canvas withToolbar of={BadgeStories.BadgeSolid} />

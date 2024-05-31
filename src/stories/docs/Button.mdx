@@ -1,0 +1,28 @@
+import { Canvas, Controls, Meta, Primary } from '@storybook/blocks';
+import * as ButtonStories from '../Button.stories';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+| Class       | Inherits          |
+| ----------- | ----------------- |
+| btn-base    | dexios-ui-box     |
+| btn-outline | dexios-ui-outline |
+| btn-solid   | dexios-ui-solid   |
+
+### Base
+
+<Canvas withToolbar of={ButtonStories.ButtonBase} />
+
+### Outlined
+
+<Canvas withToolbar of={ButtonStories.ButtonOutline} />
+
+### Solid
+
+<Canvas withToolbar of={ButtonStories.ButtonSolid} />
+
+### Combined
+
+<Canvas withToolbar of={ButtonStories.ButtonCombined} />

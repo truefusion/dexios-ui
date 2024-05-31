@@ -1,7 +1,11 @@
 {
 	"name": "@truefusion/dexios-ui",
-	"version": "0.12.3",
 	"license": "See license in LICENSE",
+	"version": "0.13.0",
+	"type": "module",
+	"files": [
+		"dist"
+	],
 	"publishConfig": {
 		"access": "public"
 	},
@@ -9,43 +13,31 @@
 		"type": "git",
 		"url": "https://github.com/AimForNaN/dexios-ui.git"
 	},
-	"files": [
-		"dist/*",
-		"dist/**/*"
-	],
+	"main": "./dist/dexios-ui.js",
 	"scripts": {
-		"dev": "storybook dev -p 6006 --no-open",
 		"build": "vite build",
-		"preview": "np --preview",
-		"release": "npm run build && np --yolo --no-2fa --no-yarn",
-		"build:storybook": "storybook build"
-	},
-	"dependencies": {
-		"@mdi/font": "^6.9.96",
-		"vue": "^3.2.31"
+		"build-storybook": "storybook build",
+		"dev": "vite",
+		"preview": "vite preview",
+		"start": "npm run storybook",
+		"storybook": "storybook dev -p 6006 --no-open"
 	},
 	"devDependencies": {
-		"@floating-ui/dom": "^1.5.3",
-		"@rollup/plugin-url": "^6.1.0",
-		"@storybook/addon-essentials": "^7.4.5",
-		"@storybook/addon-interactions": "^7.4.5",
-		"@storybook/addon-links": "^7.4.5",
-		"@storybook/blocks": "^7.4.5",
-		"@storybook/testing-library": "^0.2.2",
-		"@storybook/vue3": "^7.4.5",
-		"@storybook/vue3-vite": "^7.4.5",
-		"@tailwindcss/typography": "^0.5.10",
-		"@vitejs/plugin-vue": "^4.4.0",
-		"autoprefixer": "^10.4.16",
-		"date-fns": "^2.30.0",
-		"dialog-polyfill": "^0.5.6",
-		"postcss": "^8.4.31",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"sass": "^1.69.0",
-		"storybook": "^7.4.5",
-		"tailwindcss": "^3.3.3",
-		"vite": "^4.4.10"
-	},
-	"main": "dist/dexios-ui.es.js"
+		"@chromatic-com/storybook": "^1.5.0",
+		"@storybook/addon-essentials": "^8.1.4",
+		"@storybook/addon-interactions": "^8.1.4",
+		"@storybook/addon-links": "^8.1.4",
+		"@storybook/addon-mdx-gfm": "^8.1.4",
+		"@storybook/blocks": "^8.1.4",
+		"@storybook/html": "^8.1.4",
+		"@storybook/html-vite": "^8.1.4",
+		"@storybook/test": "^8.1.4",
+		"autoprefixer": "^10.4.19",
+		"less": "^4.2.0",
+		"less-loader": "^12.2.0",
+		"postcss": "^8.4.38",
+		"storybook": "^8.1.4",
+		"tailwindcss": "^3.4.3",
+		"vite": "^5.2.12"
+	}
 }

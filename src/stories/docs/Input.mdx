@@ -1,0 +1,27 @@
+import { Canvas, Controls, Meta, Primary } from '@storybook/blocks';
+import * as InputStories from '../Input.stories';
+
+<Meta of={InputStories} />
+
+# Input
+
+| Class         | Inherits          |
+| -----------   | ----------------- |
+| input-base    | dexios-ui-box     |
+| input-solid   | dexios-ui-solid   |
+
+### Base
+
+<Canvas withToolbar of={InputStories.InputBase} />
+
+### Outlined
+
+<Canvas withToolbar of={InputStories.InputOutline} />
+
+### Solid
+
+<Canvas withToolbar of={InputStories.InputSolid} />
+
+### Combined
+
+<Canvas withToolbar of={InputStories.InputCombined} />

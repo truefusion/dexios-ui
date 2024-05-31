@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	* {
+		@apply box-border;
+	}
+
+	body, p {
+		@apply !font-sans !text-base;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		@apply !font-title;
+	}
+
+	h2, h3, h4, h5, h6 {
+		@apply !mb-0 !mt-8;
+	}
+	
+	p {
+		@apply !leading-relaxed;
+	}
+}
+
+.docblock-source {
+	@apply !my-8;
+}
+
+.sbdocs-content {
+	@apply !p-16 !max-w-screen-lg;
+}
+
+.sbdocs-wrapper {
+	@apply !p-0;
+}

@@ -1,25 +1,12 @@
-import { resolve } from 'path';
-import { fileURLToPath, URL } from 'node:url';
+import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue';
 
-export default defineConfig(({ command, mode, ssrBuild }) => {
-	return {
-		plugins: [vue()],
-		build: {
-			cssCodeSplit: true,
-			lib: {
-				entry: resolve(__dirname, 'src/plugin.js'),
-				name: 'dexios-ui',
-			},
-			rollupOptions: {
-				external: ['vue'],
-				output: {
-					globals: {
-						vue: 'Vue',
-					},
-				},
-			},
+export default defineConfig({
+	build: {
+		cssCodeSplit: true,
+		lib: {
+			entry: resolve(__dirname, '/src/main.js'),
+			fileName: 'dexios-ui',
 		},
-	};
+	},
 });

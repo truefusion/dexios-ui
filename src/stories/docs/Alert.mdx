@@ -1,0 +1,26 @@
+import { Canvas, Controls, Meta, Primary } from '@storybook/blocks';
+import * as AlertStories from '../Alert.stories';
+
+<Meta of={AlertStories} />
+
+# Alert
+
+| Class      | Inherits      |
+| ---------- | ------------- |
+| alert-base | dexios-ui-box |
+
+### Base
+
+<Canvas withToolbar of={AlertStories.AlertBase} />
+
+### Outline
+
+<Canvas withToolbar of={AlertStories.AlertOutline} />
+
+### Soft
+
+<Canvas withToolbar of={AlertStories.AlertSoft} />
+
+### Solid
+
+<Canvas withToolbar of={AlertStories.AlertSolid} />

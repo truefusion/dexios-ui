@@ -1,42 +1,24 @@
-const plugin = require('tailwindcss/plugin');
+import default_theme from 'tailwindcss/defaultTheme';
+import preset from './src/tailwind';
 
-var content = [];
-var plugins = [
-	plugin(({ addVariant }) => {
-		addVariant(`dexios-group`, `.group &`);
-	}),
-	plugin(({ addVariant }) => {
-		addVariant(`dexios-plain`, `.dexios-plain &`);
-	}),
-	plugin(({ addVariant }) => {
-		addVariant(`dexios-primary`, `.dexios-primary &`);
-	}),
-	plugin(({ addVariant }) => {
-		addVariant(`dexios-secondary`, `.dexios-secondary &`);
-	}),
-];
-
-if (process.env.NODE_ENV == 'development') {
-	content = ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'];
-} else {
-	content = ['./src/components/**/*.{vue,js,ts,jsx,tsx}'];
-}
-
-module.exports = {
-	content,
-	safelist: ['dexios-'],
+/** @type {import('tailwindcss').Config} */
+export default {
+	content: [
+		'./src/stories/*.{js,mdx}',
+	],
 	corePlugins: {
 		preflight: false,
 	},
-	darkMode: 'class', // false or 'media' or 'class'
-	important: true,
-	plugins,
+	presets: [
+		preset,
+	],
 	theme: {
 		extend: {
 			fontFamily: {
-				inter: ['Inter', 'sans-serif'],
-				roboto: ['Roboto', 'sans-serif'],
+				sans: ['Roboto', ...default_theme.fontFamily.sans],
+				title: ['Roboto Condensed', ...default_theme.fontFamily.sans],
 			},
 		},
 	},
-};
+}
+

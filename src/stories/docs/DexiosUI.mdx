@@ -1,0 +1,65 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Dexios UI" />
+
+# Dexios UI 
+
+A set of Tailwind utilities to assist in the development of UI components.
+
+It is assumed that you have a good understanding of Tailwind.
+We took much of our inspiration from shadcn UI, Tailwind UI, and Radix UI.
+While we attempt to provide default styles that require no further modifications, beauty is in the eye of the beholder.
+Being merely a Tailwind plugin, all styles can be modified in the typical Tailwind fashion.
+We make use of arbitrary values wherever possible to ease the process even further.
+With Dexios UI you're not forced to use any component framework like React, Vue, etc.
+
+## Installation 
+
+```shell
+npm install @truefusion/dexios-ui --save
+```
+
+After installation, you will need to apply the preset to your Tailwind configuration.
+
+```js
+import dexios from '@truefusion/dexios-ui';
+
+/** @type {import('tailwindcss').Config} */
+export default {
+	presets: [
+		dexios,
+	],
+}
+```
+
+This will automatically apply all available Dexios UI plugins, making them immediately available for your project.
+
+## Getting started
+
+Everything is as simple as applying a base style followed by some utilities.
+All solid and outline utility classes support arbitrary color values and inherit from `dexios-ui-outline` and `dexios-ui-solid` utility classes respectively,
+which themselves support arbitrary color values in the form of `[color-shade]`.
+Dexios UI will automatically determine suitable matching colors based on the provided base color wherever necessary.
+In cases that do not inherit from either `dexios-ui-outline` or `dexios-ui-solid`, documentation and examples will follow.
+
+#### Styling elements
+
+For base elements, it is recommended to apply the styles directly to the base elements.
+
+```css
+@layer base {
+	button {
+		@apply btn-base btn-solid-[zinc-800] hover:btn-solid-[zinc-900];
+	}
+}
+```
+
+Alternatively, 
+
+```html
+<button class="btn-base btn-solid-[zinc-900]">Button</button>
+```
+
+#### Further reading
+
+Check out the component and other examples to learn more about all the ways you can make use of Dexios UI.
