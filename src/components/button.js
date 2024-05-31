@@ -7,6 +7,7 @@ export default plugin(function ({ addComponents, matchComponents }) {
 		'bg-transparent',
 		'border-0',
 		'cursor-pointer',
+		'font-medium',
 		'gap-2',
 		'inline-flex',
 		'items-center',
