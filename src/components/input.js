@@ -23,7 +23,6 @@ export default plugin(function ({ addComponents, matchComponents }) {
 			const input_outline = [
 				`ui-outline-inner-[${value}]`,
 				'shadow-sm',
-				'focus:ring-2',
 			];
 
 			return {
