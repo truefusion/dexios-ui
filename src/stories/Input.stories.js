@@ -28,7 +28,7 @@ export const InputOutline = {
 	render() {
 		const input = document.createElement('input');
 
-		input.classList.add('ui-input-base', 'ui-input-outline-[zinc-200]', 'focus:ui-outline-inner-[cyan-300_2]');
+		input.classList.add('ui-input-base', 'ui-input-outline-[zinc-200]', 'focus:ui-outline-inner-[sky-300_2]');
 		input.placeholder = 'Placeholder text';
 
 		return input;

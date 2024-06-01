@@ -36,7 +36,7 @@ export const TabsSoft = {
 		tabs.forEach((tab, idx) => {
 			tab_bar.appendChild(nlt.cloneNode());
 			tab = document.createElement('div');
-			tab.classList.add('ui-tab-base', 'hover:ui-soft-[zinc]', 'aria-selected:ui-soft-[indigo]');
+			tab.classList.add('ui-tab-base', 'hover:text-zinc-700', 'aria-selected:ui-soft-[indigo]');
 			tab.innerText = `Tab ${idx+1}`;
 
 			if (idx == 2) {
