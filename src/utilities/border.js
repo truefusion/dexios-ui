@@ -2,100 +2,46 @@ import applyCss from '../lib/apply-css';
 import parseOutline from '../lib/parse-outline';
 import plugin from 'tailwindcss/plugin';
 
+function mixinBorder(value, prefix = 'border') {
+	var { color, width } = parseOutline(value);
+	var border = prefix;
+
+	if (width > 1) {
+		border = `${prefix}-${width}`;
+	}
+
+	return [
+		border,
+		'border-solid',
+		`border-${color}`,
+	];
+}
+
 export default plugin(function ({ matchUtilities }) {
 	matchUtilities({
 		'ui-border': (value) => {
-			var { color, width } = parseOutline(value);
-			var border = 'border';
-
-			if (width > 1) {
-				border = `border-${width}`;
-			}
-
-			const outline = [
-				border,
-				'border-solid',
-				`border-${color}`,
-			];
-
 			return {
-				[applyCss(outline)]: {},
+				[applyCss(mixinBorder(value))]: {},
 			};
 		},
 		'ui-border-bottom': (value) => {
-			var { color, width } = parseOutline(value);
-			var border = 'border-b';
-
-			if (width > 1) {
-				border = `border-b-${width}`;
-			}
-
-			const outline = [
-				'border-0',
-				border,
-				'border-solid',
-				`border-${color}`,
-			];
-
 			return {
-				[applyCss(outline)]: {},
+				[applyCss('border-0', mixinBorder(value, 'border-b'))]: {},
 			};
 		},
 		'ui-border-left': (value) => {
-			var { color, width } = parseOutline(value);
-			var border = 'border-l';
-
-			if (width > 1) {
-				border = `border-l-${width}`;
-			}
-
-			const outline = [
-				'border-0',
-				border,
-				'border-solid',
-				`border-${color}`,
-			];
-
 			return {
-				[applyCss(outline)]: {},
+				[applyCss('border-0', mixinBorder(value, 'border-l'))]: {},
 			};
 		},
 		'ui-border-right': (value) => {
-			var { color, width } = parseOutline(value);
-			var border = 'border-r';
-
-			if (width > 1) {
-				border = `border-r-${width}`;
-			}
-
-			const outline = [
-				'border-0',
-				border,
-				'border-solid',
-				`border-${color}`,
-			];
-
 			return {
-				[applyCss(outline)]: {},
+				[applyCss('border-0', mixinBorder(value, 'border-r'))]: {},
 			};
 		},
 		'ui-border-top': (value) => {
-			var { color, width } = parseOutline(value);
-			var border = 'border-t';
-
-			if (width > 1) {
-				border = `border-t-${width}`;
-			}
-
-			const outline = [
-				'border-0',
-				border,
-				'border-solid',
-				`border-${color}`,
-			];
-
 			return {
-				[applyCss(outline)]: {},
+				[applyCss('border-0', mixinBorder(value, 'border-t'))]: {},
 			};
 		},
 	});
