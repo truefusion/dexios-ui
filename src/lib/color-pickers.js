@@ -5,11 +5,11 @@ export function colorForOutlineText(value) {
 
 	switch (color) {
 		case 'black':
-			return 'black';
+			return 'zinc-950';
 		case 'transparent':
 			return 'transparent';
 		case 'white':
-			return 'white';
+			return 'zinc-50';
 	}
 
 	return `${color}-950`;
@@ -20,9 +20,9 @@ export function colorForSoftBackground(value) {
 
 	switch (color) {
 		case 'black':
-			return 'black/5';
+			return 'zinc-950/5';
 		case 'white':
-			return 'white/5';
+			return 'zinc-50/5';
 		case 'transparent':
 			return 'transparent';
 	}
@@ -35,9 +35,9 @@ export function colorForSoftTextPrimary(value) {
 
 	switch (color) {
 		case 'black':
-			return 'black/80';
+			return 'zinc-950/80';
 		case 'white':
-			return 'white/80';
+			return 'zinc-50/80';
 		case 'transparent':
 			return 'transparent';
 	}
@@ -50,9 +50,9 @@ export function colorForSoftTextSecondary(value) {
 
 	switch (color) {
 		case 'black':
-			return 'black/50';
+			return 'zinc-950/50';
 		case 'white':
-			return 'white/50';
+			return 'zinc-50/50';
 		case 'transparent':
 			return 'transparent';
 	}
@@ -71,9 +71,9 @@ export function colorForSolidText(value) {
 
 	switch (color) {
 		case 'black':
-			return 'white';
+			return 'zinc-50';
 		case 'white':
-			return 'black';
+			return 'zinc-950';
 		case 'transparent':
 			return 'transparent';
 	}
