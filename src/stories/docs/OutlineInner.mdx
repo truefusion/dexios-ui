@@ -1,21 +1,19 @@
 import { Meta } from "@storybook/blocks";
 
-<Meta title="Utilities/dexios-ui-outline-inner" />
+<Meta title="Utilities/ui-outline-inner" />
 
 # dexios-ui-outline-inner
 
-Used to apply an inset ring that is one pixel wide by default and a ring color with matching text color.
-Uses arbitrary values for specifying color, shade of ring and ring width.
+Used to apply an inset ring that is one pixel wide by default and ring color.
+Uses arbitrary values for specifying color, shade and ring width.
 The ring color will take on the color of the arbitrary value.
-Regardless of the shade specified, the matching text color will always be of the shade 950.
-If the color specified has no shade, a text color without shade will be chosen.
 
 Expected syntax for arbitrary value is in the `[color-shade_width]` form.
 
 ### Examples
 
 ```css
-dexios-ui-outline-inner-[zinc-300]
-dexios-ui-outline-inner-[zinc-300_4]
-dexios-ui-outline-inner-[black_2]
+ui-outline-inner-[zinc-300]
+ui-outline-inner-[zinc-300_4]
+ui-outline-inner-[black_2]
 ```

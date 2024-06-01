@@ -4,7 +4,7 @@ import plugin from 'tailwindcss/plugin';
 
 export default plugin(function ({ matchUtilities }) {
 	matchUtilities({
-		'dexios-ui-soft': (value) => {
+		'ui-soft': (value) => {
 			const color_bg = colorForSoftBackground(value);
 			const color_text = colorForSoftTextSecondary(value);
 			const soft = [

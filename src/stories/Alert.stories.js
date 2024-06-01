@@ -11,7 +11,7 @@ export const AlertBase = {
 		const message = document.createElement('div');
 		const title = document.createElement('div');
 
-		div.classList.add('alert-base', 'flex', 'flex-col', 'gap-2');
+		div.classList.add('ui-alert-base', 'flex', 'flex-col', 'gap-2');
 		div.appendChild(nlt.cloneNode());
 		div.appendChild(title);
 		div.appendChild(nlt.cloneNode());
@@ -35,7 +35,7 @@ export const AlertOutline = {
 		const nlt = document.createTextNode('\n\t');
 		const title = document.createElement('div');
 
-		div.classList.add('alert-base', 'dexios-ui-outline-inner-[zinc-200]', 'flex', 'flex-col', 'gap-2');
+		div.classList.add('ui-alert-base', 'ui-outline-inner-[zinc-200]', 'flex', 'flex-col', 'gap-2', 'text-zinc-950');
 		div.appendChild(nlt.cloneNode());
 		div.appendChild(title);
 		div.appendChild(nlt.cloneNode());
@@ -59,7 +59,7 @@ export const AlertSoft = {
 		const nlt = document.createTextNode('\n\t');
 		const title = document.createElement('div');
 
-		div.classList.add('alert-base', 'dexios-ui-soft-[sky]', 'flex', 'flex-col', 'gap-2');
+		div.classList.add('ui-alert-base', 'ui-soft-[sky]', 'flex', 'flex-col', 'gap-2');
 		div.appendChild(nlt.cloneNode());
 		div.appendChild(title);
 		div.appendChild(nlt.cloneNode());
@@ -83,14 +83,14 @@ export const AlertSolid = {
 		const nlt = document.createTextNode('\n\t');
 		const title = document.createElement('div');
 
-		div.classList.add('alert-base', 'dexios-ui-solid-[red-600]', 'flex', 'flex-col', 'gap-2');
+		div.classList.add('ui-alert-base', 'ui-solid-[red-600]', 'flex', 'flex-col', 'gap-2');
 		div.appendChild(nlt.cloneNode());
 		div.appendChild(title);
 		div.appendChild(nlt.cloneNode());
 		div.appendChild(message);
 		div.appendChild(nl.cloneNode());
 
-		title.classList.add('font-bold', 'text-sky-50');
+		title.classList.add('font-bold');
 		title.innerText = 'Title';
 
 		message.innerText = 'Message.';

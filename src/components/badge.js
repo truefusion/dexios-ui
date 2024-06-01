@@ -3,7 +3,7 @@ import plugin from "tailwindcss/plugin";
 
 export default plugin(function ({ addComponents }) {
 	const badge_base = [
-		'dexios-ui-box',
+		'ui-box',
 		'gap-2',
 		'inline-flex',
 		'items-center',
@@ -13,7 +13,7 @@ export default plugin(function ({ addComponents }) {
 	];
 
 	addComponents({
-		'.badge-base': {
+		'.ui-badge-base': {
 			[applyCss(badge_base)]: {},
 		},
 	});

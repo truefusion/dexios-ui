@@ -4,13 +4,14 @@ import applyCss from "../lib/apply-css";
 export default plugin(function ({ addComponents }) {
 	const box = [
 		'box-border',
+		'gap-3',
 		'font-sans',
 		'p-4',
 		'rounded-md',
 	];
 
 	addComponents({
-		'.dexios-ui-box': {
+		'.ui-box': {
 			[applyCss(box)]: {},
 		},
 	});

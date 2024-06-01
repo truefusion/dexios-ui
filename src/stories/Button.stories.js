@@ -9,7 +9,7 @@ export const ButtonBase = {
 	render() {
 		const button = document.createElement('button');
 
-		button.classList.add('btn-base');
+		button.classList.add('ui-btn-base');
 		button.innerText = 'Button';
 
 		return button;
@@ -29,9 +29,9 @@ export const ButtonCombined = {
 		btn_two.innerText = 'Button';
 		btn_three.innerText = 'Button';
 
-		btn_one.classList.add('btn-base', 'btn-outline-[zinc-300]', 'hover:dexios-ui-solid-[zinc-100]');
-		btn_two.classList.add('btn-base', 'btn-outline-[zinc-300]', 'btn-solid-[zinc-100]', 'hover:dexios-ui-outline-inner-[zinc-400]');
-		btn_three.classList.add('btn-base', 'btn-outline-[zinc-300]', 'btn-solid-[zinc-50]', 'hover:dexios-ui-outline-inner-[sky-300]', 'hover:dexios-ui-solid-[sky-50]');
+		btn_one.classList.add('ui-btn-base', 'ui-btn-outline-[zinc-300]', 'hover:ui-solid-[zinc-100]');
+		btn_two.classList.add('ui-btn-base', 'ui-btn-outline-[zinc-300]', 'ui-btn-solid-[zinc-100]', 'hover:ui-outline-inner-[zinc-400]');
+		btn_three.classList.add('ui-btn-base', 'ui-btn-outline-[zinc-300]', 'ui-btn-solid-[zinc-50]', 'hover:ui-outline-inner-[sky-300]', 'hover:ui-solid-[sky-50]');
 
 		div.appendChild(nlt.cloneNode());
 		div.appendChild(btn_one);
@@ -49,7 +49,7 @@ export const ButtonOutline = {
 	render() {
 		const button = document.createElement('button');
 
-		button.classList.add('btn-base', 'btn-outline-[zinc-300]', 'hover:dexios-ui-outline-inner-[zinc-400]');
+		button.classList.add('ui-btn-base', 'ui-btn-outline-[zinc-300]', 'hover:ui-outline-inner-[zinc-400]');
 		button.innerText = 'Button';
 
 		return button;
@@ -67,8 +67,8 @@ export const ButtonSolid = {
 		btn_one.innerText = 'Button';
 		btn_two.innerText = 'Button';
 
-		btn_one.classList.add('btn-base', 'btn-solid-[zinc-700]', 'hover:dexios-ui-solid-[zinc-900]');
-		btn_two.classList.add('btn-base', 'btn-solid-[zinc-100]', 'hover:dexios-ui-solid-[zinc-200]');
+		btn_one.classList.add('ui-btn-base', 'ui-btn-solid-[zinc-700]', 'hover:ui-solid-[zinc-900]');
+		btn_two.classList.add('ui-btn-base', 'ui-btn-solid-[zinc-100]', 'hover:ui-solid-[zinc-200]');
 
 		div.appendChild(nlt.cloneNode());
 		div.appendChild(btn_one);

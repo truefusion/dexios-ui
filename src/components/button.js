@@ -3,7 +3,7 @@ import applyCss from '../lib/apply-css';
 
 export default plugin(function ({ addComponents, matchComponents }) {
 	const btn_base = [
-		'dexios-ui-box',
+		'ui-box',
 		'bg-transparent',
 		'border-0',
 		'cursor-pointer',
@@ -18,23 +18,23 @@ export default plugin(function ({ addComponents, matchComponents }) {
 	];
 
 	addComponents({
-		'.btn-base': {
+		'.ui-btn-base': {
 			[applyCss(btn_base)]: {},
 		},
 	});
 	matchComponents({
-		'btn-outline': (value) => {
+		'ui-btn-outline': (value) => {
 			const btn_outline = [
-				`dexios-ui-outline-inner-[${value}]`,
+				`ui-outline-inner-[${value}]`,
 				'shadow-sm',
 			];
 			return {
 				[applyCss(btn_outline)]: {},
 			};
 		},
-		'btn-solid': (value) => {
+		'ui-btn-solid': (value) => {
 			const btn_solid = [
-				`dexios-ui-solid-[${value}]`,
+				`ui-solid-[${value}]`,
 				'shadow-sm',
 			];
 			return {

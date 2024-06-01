@@ -59,3 +59,33 @@ export function colorForSoftTextSecondary(value) {
 
 	return `${color}-700`;
 }
+
+export function colorForSolidBackground(value) {
+	const { color, shade } = parseColor(value);
+
+	return shade ? `${color}-${shade}` : color;
+}
+
+export function colorForSolidText(value) {
+	const { color, shade } = parseColor(value);
+
+	switch (color) {
+		case 'black':
+			return 'white';
+		case 'white':
+			return 'black';
+		case 'transparent':
+			return 'transparent';
+	}
+
+	switch (shade) {
+		case '50':
+		case '100':
+		case '200':
+		case '300':
+		case '400':
+			return `${color}-950`;
+	}
+
+	return `${color}-50`;
+}

@@ -37,19 +37,13 @@ This will automatically apply all available Dexios UI plugins, making them immed
 ## Getting started
 
 Everything is as simple as applying a base style followed by some utilities.
-All solid and outline utility classes support arbitrary color values and inherit from `dexios-ui-outline` and `dexios-ui-solid` utility classes respectively,
-which themselves support arbitrary color values in the form of `[color-shade]`.
-Dexios UI will automatically determine suitable matching colors based on the provided base color wherever necessary.
-In cases that do not inherit from either `dexios-ui-outline` or `dexios-ui-solid`, documentation and examples will follow.
-
-#### Styling elements
 
 For base elements, it is recommended to apply the styles directly to the base elements.
 
 ```css
 @layer base {
 	button {
-		@apply btn-base btn-solid-[zinc-800] hover:btn-solid-[zinc-900];
+		@apply ui-btn-base ui-btn-solid-[zinc-800] hover:ui-btn-solid-[zinc-900];
 	}
 }
 ```
@@ -57,7 +51,7 @@ For base elements, it is recommended to apply the styles directly to the base el
 Alternatively, 
 
 ```html
-<button class="btn-base btn-solid-[zinc-900]">Button</button>
+<button class="ui-btn-base ui-btn-solid-[zinc-900]">Button</button>
 ```
 
 #### Further reading

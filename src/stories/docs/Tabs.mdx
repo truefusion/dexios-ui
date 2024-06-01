@@ -1,0 +1,23 @@
+import { Canvas, Controls, Meta, Primary } from '@storybook/blocks';
+import * as TabsStories from '../Tabs.stories';
+
+<Meta of={TabsStories} />
+
+# Tabs
+
+| Class                | Inherits         |
+| -------------------- | ---------------- |
+| ui-tab-base          | ui-btn-base      |
+| ui-tab-top-underline | ui-border-bottom |
+
+### Base
+
+<Canvas withToolbar of={TabsStories.TabsBase} />
+
+### Soft
+
+<Canvas withToolbar of={TabsStories.TabsSoft} />
+
+### Underlined
+
+<Canvas withToolbar of={TabsStories.TabsUnderlined} />

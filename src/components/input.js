@@ -3,7 +3,7 @@ import applyCss from "../lib/apply-css";
 
 export default plugin(function ({ addComponents, matchComponents }) {
 	const input_base = [
-		'dexios-ui-box',
+		'ui-box',
 		'border-0',
 		'h-9',
 		'outline-none',
@@ -14,14 +14,14 @@ export default plugin(function ({ addComponents, matchComponents }) {
 	];
 
 	addComponents({
-		'.input-base': {
+		'.ui-input-base': {
 			[applyCss(input_base)]: {},
 		},
 	});
 	matchComponents({
-		'input-outline': (value) => {
+		'ui-input-outline': (value) => {
 			const input_outline = [
-				`dexios-ui-outline-inner-[${value}]`,
+				`ui-outline-inner-[${value}]`,
 				'shadow-sm',
 				'focus:ring-2',
 			];
