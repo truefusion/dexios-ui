@@ -4,7 +4,7 @@ import preset from './src/tailwind';
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: [
-		'./src/stories/*.{js,mdx}',
+		'./src/stories/**/*.{js,mdx,html}',
 	],
 	corePlugins: {
 		preflight: false,
