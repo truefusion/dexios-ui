@@ -1,0 +1,19 @@
+import { Canvas, Controls, Meta, Primary } from '@storybook/blocks';
+import * as DividerStories from '../components/Divider.stories';
+
+<Meta of={DividerStories} />
+
+# Divider
+
+| Class               | Inherits |
+| ------------------- | -------- |
+| ui-divider          |          |
+| ui-divider-vertical |          |
+
+### Horizontal
+
+<Canvas withToolbar of={DividerStories.Divider} />
+
+### Vertical
+
+<Canvas withToolbar of={DividerStories.DividerVertical} />
