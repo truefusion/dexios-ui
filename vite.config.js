@@ -6,6 +6,7 @@ export default defineConfig({
 		cssCodeSplit: true,
 		lib: {
 			entry: resolve(__dirname, '/src/main.js'),
+			formats: ['es'],
 			fileName: 'dexios-ui',
 		},
 	},
