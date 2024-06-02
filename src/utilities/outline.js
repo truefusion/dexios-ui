@@ -30,6 +30,7 @@ export default plugin(function ({ matchUtilities }) {
 
 			const outline = [
 				'outline',
+				'outline-offset-0',
 				`outline-${width}`,
 				`outline-${color}`,
 			];
