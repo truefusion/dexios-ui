@@ -3,11 +3,11 @@ import applyCss from '../lib/apply-css';
 
 export default plugin(function ({ addComponents, matchComponents }) {
 	const divider_base = [
-		'after:bg-zinc-300',
+		'after:bg-zinc-200',
 		'after:content-[""]',
 		'after:flex',
 		'after:flex-1',
-		'before:bg-zinc-300',
+		'before:bg-zinc-200',
 		'before:content-[""]',
 		'before:flex',
 		'before:flex-1',
