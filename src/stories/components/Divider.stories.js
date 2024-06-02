@@ -6,5 +6,4 @@ export default {
 }
 
 export const Divider = () => divider_horizontal;
-
 export const DividerVertical = () => divider_vertical;
