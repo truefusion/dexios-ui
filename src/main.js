@@ -1,1 +1,1 @@
-export {default as tailwind} from './tailwind';
+export {default as default} from './tailwind';

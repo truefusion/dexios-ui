@@ -1,5 +1,5 @@
 import default_theme from 'tailwindcss/defaultTheme';
-import preset from './src/tailwind';
+import preset from './src/main';
 
 /** @type {import('tailwindcss').Config} */
 export default {
