@@ -12,17 +12,16 @@ export default plugin(function ({ addComponents, matchComponents }) {
 		'before:flex',
 		'before:flex-1',
 		'flex',
+		'items-center',
 	];
 	const divider_horizontal = [
 		'after:h-px',
 		'before:h-px',
-		'items-center',
 	];
 	const divider_vertical = [
 		'after:w-px',
 		'before:w-px',
 		'flex-col',
-		'justify-center',
 	];
 
 	addComponents({
