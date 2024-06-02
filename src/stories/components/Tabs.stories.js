@@ -1,5 +1,4 @@
-const nl = document.createTextNode('\n');
-const nlt = document.createTextNode('\n\t');
+import { nl, nlt } from '../nodes';
 
 export default {
 	title: 'Components/Tabs',
