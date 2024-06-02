@@ -11,3 +11,5 @@ Run this command to launch a local instance.
 ```shell
 npm start
 ```
+
+Or you can skim through the docs yourself [here](./tree/main/src/stories/docs) or skim through component examples [here](./tree/main/src/stories/components/html).
