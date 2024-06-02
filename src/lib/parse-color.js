@@ -1,4 +1,4 @@
-export default function (base_color) {
+export default function parseColor(base_color) {
 	var [ prefix, color, shade ] = String(base_color).trim().match(/[^\-]+/g) ?? [];
 
 	if (!shade) {

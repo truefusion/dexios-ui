@@ -1,4 +1,4 @@
-export default function (...css) {
+export default function applyCss(...css) {
 	return css.reduce((ret, css) => {
 		if (Array.isArray(css)) {
 			css = css.join(' ');
