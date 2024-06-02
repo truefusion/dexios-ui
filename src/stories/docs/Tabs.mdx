@@ -1,4 +1,4 @@
-import { Canvas, Controls, Meta, Primary } from '@storybook/blocks';
+import { Meta, Stories } from '@storybook/blocks';
 import * as TabsStories from '../components/Tabs.stories';
 
 <Meta of={TabsStories} />
@@ -10,14 +10,4 @@ import * as TabsStories from '../components/Tabs.stories';
 | ui-tab-base          | ui-btn-base      |
 | ui-tab-top-underline | ui-border-bottom |
 
-### Base
-
-<Canvas withToolbar of={TabsStories.TabsBase} />
-
-### Soft
-
-<Canvas withToolbar of={TabsStories.TabsSoft} />
-
-### Underlined
-
-<Canvas withToolbar of={TabsStories.TabsUnderlined} />
+<Stories />

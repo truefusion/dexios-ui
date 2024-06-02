@@ -1,4 +1,4 @@
-import { Canvas, Controls, Meta, Primary } from '@storybook/blocks';
+import { Meta, Stories } from '@storybook/blocks';
 import * as ButtonStories from '../components/Button.stories';
 
 <Meta of={ButtonStories} />
@@ -11,18 +11,4 @@ import * as ButtonStories from '../components/Button.stories';
 | ui-btn-outline | ui-outline-inner |
 | ui-btn-solid   | ui-solid         |
 
-### Base
-
-<Canvas withToolbar of={ButtonStories.ButtonBase} />
-
-### Outlined
-
-<Canvas withToolbar of={ButtonStories.ButtonOutline} />
-
-### Solid
-
-<Canvas withToolbar of={ButtonStories.ButtonSolid} />
-
-### Combined
-
-<Canvas withToolbar of={ButtonStories.ButtonCombined} />
+<Stories />

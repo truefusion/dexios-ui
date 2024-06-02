@@ -1,4 +1,4 @@
-import { Canvas, Controls, Meta, Primary } from '@storybook/blocks';
+import { Meta, Stories } from '@storybook/blocks';
 import * as InputStories from '../components/Input.stories';
 
 <Meta of={InputStories} />
@@ -10,18 +10,4 @@ import * as InputStories from '../components/Input.stories';
 | ui-input-base    | ui-box           |
 | ui-input-outline | ui-outline-inner |
 
-### Base
-
-<Canvas withToolbar of={InputStories.InputBase} />
-
-### Outlined
-
-<Canvas withToolbar of={InputStories.InputOutline} />
-
-### Solid
-
-<Canvas withToolbar of={InputStories.InputSolid} />
-
-### Combined
-
-<Canvas withToolbar of={InputStories.InputCombined} />
+<Stories />

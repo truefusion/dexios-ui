@@ -1,4 +1,4 @@
-import { Canvas, Controls, Meta, Primary } from '@storybook/blocks';
+import { Meta, Stories } from '@storybook/blocks';
 import * as AlertStories from '../components/Alert.stories';
 
 <Meta of={AlertStories} />
@@ -9,18 +9,4 @@ import * as AlertStories from '../components/Alert.stories';
 | ------------- | -------- |
 | ui-alert-base | ui-box   |
 
-### Base
-
-<Canvas withToolbar of={AlertStories.AlertBase} />
-
-### Outline
-
-<Canvas withToolbar of={AlertStories.AlertOutline} />
-
-### Soft
-
-<Canvas withToolbar of={AlertStories.AlertSoft} />
-
-### Solid
-
-<Canvas withToolbar of={AlertStories.AlertSolid} />
+<Stories />
