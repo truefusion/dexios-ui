@@ -2,6 +2,7 @@ import alert from './components/alert';
 import badge from './components/badge';
 import box from './components/box';
 import button from './components/button';
+import divider from './components/divider';
 import input from './components/input';
 import tabs from './components/tabs';
 
@@ -21,6 +22,7 @@ export default {
 		badge,
 		box,
 		button,
+		divider,
 		input,
 		tabs,
 	],
@@ -32,6 +34,7 @@ export {
 	border,
 	box,
 	button,
+	divider,
 	input,
 	outline,
 	soft,
