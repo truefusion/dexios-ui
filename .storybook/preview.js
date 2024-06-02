@@ -1,3 +1,4 @@
+import '@mdi/font/css/materialdesignicons.min.css';
 import '../src/styles/base.less';
 
 /** @type { import('@storybook/html').Preview } */
