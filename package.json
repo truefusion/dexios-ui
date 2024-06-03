@@ -18,7 +18,8 @@
 		"build": "vite build",
 		"build-storybook": "storybook build",
 		"dev": "vite",
-		"preview": "vite preview",
+		"preview": "np --preview",
+		"release": "npm run build && np --yolo --no-2fa --no-yarn",
 		"start": "npm run storybook",
 		"storybook": "storybook dev -p 6006 --no-open"
 	},
