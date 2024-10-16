@@ -1,8 +1,6 @@
-import plugin from "tailwindcss/plugin";
-import applyCss from "../lib/apply-css";
-import parseOutline from "../lib/parse-outline";
+import plugin from '../lib/plugin';
 
-export default plugin(function ({ addComponents, matchComponents }) {
+export default plugin(function ({ dexios, addComponents, matchComponents }) {
 	const tab_base = [
 		'ui-btn-base',
 		'flex',
@@ -11,12 +9,12 @@ export default plugin(function ({ addComponents, matchComponents }) {
 
 	addComponents({
 		'.ui-tab-base': {
-			[applyCss(tab_base)]: {},
+			[dexios.applyCss(tab_base)]: {},
 		},
 	});
 	matchComponents({
 		'ui-tab-top-underline': (value) => {
-			const { color, width } = parseOutline(value);
+			const { color, width } = dexios.parseOutline(value);
 			const tab_top_underline = [
 				`ui-border-bottom-[${color}_${width}]`,
 				`-mb-[${width}px]`,
@@ -24,7 +22,7 @@ export default plugin(function ({ addComponents, matchComponents }) {
 				`text-${color}`,
 			];
 			return {
-				[applyCss(tab_top_underline)]: {},
+				[dexios.applyCss(tab_top_underline)]: {},
 			};
 		},
 	});

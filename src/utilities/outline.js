@@ -1,11 +1,9 @@
-import applyCss from '../lib/apply-css';
-import parseOutline from '../lib/parse-outline';
-import plugin from 'tailwindcss/plugin';
+import plugin from '../lib/plugin';
 
-export default plugin(function ({ matchUtilities }) {
+export default plugin(function ({ dexios, matchUtilities }) {
 	matchUtilities({
 		'ui-outline-inner': (value) => {
-			var { color, width } = parseOutline(value);
+			var { color, width } = dexios.parseOutline(value);
 
 			if (!width) {
 				width = 1;
@@ -18,11 +16,11 @@ export default plugin(function ({ matchUtilities }) {
 			];
 
 			return {
-				[applyCss(outline)]: {},
+				[dexios.applyCss(outline)]: {},
 			};
 		},
 		'ui-outline-outer': (value) => {
-			var { color, width } = parseOutline(value);
+			var { color, width } = dexios.parseOutline(value);
 
 			if (!width) {
 				width = 1;
@@ -36,7 +34,7 @@ export default plugin(function ({ matchUtilities }) {
 			];
 
 			return {
-				[applyCss(outline)]: {},
+				[dexios.applyCss(outline)]: {},
 			};
 		},
 	});

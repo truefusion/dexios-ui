@@ -1,7 +1,6 @@
-import plugin from "tailwindcss/plugin";
-import applyCss from "../lib/apply-css";
+import plugin from '../lib/plugin';
 
-export default plugin(function ({ addComponents, matchComponents }) {
+export default plugin(function ({ dexios, addComponents, matchComponents }) {
 	const input_base = [
 		'ui-box',
 		'border-0',
@@ -15,7 +14,7 @@ export default plugin(function ({ addComponents, matchComponents }) {
 
 	addComponents({
 		'.ui-input-base': {
-			[applyCss(input_base)]: {},
+			[dexios.applyCss(input_base)]: {},
 		},
 	});
 	matchComponents({
@@ -26,7 +25,7 @@ export default plugin(function ({ addComponents, matchComponents }) {
 			];
 
 			return {
-				[applyCss(input_outline)]: {},
+				[dexios.applyCss(input_outline)]: {},
 			};
 		},
 	});

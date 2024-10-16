@@ -1,7 +1,6 @@
-import applyCss from "../lib/apply-css";
-import plugin from "tailwindcss/plugin";
+import plugin from '../lib/plugin';
 
-export default plugin(function ({ addComponents }) {
+export default plugin(function ({ dexios, addComponents }) {
 	const badge_base = [
 		'ui-box',
 		'gap-2',
@@ -14,7 +13,7 @@ export default plugin(function ({ addComponents }) {
 
 	addComponents({
 		'.ui-badge-base': {
-			[applyCss(badge_base)]: {},
+			[dexios.applyCss(badge_base)]: {},
 		},
 	});
 });

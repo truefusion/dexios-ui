@@ -1,9 +1,16 @@
-export default function applyCss(...css) {
-	return css.reduce((ret, css) => {
-		if (Array.isArray(css)) {
-			css = css.join(' ');
+function walk(prefix, css) {
+	return css.reduce((ret, item) => {
+		var p = prefix;
+
+		if (Array.isArray(item)) {
+			item = walk(p, item);
+			p = '';
 		}
 
-		return [ret, css].filter(x => x).join(' ');
-	}, '@apply');
+		return item ? `${ret} ${p}${item}` : ret;
+	}, '').trim();
+}
+
+export default function applyCss(prefix, ...css) {
+	return `@apply ${walk(prefix, css)}`;
 }

@@ -1,7 +1,6 @@
-import plugin from "tailwindcss/plugin";
-import applyCss from "../lib/apply-css";
+import plugin from '../lib/plugin';
 
-export default plugin(function ({ addComponents }) {
+export default plugin(function ({ dexios, addComponents }) {
 	const box = [
 		'box-border',
 		'gap-3',
@@ -12,7 +11,7 @@ export default plugin(function ({ addComponents }) {
 
 	addComponents({
 		'.ui-box': {
-			[applyCss(box)]: {},
+			[dexios.applyCss(box)]: {},
 		},
 	});
 });

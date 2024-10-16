@@ -1,6 +1,5 @@
-import applyCss from '../lib/apply-css';
+import plugin from '../lib/plugin';
 import parseOutline from '../lib/parse-outline';
-import plugin from 'tailwindcss/plugin';
 
 function mixinBorder(value, prefix = 'border') {
 	var { color, width } = parseOutline(value);
@@ -17,31 +16,31 @@ function mixinBorder(value, prefix = 'border') {
 	];
 }
 
-export default plugin(function ({ matchUtilities }) {
+export default plugin(function ({ dexios, matchUtilities }) {
 	matchUtilities({
 		'ui-border': (value) => {
 			return {
-				[applyCss(mixinBorder(value))]: {},
+				[dexios.applyCss(mixinBorder(value))]: {},
 			};
 		},
 		'ui-border-bottom': (value) => {
 			return {
-				[applyCss('border-0', mixinBorder(value, 'border-b'))]: {},
+				[dexios.applyCss('border-0', mixinBorder(value, 'border-b'))]: {},
 			};
 		},
 		'ui-border-left': (value) => {
 			return {
-				[applyCss('border-0', mixinBorder(value, 'border-l'))]: {},
+				[dexios.applyCss('border-0', mixinBorder(value, 'border-l'))]: {},
 			};
 		},
 		'ui-border-right': (value) => {
 			return {
-				[applyCss('border-0', mixinBorder(value, 'border-r'))]: {},
+				[dexios.applyCss('border-0', mixinBorder(value, 'border-r'))]: {},
 			};
 		},
 		'ui-border-top': (value) => {
 			return {
-				[applyCss('border-0', mixinBorder(value, 'border-t'))]: {},
+				[dexios.applyCss('border-0', mixinBorder(value, 'border-t'))]: {},
 			};
 		},
 	});

@@ -1,7 +1,6 @@
-import applyCss from "../lib/apply-css";
-import plugin from "tailwindcss/plugin";
+import plugin from '../lib/plugin';
 
-export default plugin(function ({ addComponents }) {
+export default plugin(function ({ dexios, addComponents }) {
 	const alert_base = [
 		'ui-box',
 		'gap-2',
@@ -10,7 +9,7 @@ export default plugin(function ({ addComponents }) {
 
 	addComponents({
 		'.ui-alert-base': {
-			[applyCss(alert_base)]: {},
+			[dexios.applyCss(alert_base)]: {},
 		},
 	});
 });

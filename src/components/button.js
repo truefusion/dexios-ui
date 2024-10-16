@@ -1,9 +1,8 @@
-import plugin from "tailwindcss/plugin";
-import applyCss from '../lib/apply-css';
+import plugin from '../lib/plugin';
 
-export default plugin(function ({ addComponents, matchComponents }) {
+export default plugin(function ({ dexios, addComponents, matchComponents }) {
 	const btn_base = [
-		'ui-box',
+		`ui-box`,
 		'bg-transparent',
 		'border-0',
 		'cursor-pointer',
@@ -19,7 +18,7 @@ export default plugin(function ({ addComponents, matchComponents }) {
 
 	addComponents({
 		'.ui-btn-base': {
-			[applyCss(btn_base)]: {},
+			[dexios.applyCss(btn_base)]: {},
 		},
 	});
 	matchComponents({
@@ -29,7 +28,7 @@ export default plugin(function ({ addComponents, matchComponents }) {
 				'shadow-sm',
 			];
 			return {
-				[applyCss(btn_outline)]: {},
+				[dexios.applyCss(btn_outline)]: {},
 			};
 		},
 		'ui-btn-solid': (value) => {
@@ -38,7 +37,7 @@ export default plugin(function ({ addComponents, matchComponents }) {
 				'shadow-sm',
 			];
 			return {
-				[applyCss(btn_solid)]: {},
+				[dexios.applyCss(btn_solid)]: {},
 			};
 		},
 	});

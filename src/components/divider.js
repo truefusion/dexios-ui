@@ -1,7 +1,6 @@
-import plugin from "tailwindcss/plugin";
-import applyCss from '../lib/apply-css';
+import plugin from '../lib/plugin';
 
-export default plugin(function ({ addComponents, matchComponents }) {
+export default plugin(function ({ dexios, addComponents, matchComponents }) {
 	const divider_base = [
 		'after:bg-zinc-200',
 		'after:content-[""]',
@@ -26,10 +25,10 @@ export default plugin(function ({ addComponents, matchComponents }) {
 
 	addComponents({
 		'.ui-divider': {
-			[applyCss(divider_base, divider_horizontal)]: {},
+			[dexios.applyCss(divider_base, divider_horizontal)]: {},
 		},
 		'.ui-divider-vertical': {
-			[applyCss(divider_base, divider_vertical)]: {},
+			[dexios.applyCss(divider_base, divider_vertical)]: {},
 		},
 	});
 	matchComponents({
@@ -40,7 +39,7 @@ export default plugin(function ({ addComponents, matchComponents }) {
 				`before:bg-${value}`,
 			];
 			return {
-				[applyCss(divider_horizontal)]: {},
+				[dexios.applyCss(divider_horizontal)]: {},
 			};
 		},
 		'ui-divider-vertical': (value) => {
@@ -50,7 +49,7 @@ export default plugin(function ({ addComponents, matchComponents }) {
 				`before:bg-${value}`,
 			];
 			return {
-				[applyCss(divider_vertical)]: {},
+				[dexios.applyCss(divider_vertical)]: {},
 			};
 		},
 	});
