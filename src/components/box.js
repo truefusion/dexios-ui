@@ -4,7 +4,6 @@ export default plugin(function ({ dexios, addComponents }) {
 	const box = [
 		'box-border',
 		'gap-3',
-		'font-sans',
 		'p-4',
 		'rounded-md',
 	];
